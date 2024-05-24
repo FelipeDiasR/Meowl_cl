@@ -1,0 +1,148 @@
+.meow_brand {
+ display: flex;
+ 
+
+}
+
+
+.meow__brand_first-content {
+    color: #fff;
+    position: absolute;
+    top: 1250px;
+    left: 675px;
+    font-family: var(--font-family);
+}
+
+.meow__brand_first-content h1 {
+    position: absolute;
+    top: -100px;
+    left: -60px;
+    font-size: 3.4em;
+
+
+}
+
+.meow__brand_first-content h2 {
+    font-size: 1.75em;
+    margin-bottom: 1.5em;
+    position: absolute;
+    left: 55px;
+    
+}
+
+.meow__brand_first-content p {
+    
+    font-family: var(--font-family);
+    position: relative;
+    top: 70px;
+    left: 55px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    
+}
+
+.overlay-imagefoguete {
+    position: absolute;
+    top: -10px;
+    left: -500px;
+    
+
+}
+.overlay-imagefoguete img {
+    opacity: 1; 
+    width: 330px;
+    height: 299;
+    
+}
+
+
+/* ---------GAMING SECTOR -------*/
+.meow__brand_second-content {
+    color: #fff;
+    position: absolute;
+    top: 1650px;
+    left: 675px;
+    font-family: var(--font-family);
+}
+
+
+.meow__brand_second-content h2 {
+    font-size: 1.75em;
+    margin-bottom: 1.5em;
+    position: absolute;
+    left: -500px;
+    
+}
+
+.meow__brand_second-content p {
+    
+    font-family: var(--font-family);
+    position: relative;
+    top: 70px;
+    left: -500px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    
+}
+
+.overlay-imagegame {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    
+
+}
+.overlay-imagegame img {
+    opacity: 1; 
+    width: 330px;
+    height: 299;
+    
+}
+
+
+/*----Staking sector ------ */
+
+.meow__brand_third-content {
+    color: #fff;
+    position: absolute;
+    top:  2100px;
+    left: 675px;
+    font-family: var(--font-family);
+}
+
+
+.meow__brand_third-content h2 {
+    font-size: 1.75em;
+    margin-bottom: 1.5em;
+    position: absolute;
+    left: 55px;
+    
+}
+
+.meow__brand_third-content p {
+    
+    font-family: var(--font-family);
+    position: relative;
+    top: 70px;
+    left: 55px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    
+}
+
+.overlay-imagestaking {
+    position: absolute;
+    top:  -40px;
+    left: -500px;
+    
+
+}
+.overlay-imagestaking img {
+    opacity: 1; 
+    width: 330px;
+    height: 299;
+    
+}
+
+
+

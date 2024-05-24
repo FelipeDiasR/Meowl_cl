@@ -1,0 +1,978 @@
+.meow__header {
+    display: flex;
+    /*background-image: url(../../img/assets/moon.png);
+    background-position: bottom;*/
+    
+   
+
+}
+
+.overlay-image1 {
+    position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+    top: -70px; /* Ajuste conforme necessário */
+    left: 23%; /* Ajuste conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+  }
+
+  .overlay-image1 img {
+    opacity: 1;
+    width: 2000px; 
+    
+  }
+
+
+.overlay-image2 {
+    position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+    top: 350px; /* Ajuste conforme necessário */
+    left: 23%; /* Ajuste conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+  }
+
+  .overlay-image2 img {
+    opacity: 0.7; 
+    
+  }
+
+  .overlay-image3 {
+    width: 10%;  
+    position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+    top: 300px; /* Ajuste conforme necessário */
+    left: -10%; /* Ajuste conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+  }
+
+  .overlay-image3 img {
+    opacity: 0.8;
+    
+     
+    
+  }
+
+  .overlay-image4 {
+    width: 10%;  
+    position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+    top: 20%; /* Ajuste conforme necessário */
+    left: -1%; /* Ajuste conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+  }
+
+  .overlay-image4 img {
+    opacity: 1; 
+    
+  }
+.meow__header-content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    left: 400px;
+    top: 240px;
+    text-align: center;
+
+
+}
+
+.meow__header-content h1 {
+    font-size: 5em;
+    margin-bottom: 1.5em;
+    background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: var(--font-family);
+    position: absolute;
+    top: 60px;
+    
+}
+
+.meow__header-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    color: #ffff;
+    font-family: var(--font-family);
+    font-weight: 700;
+    position: absolute;
+    left: 110px;
+    top: 325px;
+    
+
+}
+
+
+
+
+.meow__header-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #ffff;
+    font-family: var(--font-family);
+    font-weight: 900;
+    position: absolute;
+    left: -30px;
+    top: 410px;
+    font-style: italic;
+    
+
+
+}
+
+
+
+.meow__header_buttons{
+    position: absolute;
+    left: 230px;
+    top: 570px;
+}
+
+.buttonA{
+    width: 126.72px;
+    height: 48px;
+    flex: 2;
+    background-color: #624DE3;
+    font-family: var(--font-family);
+    color:#ffff;
+    cursor: pointer;
+    outline: none;
+    padding: 0 1rem;
+    border: none;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+
+.buttonB{
+    position: absolute;
+    left: 145px;
+    width: 163.27px;
+    height: 48px;
+    flex: 2;
+    background-color: #151718;
+    font-family: var(--font-family);
+    color:#ffff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.meow_arrow_icon {
+    position: absolute;
+    left: 130px;
+    top: 15px;
+    
+    
+
+  }
+
+
+  @media screen and (max-width: 778px){
+    .meow__header {
+        flex-direction: column;
+        position: absolute;
+        left: -150px;
+
+    }
+
+    .meow__header-content{
+        margin: 0 0 3rem;
+
+
+    }
+
+    .overlay-image2 {
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: 90%; /* Ajuste conforme necessário */
+        left: 6%; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image2 img {
+        width: 250x;
+        height: 600px;
+        opacity: 0.7; 
+        
+      }
+    
+      .overlay-image3 {
+       
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: 70%; /* Ajuste conforme necessário */
+        left: -20%; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image3 img {
+        opacity: 0.8; 
+        width: 700px;
+        
+      }
+    
+      .overlay-image4 {
+    
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -10%; /* Ajuste conforme necessário */
+        left: -20%; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image4 img {
+        opacity: 1; 
+        width: 700px;
+        height: auto;
+        
+      }
+
+    .meow__header-content h1 {  
+        font-size: 3em;
+        margin-bottom: 1.5em;
+        background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-family: var(--font-family);
+        position: relative;
+        left: -150px;
+        top: 20px;
+    }
+
+    .meow__header-content h2 {
+        font-size: 1em;
+        margin-bottom: 1.5em;
+        color: #ffff;
+        font-family: var(--font-family);
+        font-weight: 700;
+        position: relative;
+        left: -180px;
+        top: 120px;
+        
+    
+    }
+
+    .meow__header-content p {
+        font-size: 0.8em;
+        margin-bottom: 1.5em;
+        color: #ffff;
+        font-family: var(--font-family);
+        font-weight: 900;
+        position: relative;
+        left: -200px;
+        top: 150px;
+        font-style: italic;
+        
+    
+    
+    }
+    .meow__header_buttons{
+      position: absolute;
+      left: -80px;
+      top: 350px;
+  }
+  
+  .buttonA{
+      width: 126.72px;
+      height: 48px;
+      flex: 2;
+      background-color: #624DE3;
+      font-family: var(--font-family);
+      color:#ffff;
+      cursor: pointer;
+      outline: none;
+      padding: 0 1rem;
+      border: none;
+  
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      
+  }
+  
+  
+  .buttonB{
+      position: absolute;
+      left: 145px;
+      width: 163.27px;
+      height: 48px;
+      flex: 2;
+      background-color: #151718;
+      font-family: var(--font-family);
+      color:#ffff;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+  }
+  
+  .meow_arrow_icon {
+      position: absolute;
+      left: -10px;
+      top: 4px;
+      
+      
+  
+    }
+  
+  }  
+
+  
+@media screen  and (max-width: 1050px) { 
+
+    .meow__header {
+        flex-direction: column;
+
+    }  
+
+    .overlay-image1 {
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -70px; /* Ajuste conforme necessário */
+        left: 60px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image1 img {
+        opacity: 1;
+        width: 1500px; 
+        
+      }
+
+    .overlay-image2 {
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: 250px; /* Ajuste conforme necessário */
+        left: 60px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image2 img {
+        width: 250x;
+        height: 600px;
+        opacity: 0.7; 
+        
+      }
+    
+      .overlay-image3 {
+       
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: 180px; /* Ajuste conforme necessário */
+        left: -250px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image3 img {
+        opacity: 0.8; 
+        width: 700px;
+        
+      }
+    
+      .overlay-image4 {
+    
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -10%; /* Ajuste conforme necessário */
+        left: -200px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image4 img {
+        opacity: 1; 
+        width: 700px;
+        height: auto;
+        
+      }
+
+    .meow__header-content h1 {  
+        font-size: 3em;
+        margin-bottom: 1.5em;
+        background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-family: var(--font-family);
+        position: relative;
+        left: -150px;
+        top: 20px;
+    }
+
+    .meow__header-content h2 {
+        font-size: 1em;
+        margin-bottom: 1.5em;
+        color: #ffff;
+        font-family: var(--font-family);
+        font-weight: 700;
+        position: relative;
+        left: -110px;
+        top: 60px;
+        
+    
+    }
+
+    .meow__header-content p {
+        font-size: 0.8em;
+        margin-bottom: 1.5em;
+        color: #ffff;
+        font-family: var(--font-family);
+        font-weight: 900;
+        position: relative;
+        left: -200px;
+        top: 70px;
+        font-style: italic;
+        
+    
+    
+    }
+
+    .meow__header_buttons{
+        position: absolute;
+        left: -80px;
+        top: 350px;
+    }
+    
+    .buttonA{
+        width: 126.72px;
+        height: 48px;
+        flex: 2;
+        background-color: #624DE3;
+        font-family: var(--font-family);
+        color:#ffff;
+        cursor: pointer;
+        outline: none;
+        padding: 0 1rem;
+        border: none;
+    
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        
+    }
+    
+    
+    .buttonB{
+        position: absolute;
+        left: 145px;
+        width: 163.27px;
+        height: 48px;
+        flex: 2;
+        background-color: #151718;
+        font-family: var(--font-family);
+        color:#ffff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .meow_arrow_icon {
+        position: absolute;
+        left: 130px;
+        top: 15px;
+        
+        
+    
+      }
+    
+}
+
+/* --------MOBILE  ------------*/
+
+@media screen  and (max-width: 550px) { 
+
+    .meow__header {
+        flex-direction: column;
+        position: absolute;
+        left: 100px;
+
+    }
+    /* --------moon  ------------*/
+    .overlay-image1 {
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -190px; /* Ajuste conforme necessário */
+        left: -215px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image1 img {
+        opacity: 1;
+        width: 800px; 
+        
+      }
+    /* --------Bloor  ------------*/
+    .overlay-image2 {
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -30px; /* Ajuste conforme necessário */
+        left: -210px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image2 img {
+        width: 250x;
+        height: 230px;
+        opacity: 0.7; 
+        
+      }
+    
+    /* --------rede 2  ------------*/
+      .overlay-image3 {
+       
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -60px; /* Ajuste conforme necessário */
+        left: -360px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image3 img {
+        opacity: 0.8; 
+        width: 325px;
+        
+      }
+    
+      /* --------stars  ------------*/
+      .overlay-image4 {
+    
+        position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+        top: -120px; /* Ajuste conforme necessário */
+        left: -475px; /* Ajuste conforme necessário */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+      }
+    
+      .overlay-image4 img {
+        opacity: 1; 
+        width: 450px;
+        height: auto;
+        
+      }
+
+    /* --------Text: New Era of Memes  ------------*/
+
+    .meow__header-content h1 {  
+        font-size: 1.9em;
+        margin-bottom: 1.5em;
+        background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-family: var(--font-family);
+        position: relative;
+        left: -350px;
+        top: -145px;
+    }
+    /* --------frase de efeito: The first  ------------*/
+    .meow__header-content h2 {
+        font-size: 0.67em;
+        margin-bottom: 1.5em;
+        color: #ffff;
+        font-family: var(--font-family);
+        font-weight: 700;
+        position: relative;
+        left: -340px;
+        top: -135px;
+        
+    
+    }
+
+    /* -------Paragrafo header -----*/
+    .meow__header-content p {
+        font-size: 0.8em;
+        margin-bottom: 1.2em;
+        color: #ffff;
+        font-family: var(--font-family);
+        font-weight: 900;
+        position: relative;
+        left: -370px;
+        top: -115px;
+        font-style: italic;
+        
+    
+    
+    }
+
+    /* -------botões -----*/
+
+    .meow__header_buttons{
+        position: absolute;
+        left: -350px;
+        top: 175px;
+    }
+    
+    .buttonA{
+        width: 96.72px;
+        height: 48px;
+        flex: 2;
+        background-color: #624DE3;
+        font-family: var(--font-family);
+        color:#ffff;
+        cursor: pointer;
+        outline: none;
+        padding: 0 1rem;
+        border: none;
+    
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        
+    }
+    
+    
+    .buttonB{
+        position: absolute;
+        left: 145px;
+        width: 133.27px;
+        height: 48px;
+        flex: 2;
+        background-color: #151718;
+        font-family: var(--font-family);
+        color:#ffff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .meow_arrow_icon {
+        position: absolute;
+        left: 110px;
+        top: 14px;
+        
+        
+    
+      }
+    
+}
+
+@media screen  and (max-width: 376px) { 
+
+  .meow__header {
+      flex-direction: column;
+      position: absolute;
+      left: 1px;
+
+  }
+  /* --------moon  ------------*/
+  .overlay-image1 {
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -190px; /* Ajuste conforme necessário */
+      left: -215px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image1 img {
+      opacity: 1;
+      width: 800px; 
+      
+    }
+  /* --------Bloor  ------------*/
+  .overlay-image2 {
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -30px; /* Ajuste conforme necessário */
+      left: -210px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image2 img {
+      width: 250x;
+      height: 230px;
+      opacity: 0.7; 
+      
+    }
+  
+  /* --------rede 2  ------------*/
+    .overlay-image3 {
+     
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -60px; /* Ajuste conforme necessário */
+      left: -360px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image3 img {
+      opacity: 0.8; 
+      width: 325px;
+      
+    }
+  
+    /* --------stars  ------------*/
+    .overlay-image4 {
+  
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -120px; /* Ajuste conforme necessário */
+      left: -475px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image4 img {
+      opacity: 1; 
+      width: 450px;
+      height: auto;
+      
+    }
+
+  /* --------Text: New Era of Memes  ------------*/
+
+  .meow__header-content h1 {  
+      font-size: 1.9em;
+      margin-bottom: 1.5em;
+      background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      font-family: var(--font-family);
+      position: relative;
+      left: -350px;
+      top: -145px;
+  }
+  /* --------frase de efeito: The first  ------------*/
+  .meow__header-content h2 {
+      font-size: 0.67em;
+      margin-bottom: 1.5em;
+      color: #ffff;
+      font-family: var(--font-family);
+      font-weight: 700;
+      position: relative;
+      left: -340px;
+      top: -135px;
+      
+  
+  }
+
+  /* -------Paragrafo header -----*/
+  .meow__header-content p {
+      font-size: 0.1 em;
+      margin-bottom: 1.2em;
+      color: #ffff;
+      font-family: var(--font-family);
+      font-weight: 900;
+      position: relative;
+      left: -400px;
+      top: -115px;
+      font-style: italic;
+      
+  
+  
+  }
+
+  /* -------botões -----*/
+
+  .meow__header_buttons{
+      position: absolute;
+      left: -350px;
+      top: 175px;
+  }
+  
+  .buttonA{
+      width: 96.72px;
+      height: 48px;
+      flex: 2;
+      background-color: #624DE3;
+      font-family: var(--font-family);
+      color:#ffff;
+      cursor: pointer;
+      outline: none;
+      padding: 0 1rem;
+      border: none;
+  
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      
+  }
+  
+  
+  .buttonB{
+      position: absolute;
+      left: 145px;
+      width: 133.27px;
+      height: 48px;
+      flex: 2;
+      background-color: #151718;
+      font-family: var(--font-family);
+      color:#ffff;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+  }
+  
+  .meow_arrow_icon {
+      position: absolute;
+      left: 110px;
+      top: 14px;
+      
+      
+  
+    }
+  
+}
+
+@media screen  and (max-width: 431px) { 
+
+  .meow__header {
+      flex-direction: column;
+      position: absolute;
+      left: 10px;
+     
+
+  }
+  /* --------moon  ------------*/
+  .overlay-image1 {
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -190px; /* Ajuste conforme necessário */
+      left: -215px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image1 img {
+      opacity: 1;
+      width: 800px; 
+      
+    }
+  /* --------Bloor  ------------*/
+  .overlay-image2 {
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -30px; /* Ajuste conforme necessário */
+      left: -210px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image2 img {
+      width: 250x;
+      height: 230px;
+      opacity: 0.7; 
+      
+    }
+  
+  /* --------rede 2  ------------*/
+    .overlay-image3 {
+     
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -60px; /* Ajuste conforme necessário */
+      left: -360px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image3 img {
+      opacity: 0.8; 
+      width: 325px;
+      
+    }
+  
+    /* --------stars  ------------*/
+    .overlay-image4 {
+  
+      position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
+      top: -120px; /* Ajuste conforme necessário */
+      left: -475px; /* Ajuste conforme necessário */
+      transform: translate(-50%, -50%); /* Centraliza a imagem */
+    }
+  
+    .overlay-image4 img {
+      opacity: 1; 
+      width: 450px;
+      height: auto;
+      
+    }
+
+  /* --------Text: New Era of Memes  ------------*/
+
+  .meow__header-content h1 {  
+      font-size: 1.9em;
+      margin-bottom: 1.5em;
+      background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      font-family: var(--font-family);
+      position: relative;
+      left: -350px;
+      top: -145px;
+  }
+  /* --------frase de efeito: The first  ------------*/
+  .meow__header-content h2 {
+      font-size: 0.67em;
+      margin-bottom: 1.5em;
+      color: #ffff;
+      font-family: var(--font-family);
+      font-weight: 700;
+      position: relative;
+      left: -340px;
+      top: -135px;
+      
+  
+  }
+
+  /* -------Paragrafo header -----*/
+  .meow__header-content p {
+      font-size: 0.5em;
+      margin-bottom: 1.2em;
+      color: #ffff;
+      font-family: var(--font-family);
+      font-weight: 900;
+      position: relative;
+      left: -380px;
+      top: -115px;
+      font-style: italic;
+      
+  
+  
+  }
+
+  /* -------botões -----*/
+
+  .meow__header_buttons{
+      position: absolute;
+      left: -350px;
+      top: 90px;
+  }
+  
+  .buttonA{
+      width: 96.72px;
+      height: 48px;
+      flex: 2;
+      background-color: #624DE3;
+      font-family: var(--font-family);
+      color:#ffff;
+      cursor: pointer;
+      outline: none;
+      padding: 0 1rem;
+      border: none;
+  
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      
+  }
+  
+  
+  .buttonB{
+      position: absolute;
+      left: 145px;
+      width: 133.27px;
+      height: 48px;
+      flex: 2;
+      background-color: #151718;
+      font-family: var(--font-family);
+      color:#ffff;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+  }
+  
+  .meow_arrow_icon {
+      position: absolute;
+      left: 110px;
+      top: 14px;
+      
+      
+  
+    }
+  
+}
+
+
