@@ -42,18 +42,6 @@ a {
   }*/
 
 
-
-  .overlay-image {
-    position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-    top: 34%; /* Ajuste conforme necessário */
-    left: 50%; /* Ajuste conforme necessário */
-    transform: translate(-50%, -50%); /* Centraliza a imagem */
-  }
-
-  .overlay-image img {
-    opacity: 0.8; /* Define a transparência, ajuste conforme necessário */
-  }
-
   
 
   

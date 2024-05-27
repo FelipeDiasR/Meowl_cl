@@ -1,10 +1,10 @@
 import React from 'react';
 import './features.css';
 
-function Features() {
+function Partners() {
   return (
-    <div>Features</div>
+    <div>Partners</div>
   )
 }
 
-export default Features
+export default Partners

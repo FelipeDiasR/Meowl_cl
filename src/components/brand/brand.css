@@ -4,6 +4,21 @@
 
 }
 
+.overlay-imageback {
+    position: absolute;
+    top: -360px;
+    left: -675px;
+    
+
+}
+.overlay-imageback img {
+    opacity: 0.8; 
+    width: 1520px;
+    
+    
+}
+
+
 
 .meow__brand_first-content {
     color: #fff;
@@ -143,6 +158,991 @@
     height: 299;
     
 }
+
+
+
+/*-----mobile   MAX 1441 PX-----------------------------------------
+---------------------------------------------------
+----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 1441px) {
+
+
+    .meow_brand {
+        display: flex;
+       
+        
+       
+       }
+    .overlay-imageback {
+        position: absolute;
+        top: -590px;
+        left: -380px;
+        
+    
+    }
+    .overlay-imageback img {
+        opacity: 0.66; 
+        width: 1250px;
+        height: 1500px;
+        
+    
+        
+    }
+    
+    /* lauchpad sector */
+    
+    .meow__brand_first-content {
+        color: #fff;
+        position: absolute;
+        top: 1200px;
+        left: 300px;
+        font-family: var(--font-family);
+    }
+    
+    .meow__brand_first-content h1 {
+        position: absolute;
+        top: -100px;
+        left: 75px;
+        font-size: 2.3em;
+    
+    
+    }
+    
+    .meow__brand_first-content h2 {
+        font-size: 1.65em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 80px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_first-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 50px;
+        left: 80px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagefoguete {
+        position: absolute;
+        top: 10px;
+        left: -200px;
+       
+        
+    
+    }
+    .overlay-imagefoguete img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+   
+    
+    
+    /* ---------GAMING SECTOR -------*/
+    
+    .meow__brand_second-content {
+        color: #fff;
+        position: absolute;
+        top: 1450px;
+        left: 110px;
+        font-family: var(--font-family);
+    }
+    
+
+    
+    .meow__brand_second-content h2 {
+        font-size: 1.65em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_second-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 45px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagegame {
+        position: absolute;
+        top: 10px;
+        left: 625px;
+       
+        
+    
+    }
+    .overlay-imagegame img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+    
+    
+    /*----Staking sector ------ */
+    
+    .meow__brand_third-content {
+        color: #fff;
+        position: absolute;
+        top: 1700px;
+        left: 352px;
+        font-family: var(--font-family);
+    }
+    
+    
+    .meow__brand_third-content h2 {
+        font-size: 1.65em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_third-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagestaking {
+        position: absolute;
+        top: 10px;
+        left: -280px;
+       
+        
+    
+    }
+    .overlay-imagestaking img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+
+}
+
+/*-----mobile   MAX 1025 PX-----------------------------------------
+---------------------------------------------------
+----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 1025px) {
+
+
+    .meow_brand {
+        display: flex;
+       
+        
+       
+       }
+    .overlay-imageback {
+        position: absolute;
+        top: -590px;
+        left: -380px;
+        
+    
+    }
+    .overlay-imageback img {
+        opacity: 0.66; 
+        width: 1250px;
+        height: 1500px;
+        
+    
+        
+    }
+    
+    /* lauchpad sector */
+    
+    .meow__brand_first-content {
+        color: #fff;
+        position: absolute;
+        top: 1175px;
+        left: 300px;
+        font-family: var(--font-family);
+    }
+    
+    .meow__brand_first-content h1 {
+        position: absolute;
+        top: -100px;
+        left: 65px;
+        font-size: 2.3em;
+    
+    
+    }
+    
+    .meow__brand_first-content h2 {
+        font-size: 1.65em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 80px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_first-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 50px;
+        left: 80px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagefoguete {
+        position: absolute;
+        top: 10px;
+        left: -200px;
+       
+        
+    
+    }
+    .overlay-imagefoguete img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+   
+    
+    
+    /* ---------GAMING SECTOR -------*/
+    
+    .meow__brand_second-content {
+        color: #fff;
+        position: absolute;
+        top: 1450px;
+        left: 110px;
+        font-family: var(--font-family);
+    }
+    
+
+    
+    .meow__brand_second-content h2 {
+        font-size: 1.65em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_second-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 45px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagegame {
+        position: absolute;
+        top: 10px;
+        left: 625px;
+       
+        
+    
+    }
+    .overlay-imagegame img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+    
+    
+    /*----Staking sector ------ */
+    
+    .meow__brand_third-content {
+        color: #fff;
+        position: absolute;
+        top: 1700px;
+        left: 352px;
+        font-family: var(--font-family);
+    }
+    
+    
+    .meow__brand_third-content h2 {
+        font-size: 1.65em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_third-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagestaking {
+        position: absolute;
+        top: 10px;
+        left: -280px;
+       
+        
+    
+    }
+    .overlay-imagestaking img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+
+}
+
+/*-----mobile   MAX 769 PX-----------------------------------------
+---------------------------------------------------
+----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 769px) {
+
+
+    .meow_brand {
+        display: flex;
+        
+       
+       }
+    .overlay-imageback {
+        position: absolute;
+        top: -520px;
+        left: -600px;
+        
+    
+    }
+    .overlay-imageback img {
+        opacity: 0.7; 
+        width: 1250px;
+        height: 1300px;
+        
+    
+        
+    }
+    
+    /* lauchpad sector */
+    
+    .meow__brand_first-content {
+        color: #fff;
+        position: absolute;
+        top: 1150px;
+        left: 280px;
+        font-family: var(--font-family);
+    }
+    
+    .meow__brand_first-content h1 {
+        position: absolute;
+        top: -100px;
+        left: -5px;
+        font-size: 3em;
+        width: 1000px;
+    
+    
+    }
+    
+    .meow__brand_first-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -5px;
+        
+    }
+    
+    .meow__brand_first-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 1000px;
+        
+    }
+    
+    .overlay-imagefoguete {
+        position: absolute;
+        top: 60px;
+        left: -200px;
+       
+        
+    
+    }
+    .overlay-imagefoguete img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+   
+    
+    
+    /* ---------GAMING SECTOR -------*/
+    
+    .meow__brand_second-content {
+        color: #fff;
+        position: absolute;
+        top: 1420px;
+        left: 10px;
+        font-family: var(--font-family);
+    }
+    
+    
+    .meow__brand_second-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 80px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_second-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 60px;
+        left: 80px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        
+    }
+    
+    .overlay-imagegame {
+        position: absolute;
+        top: 10px;
+        left: 685px;
+       
+        
+    
+    }
+    .overlay-imagegame img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+    
+    
+    /*----Staking sector ------ */
+    
+    .meow__brand_third-content {
+        color: #fff;
+        position: absolute;
+        top: 1650px;
+        left: 280px;
+    }
+    
+    
+    
+    .meow__brand_third-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -5px;
+        
+    }
+    
+    .meow__brand_third-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 1000px;
+        
+        
+    }
+    
+    .overlay-imagestaking {
+        position: absolute;
+        top: 10px;
+        left: -220px;
+       
+        
+    
+    }
+    .overlay-imagestaking img {
+        opacity: 1; 
+        width: 220px;
+        height: 299;
+        
+    }
+
+
+}
+
+/*-----mobile   MAX 425 PX-----------------------------------------
+---------------------------------------------------
+----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 426px) {
+
+
+    .meow_brand {
+        display: flex;
+        
+       
+       }
+    .overlay-imageback {
+        position: absolute;
+        top: -520px;
+        left: -600px;
+        
+    
+    }
+    .overlay-imageback img {
+        opacity: 0.7; 
+        width: 1250px;
+        height: 1300px;
+        
+    
+        
+    }
+    
+    /* lauchpad sector */
+    
+    .meow__brand_first-content {
+        color: #fff;
+        position: absolute;
+        top: 1375px;
+        left: 200px;
+        font-family: var(--font-family);
+    }
+    
+    .meow__brand_first-content h1 {
+        position: absolute;
+        top: -100px;
+        left: 50px;
+        font-size: 3em;
+        width: 1000px;
+    
+    
+    }
+    
+    .meow__brand_first-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -5px;
+        
+    }
+    
+    .meow__brand_first-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 900px;
+        
+    }
+    
+    .overlay-imagefoguete {
+        position: absolute;
+        top: 60px;
+        left: -180px;
+       
+        
+    
+    }
+    .overlay-imagefoguete img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+   
+    
+    
+    /* ---------GAMING SECTOR -------*/
+    
+    .meow__brand_second-content {
+        color: #fff;
+        position: absolute;
+        top: 1675px;
+        left: 10px;
+        font-family: var(--font-family);
+    }
+    
+    
+    .meow__brand_second-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 80px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_second-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 60px;
+        left: 75px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 900px;
+        
+    }
+    
+    .overlay-imagegame {
+        position: absolute;
+        top: 10px;
+        left: 635px;
+       
+        
+    
+    }
+    .overlay-imagegame img {
+        opacity: 1; 
+        width: 200px;
+        height: 299;
+        
+    }
+
+    
+    
+    /*----Staking sector ------ */
+    
+    .meow__brand_third-content {
+        color: #fff;
+        position: absolute;
+        top: 1975px;
+        left: 201px;
+    }
+    
+    
+    
+    .meow__brand_third-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -5px;
+        
+    }
+    
+    .meow__brand_third-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 1000px;
+        
+        
+    }
+    
+    .overlay-imagestaking {
+        position: absolute;
+        top: 10px;
+        left: -220px;
+       
+        
+    
+    }
+    .overlay-imagestaking img {
+        opacity: 1; 
+        width: 220px;
+        height: 299;
+        
+    }
+
+
+}
+
+/*-----mobile   MAX 376 PX-----------------------------------------
+---------------------------------------------------
+----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------*/
+
+
+/*-----mobile   MAX 321 PX-----------------------------------------
+---------------------------------------------------
+----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------*/
+
+@media screen and (max-width: 321px) {
+
+
+    .meow_brand {
+        display: flex;
+        
+       
+       }
+    .overlay-imageback {
+        position: absolute;
+        top: -520px;
+        left: -600px;
+        
+    
+    }
+    .overlay-imageback img {
+        opacity: 0.7; 
+        width: 1250px;
+        height: 1300px;
+        
+    
+        
+    }
+    
+    /* lauchpad sector */
+    
+    .meow__brand_first-content {
+        color: #fff;
+        position: absolute;
+        top: 1375px;
+        left: 145px;
+        font-family: var(--font-family);
+    }
+    
+    .meow__brand_first-content h1 {
+        position: absolute;
+        top: -100px;
+        left: 85px;
+        font-size: 3em;
+        width: 1000px;
+    
+    
+    }
+    
+    .meow__brand_first-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -5px;
+        
+    }
+    
+    .meow__brand_first-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 900px;
+        
+    }
+    
+    .overlay-imagefoguete {
+        position: absolute;
+        top: 60px;
+        left: -140px;
+       
+        
+    
+    }
+    .overlay-imagefoguete img {
+        opacity: 1; 
+        width: 190px;
+        height: 299;
+        
+    }
+
+   
+    
+    
+    /* ---------GAMING SECTOR -------*/
+    
+    .meow__brand_second-content {
+        color: #fff;
+        position: absolute;
+        top: 1675px;
+        left: -30px;
+        font-family: var(--font-family);
+    }
+    
+    
+    .meow__brand_second-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 80px;
+        top: -20px;
+        
+    }
+    
+    .meow__brand_second-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 60px;
+        left: 75px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 900px;
+        
+    }
+    
+    .overlay-imagegame {
+        position: absolute;
+        top: 10px;
+        left: 635px;
+       
+        
+    
+    }
+    .overlay-imagegame img {
+        opacity: 1; 
+        width: 180px;
+        height: 299;
+        
+    }
+
+    
+    
+    /*----Staking sector ------ */
+    
+    .meow__brand_third-content {
+        color: #fff;
+        position: absolute;
+        top: 1975px;
+        left: 145px;
+    }
+    
+    
+    
+    .meow__brand_third-content h2 {
+        font-size: 2em;
+        margin-bottom: 1.3em;
+        position: absolute;
+        left: 25px;
+        top: -5px;
+        
+    }
+    
+    .meow__brand_third-content p {
+        
+        font-family: var(--font-family);
+        position: relative;
+        top: 70px;
+        left: 25px;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: left;
+        white-space: pre-wrap;
+        width: 1000px;
+        
+        
+    }
+    
+    .overlay-imagestaking {
+        position: absolute;
+        top: 10px;
+        left: -155px;
+       
+        
+    
+    }
+    .overlay-imagestaking img {
+        opacity: 1; 
+        width: 180px;
+        height: 299;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
 
 
 

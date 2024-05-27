@@ -3,7 +3,7 @@ import React from 'react';
 
 
 //import moon from './img/assets/moon4.svg';
-import rede from './img/assets/div3.svg';
+//import rede from './img/assets/div3.svg';
 //import bloor from './img/assets/bloor.svg';
 
 import './App.css';
@@ -11,9 +11,13 @@ import './App.css';
 
 
 import { /*Article,*/ Brand, /*Cta, Fature,*/ Navbar } from './components';
-import { Footer, Features, Header, Preesale, Tokenomics } from './containers';
+import { Footer, Partners, Header, Preesale, Tokenomics } from './containers';
   
-
+/* <div className='teste'>
+            <img src={moon} alt="moon"/>
+            </div>
+             
+            style={{ backgroundImage:`url(${moon})`}}//*/
 
 
 const App = () => {
@@ -22,15 +26,10 @@ const App = () => {
       <div className='gradient_bg'  >
          <Navbar />
          <Header />
-          <div className='overlay-image' >
-            <img src={rede} alt="rede" />
-          </div>
-          
-
         </div>
       <Brand />
-      <Features />
       <Preesale />
+      <Partners />
       <Tokenomics />
       <Footer />
       

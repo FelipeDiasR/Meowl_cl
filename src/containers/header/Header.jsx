@@ -6,6 +6,7 @@ import Bloor from '../../img/assets/bloor.svg';
 import Rede2 from '../../img/assets/rede2.svg';
 import Starts from '../../img/assets/Canvas.svg';
 import moon from '../../img/assets/teste5.svg'
+import rede from '../../img/assets/div3.svg';
 
 const Header =() => {
   return (
@@ -14,6 +15,9 @@ const Header =() => {
         <div className='overlay-image1'>
         <img src={moon} alt="moon" />
           </div>
+        <div className='overlay-image' >
+            <img src={rede} alt="rede" />
+        </div> 
         <div className='overlay-image2'>
             <img src={Bloor} alt="bloor" />
           </div>

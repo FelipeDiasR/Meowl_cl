@@ -1,7 +1,7 @@
 import React from 'react';
 import './preesale.css';
 
-function Preesale() {
+const Preesale = () =>  {
   return (
     <div>Preesale</div>
   )
