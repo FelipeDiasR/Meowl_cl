@@ -1,0 +1,110 @@
+.meow__partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 3100px;
+    left: 375px;
+    
+    
+
+
+}
+
+.meow__partners h2 {
+    position: absolute;
+    top: -75px;
+    left: 345px;
+    font-size: 0.8em;
+    font-weight: 350;
+    font-family: var(--font-family);
+    color: rgba(255, 255, 255, 0.719);
+    width: 200px;
+    
+    
+
+}
+
+.overlay-imagepolly {
+    position: absolute;
+    left: -55px;
+}
+
+.overlay-imagebase {
+    position: absolute;
+    left: 280px;
+}
+
+.overlay-imagemeowl {
+    position: absolute;
+    left: 485px;
+
+}
+
+
+  /* tela até 500px -------------------
+--------------------------------------
+------------------------------*/  
+@media screen and (max-width: 500px) {
+
+    .meow__partners {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: absolute;
+        top: 3050px;
+        left: -165px;
+        
+        
+    
+    
+    }
+    
+    .meow__partners h2 {
+        position: absolute;
+        top: -75px;
+        left: 345px;
+        font-size: 0.8em;
+        font-weight: 350;
+        font-family: var(--font-family);
+        color: rgba(255, 255, 255, 0.719);
+        width: 200px;
+        
+        
+    
+    }
+    
+    .mewo_partners-container{
+        position: absolute;
+        left: 30px;
+    }
+    
+    .overlay-imagepolly {
+        position: absolute;
+        left: 150px;
+    }
+    .overlay-imagepolly img {
+        width: 150px;
+
+    }
+    
+    .overlay-imagebase {
+        position: absolute;
+        left: 280px;
+    }
+    .overlay-imagebase img {
+        width: 150px;
+
+    }
+    
+    .overlay-imagemeowl {
+        position: absolute;
+        left: 400px;
+        top: 15px;
+    
+    }
+    .overlay-imagemeowl img {
+        width: 150px;
+    }
+
+}
