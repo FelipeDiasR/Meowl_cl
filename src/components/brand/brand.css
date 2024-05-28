@@ -775,15 +775,15 @@
         color: #fff;
         position: absolute;
         top: 950px;
-        left: 10px;
+        left: 1px;
         font-family: var(--font-family);
     }
     
     .meow__brand_first-content h1 {
         position: absolute;
         top: -100px;
-        left: 35px;
-        font-size: 3em;
+        left: 55px;
+        font-size: 2.4em;
         width: 1000px;
     
     
@@ -793,7 +793,7 @@
         font-size: 2em;
         margin-bottom: 1.3em;
         position: absolute;
-        left: 25px;
+        left: 100px;
         top: -5px;
         
     }
@@ -801,21 +801,21 @@
     .meow__brand_first-content p {
         
         font-family: var(--font-family);
-        position: relative;
+        position: absolute;
         top: 70px;
-        left: 25px;
-        font-size: 0.7em;
+        left: 70px;
+        font-size: 1.2em;
         line-height: 1.3em;
-        text-align: left;
+        text-align: center;
         white-space: pre-wrap;
-        width: 600px;
+        width: 225px;
         
     }
     
     .overlay-imagefoguete {
         position: absolute;
-        top: 145px;
-        left: 25px;
+        top: 355px;
+        left: 225px;
        
         
     
@@ -835,7 +835,7 @@
     .meow__brand_second-content {
         color: #fff;
         position: absolute;
-        top: 1300px;
+        top: 1450px;
         left: -46px;
         font-family: var(--font-family);
     }
@@ -845,7 +845,7 @@
         font-size: 2em;
         margin-bottom: 1.3em;
         position: absolute;
-        left: 80px;
+        left: 160px;
         top: -20px;
         
     }
@@ -854,19 +854,19 @@
         
         font-family: var(--font-family);
         position: relative;
-        top: 60px;
-        left: 80px;
-        font-size: 0.7em;
+        top: 95px;
+        left: 120px;
+        font-size: 1.2em;
         line-height: 1.3em;
-        text-align: left;
+        text-align: center;
         white-space: pre-wrap;
-        width: 600px;
+        width: 225px;
         
     }
     
     .overlay-imagegame {
         position: absolute;
-        top: 125px;
+        top: 330px;
         left: 275px;
        
         
@@ -886,7 +886,7 @@
     .meow__brand_third-content {
         color: #fff;
         position: absolute;
-        top: 1600px;
+        top: 1900px;
         left: 10px;
         font-family: var(--font-family);
     }
@@ -896,8 +896,8 @@
         font-size: 2em;
         margin-bottom: 1.3em;
         position: absolute;
-        left: 25px;
-        top: -5px;
+        left: 110px;
+        top: 35px;
         
     }
     
@@ -905,20 +905,20 @@
         
         font-family: var(--font-family);
         position: relative;
-        top: 70px;
-        left: 25px;
-        font-size: 0.7em;
+        top: 155px;
+        left: 70px;
+        font-size: 1.2em;
         line-height: 1.3em;
-        text-align: left;
+        text-align: center;
         white-space: pre-wrap;
-        width: 600px;
+        width: 225px;
         
     }
     
     .overlay-imagestaking {
         position: absolute;
-        top: 145px;
-        left: 25px;
+        top: 480px;
+        left: 225px;
        
         
     
