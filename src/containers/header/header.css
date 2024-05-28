@@ -1374,27 +1374,28 @@
  /*imagem Blooor ------*/
 .overlay-image2 {
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-    top: 375px; /* Ajuste conforme necessário */
-    left: 425px; /* Ajuste conforme necessário */
+    top: 50px; /* Ajuste conforme necessário */
+    left: 220px; /* Ajuste conforme necessário */
     transform: translate(-50%, -50%); /* Centraliza a imagem */
   }
 
   .overlay-image2 img {
-    opacity: 0.7; 
+    opacity: 0.7;
+    width: 725px; 
     
   }
   /*imagem grelha2 ------*/
   .overlay-image3 {
     
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-    top: 300px; /* Ajuste conforme necessário */
+    top: 13px; /* Ajuste conforme necessário */
     left: 10px; /* Ajuste conforme necessário */
     transform: translate(-50%, -50%); /* Centraliza a imagem */
   }
 
   .overlay-image3 img {
     opacity: 1;
-    width: 870px;
+    width: 400px;
     
      
     
@@ -1403,13 +1404,14 @@
   .overlay-image4 {
     
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-    top: 20%; /* Ajuste conforme necessário */
-    left: 70px; /* Ajuste conforme necessário */
+    top: -50px; /* Ajuste conforme necessário */
+    left: -70px; /* Ajuste conforme necessário */
     transform: translate(-50%, -50%); /* Centraliza a imagem */
   }
 
   .overlay-image4 img {
     opacity: 1; 
+    width: 600px;
     
   }
 
@@ -1437,21 +1439,21 @@
     font-weight: 700;
     font-family: var(--font-family);
     position: absolute;
-    top: -60px;
+    top: -80px;
     left: -290px;
     width: 1000px;
      /*777*/
 }
 
 .meow__header-content h2 {
-    font-size: 1.5em;
+    font-size: 0.82em;
     margin-bottom: 1.5em;
     color: #ffff;
     font-family: var(--font-family);
     font-weight: 700;
     position: absolute;
-    left: -55px;
-    top: 255px;
+    left: -285px;
+    top: 13px;
     width: 1000px;
     
 
@@ -1461,16 +1463,16 @@
   /*-----patagrafo ----*/
 
 .meow__header-content p {
-    font-size: 1.4em;
+    font-size: 0.9em;
     margin-bottom: 1.5em;
     color: #ffff;
     font-family: var(--font-family);
     font-weight: 800;
     position: absolute;
-    left: 235px;
-    top: 365px;
+    left: 105px;
+    top: 55px;
     font-style: italic;
-    width: 375px;
+    width: 220px;
     
 
 
@@ -1480,13 +1482,14 @@
 
 .meow__header_buttons{
     position: absolute;
-    left: 270px;
-    top: 720px;
+    left: 105px;
+    top: 280px;
+  
 }
 
 .buttonA{
-    width: 126.72px;
-    height: 48px;
+    width: 90.72px;
+    height: 32px;
     flex: 2;
     background-color: #624DE3;
     font-family: var(--font-family);
@@ -1506,9 +1509,9 @@
 
 .buttonB{
     position: absolute;
-    left: 145px;
-    width: 163.27px;
-    height: 48px;
+    margin-left: -3em;
+    width: 115.27px;
+    height: 35px;
     flex: 2;
     background-color: #151718;
     font-family: var(--font-family);
@@ -1521,8 +1524,8 @@
 
 .meow_arrow_icon {
     position: absolute;
-    left: 130px;
-    top: 15px;
+    left: 95px;
+    top: 10px;
     
     
 
