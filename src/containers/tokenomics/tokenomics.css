@@ -1,0 +1,100 @@
+.meow__tokenomics {
+    font-size: 2em;
+    color: #ffff;
+    margin-top: 165rem;
+    margin-left: 42rem;
+
+}
+
+.meow__tokenomics_container {
+    position: absolute;
+    left: 39rem;
+
+}
+
+
+
+.meow__tokenomics_container h1 {
+    font-family: var(--font-family);
+    font-size: 2.8rem;
+
+}
+
+.meow__tokenomics_container h3 {
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    margin-left: 20rem;
+    line-height: 2.5em;
+    font-weight: 650;
+    margin-top: 7rem;
+
+}
+
+.overlay-imagechart {
+    position: absolute;
+    left: -50rem;
+    top: 3rem;
+}
+.overlay-imagechart img {
+    width: 75rem;
+
+}
+
+
+
+/*------------------ Até 500px -------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+*/
+@media screen and (max-width: 500px) {
+
+    .meow__tokenomics {
+        font-size: 2em;
+        color: #ffff;
+        margin-top: 140rem;
+        margin-left: 42rem;
+    
+    }
+    
+    .meow__tokenomics_container {
+        position: absolute;
+        left: 4.8rem;
+    
+    }
+    
+    
+    
+    .meow__tokenomics_container h1 {
+        font-family: var(--font-family);
+        font-size: 2.8rem;
+        margin-left: 0.5rem;
+        
+       
+    }
+    
+    .meow__tokenomics_container h3 {
+        font-family: var(--font-family);
+        font-size: 0.8em;
+        margin-left: 2.5rem;
+        line-height: 2.5em;
+        font-weight: 650;
+        margin-top: 4rem;
+    
+    }
+    
+    .overlay-imagechart {
+        display: none;
+        position: absolute;
+        left: -5rem;
+        top: 3rem;
+    }
+    .overlay-imagechart img {
+        width: 25rem;
+    
+    }
+
+
+}
