@@ -1,5 +1,7 @@
-export { default as Partners } from './partners/Partners.jsx';
+export { default as Partners } from './pages/home/partners/Partners.jsx';
 export { default as Footer } from './footer/Footer.jsx';
-export { default as Header } from './header/Header.jsx';
-export { default as Preesale } from './preesale/Preesale.jsx';
-export { default as Tokenomics } from './tokenomics/Tokenomics.jsx';
+export { default as Header } from './pages/home/header/Header.jsx';
+export { default as Preesale } from './pages/home/preesale/Preesale.jsx';
+export { default as Tokenomics } from './pages/home/tokenomics/Tokenomics.jsx';
+export { default as Brand } from './pages/home/brand/Brand.jsx';
+export { default as Cta } from './pages/home/cta/Cta.jsx';

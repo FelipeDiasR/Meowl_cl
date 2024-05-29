@@ -1,5 +1,7 @@
 .meow__header {
     display: flex;
+    position: relative;
+    margin-top: -30rem;
     /*background-image: url(../../img/assets/moon.png);
     background-position: bottom;*/
     
@@ -79,7 +81,7 @@
     flex-direction: column;
     position: relative;
     left: 400px;
-    top: 240px;
+    top: 1px;
     text-align: center;
 
 
