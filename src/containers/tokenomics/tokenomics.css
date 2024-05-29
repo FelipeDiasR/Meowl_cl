@@ -72,7 +72,7 @@
         background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
          rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); /* Cor de fundo */
         padding: 20px;
-        margin-top: 135rem;
+        margin-top: 148rem;
         margin-left: 1.5rem;
         width: 100%; /* Ocupa toda a largura disponível */
         box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
@@ -85,7 +85,7 @@
   
       .meow__tokenomics_container {
         position: relative;
-        top: -15rem;
+        top: -10rem;
         left: -11.5rem;
         color: #ffff; /* Ajusta a cor do texto */
         max-width: 800px; /* Define uma largura máxima para o container */
