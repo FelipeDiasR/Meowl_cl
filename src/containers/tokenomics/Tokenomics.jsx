@@ -6,6 +6,7 @@ const Tokenomics = () => {
   return (
     <div className='meow__tokenomics section__padding'>
       <div className='meow__tokenomics_container'>
+        
         <h1> Tokenomics </h1>
         
         <h3> Integrations:  3% <br/> LP Incentives: 20% <br/> 
@@ -17,10 +18,9 @@ const Tokenomics = () => {
         <div className='overlay-imagechart'>
         <img src={Chart} alt="Chart" />
         </div>
+
         
-        
-        
-        
+                
         
         
         
