@@ -1,100 +1,128 @@
 .meow__tokenomics {
     font-size: 2em;
-    color: #ffff;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
+     rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); /* Cor de fundo */
+    padding: 20px;
     margin-top: 165rem;
-    margin-left: 42rem;
-
-}
-
-.meow__tokenomics_container {
-    position: absolute;
-    left: 39rem;
-
-}
-
-
-
-.meow__tokenomics_container h1 {
+    margin-left: 1.5rem;
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
+    display: flex; /* Usado para centralizar conteúdo verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: calc(100vh + 100px); /* Aumente a altura do fundo */
+    
+  }
+  
+  .meow__tokenomics_container {
+    position: relative;
+    top: -15rem;
+    color: #ffff; /* Ajusta a cor do texto */
+    max-width: 800px; /* Define uma largura máxima para o container */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
+  }
+  
+  .meow__tokenomics_container h1 {
     font-family: var(--font-family);
-    font-size: 2.8rem;
-
-}
-
-.meow__tokenomics_container h3 {
+    font-size: 2.4rem;
+    text-align: center; /* Centraliza o texto */
+    position: absolute;
+    top: -4rem;
+    left: 16rem;
+  }
+  
+  .meow__tokenomics_container h3 {
+    position: absolute;
+    text-align: left;
+    left: 36rem;
+    top: 5rem;
     font-family: var(--font-family);
     font-size: 0.8em;
-    margin-left: 20rem;
-    line-height: 2.5em;
+    line-height: 2.1em;
     font-weight: 650;
-    margin-top: 7rem;
+    width: 15rem;
 
-}
-
-.overlay-imagechart {
+  }
+  
+  .overlay-imagechart {
+    margin-top: 20px; /* Espaçamento acima da imagem */
+    text-align: center; /* Centraliza a imagem */
+  }
+  
+  .overlay-imagechart img {
+    width: 69rem;
     position: absolute;
-    left: -50rem;
-    top: 3rem;
-}
-.overlay-imagechart img {
-    width: 75rem;
-
-}
-
-
-
-/*------------------ Até 500px -------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
-*/
-@media screen and (max-width: 500px) {
-
+    left: -30rem;
+    top: -1rem;
+    height: auto;
+  }
+  
+  /*------------------ Até 500px -----------------------------
+  ------------------------------------------------------------
+  -------------------------------------------------------------
+  -------------------------------------------------------------
+  -------------------------------------------------------- */
+  @media screen and (max-width: 500px) {
     .meow__tokenomics {
         font-size: 2em;
-        color: #ffff;
-        margin-top: 150rem;
-        margin-left: 42rem;
-    
-    }
-    
-    .meow__tokenomics_container {
-        position: absolute;
-        left: 4.8rem;
-    
-    }
-    
-    
-    
-    .meow__tokenomics_container h1 {
-        font-family: var(--font-family);
-        font-size: 2.8rem;
-        margin-left: 0.5rem;
+        color: #fff;
+        background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
+         rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); /* Cor de fundo */
+        padding: 20px;
+        margin-top: 135rem;
+        margin-left: 1.5rem;
+        width: 100%; /* Ocupa toda a largura disponível */
+        box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
+        display: flex; /* Usado para centralizar conteúdo verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        min-height: calc(70vh + 5rem); /* Aumente a altura do fundo */
         
-       
-    }
-    
-    .meow__tokenomics_container h3 {
+      }
+  
+      .meow__tokenomics_container {
+        position: relative;
+        top: -15rem;
+        left: -11.5rem;
+        color: #ffff; /* Ajusta a cor do texto */
+        max-width: 800px; /* Define uma largura máxima para o container */
+        width: 100%; /* Garante que o container ocupe toda a largura disponível */
+        padding: 20px;
+        box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
+      }
+      
+      .meow__tokenomics_container h1 {
+        font-family: var(--font-family);
+        font-size: 2.4rem;
+        text-align: center; /* Centraliza o texto */
+        position: absolute;
+        top: -4rem;
+        left: 16rem;
+      }
+      
+      .meow__tokenomics_container h3 {
+        position: absolute;
+        text-align: left;
+        left: 16.5rem;
+        top: 5rem;
         font-family: var(--font-family);
         font-size: 0.8em;
-        margin-left: 2.5rem;
-        line-height: 2.5em;
+        line-height: 2.1em;
         font-weight: 650;
-        margin-top: 4rem;
+        width: 15rem;
     
-    }
-    
+      }
+  
     .overlay-imagechart {
-        display: none;
-        position: absolute;
-        left: -5rem;
-        top: 3rem;
+      display: none; /* Esconde a imagem em telas pequenas */
     }
+  
     .overlay-imagechart img {
-        width: 25rem;
-    
+      width: 100%;
+      max-width: 300px;
     }
-
-
-}
+  }
+  
