@@ -10,7 +10,7 @@ import './App.css';
 
 
 
-import { /*Article,*/ Brand, /*Cta, Fature,*/ Navbar } from './components';
+import { /*Article,*/ Brand, Cta, /*Fature,*/ Navbar } from './components';
 import { Footer, Partners, Header, Preesale, Tokenomics } from './containers';
   
 /* <div className='teste'>
@@ -31,6 +31,7 @@ const App = () => {
       <Preesale />
       <Partners />
       <Tokenomics />
+      <Cta/>
       <Footer />
       
      

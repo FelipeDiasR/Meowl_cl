@@ -1,0 +1,12 @@
+.meow_cta {
+    display: flex;
+
+}
+
+.meow_cta_container {
+    margin-top: 5rem;
+    margin-left: 40rem;
+    color: #ffff;
+    font-family: var(--font-family);
+
+}

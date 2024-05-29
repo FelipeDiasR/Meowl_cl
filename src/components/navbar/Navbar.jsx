@@ -47,7 +47,7 @@ const Navbar =() => {
 
         {toggleMenu && (
           <div className="meow__navbar-menu_container">  
-            <div ClassName="meow__navbar-menu_container_link"> 
+            <div className="meow__navbar-menu_container_link"> 
              <Menu />
              <div className='meow__navbar_menu_whitepaper-buy'>
               <p> <a href="#whitwpaper"> </a>Whitepaper</p>        

@@ -1,9 +1,22 @@
 import React from 'react';
 import './cta.css';
+import Email from '../../img/icons/email.svg';
 
-function Cta() {
+const Cta = () => {
   return (
-    <div>Cta</div>
+    <div className='meow_cta section__padding '>
+        <div className='meow_cta_container'>
+            <h1> Join the preesale </h1>
+          
+          
+          <input type='email' clasname='input' required></input>
+
+          <div className='meow_cta_button'>
+            <button className='button1' type='button'> subscribe</button>
+            </div>
+          
+          </div>
+      </div>
   )
 }
 
