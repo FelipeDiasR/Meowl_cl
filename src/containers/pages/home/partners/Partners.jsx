@@ -1,6 +1,6 @@
 import React from 'react';
 import './partners.css';
-import { Base, MeowlVerse, Pollygon} from '../../img/partners/imports'
+import { Base, MeowlVerse, Pollygon} from '../../../../img/partners/imports'
 
 function Partners() {
   return (

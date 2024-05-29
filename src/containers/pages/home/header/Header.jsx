@@ -2,11 +2,11 @@ import React from 'react';
 import './header.css';
 
 import { GoArrowRight } from "react-icons/go";
-import Bloor from '../../img/assets/bloor.svg';
-import Rede2 from '../../img/assets/rede2.svg';
-import Starts from '../../img/assets/Canvas.svg';
-import moon from '../../img/assets/teste5.svg'
-import rede from '../../img/assets/div3.svg';
+import Bloor from '../../../../img/assets/bloor.svg';
+import Rede2 from '../../../../img/assets/rede2.svg';
+import Starts from '../../../../img/assets/Canvas.svg';
+import moon from '../../../../img/assets/teste5.svg'
+import rede from '../../../../img/assets/div3.svg';
 
 const Header =() => {
   return (
