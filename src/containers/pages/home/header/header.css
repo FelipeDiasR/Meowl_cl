@@ -1191,8 +1191,8 @@
 @media screen and (max-width: 500px) {
   .meow__header {
     display: flex;
-    margin-top: -37rem;
-    margin-left: 1rem;
+    margin-top: -36rem;
+    margin-left: 0.9rem;
     
 
     /*background-image: url(../../img/assets/moon.png);
