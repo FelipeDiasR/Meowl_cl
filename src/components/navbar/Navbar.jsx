@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
-import Logotipo from '../../img/logotipo.png';
+import Logotipo from '../../img/logotipo.svg';
 import Buybutton from '../../img/Buy.png';
 import './navbar.css';
 
