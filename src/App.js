@@ -9,7 +9,7 @@ import './App.css';
 
 
 import { Navbar } from './components';
-import { Footer } from './containers';
+import { Footer } from './components';
   
 /* <div className='teste'>
             <img src={moon} alt="moon"/>

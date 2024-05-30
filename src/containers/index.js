@@ -1,5 +1,4 @@
 export { default as Partners } from './pages/home/partners/Partners.jsx';
-export { default as Footer } from './footer/Footer.jsx';
 export { default as Header } from './pages/home/header/Header.jsx';
 export { default as Preesale } from './pages/home/preesale/Preesale.jsx';
 export { default as Tokenomics } from './pages/home/tokenomics/Tokenomics.jsx';
