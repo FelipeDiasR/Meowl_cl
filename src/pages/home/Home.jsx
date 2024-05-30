@@ -4,7 +4,7 @@ import React from 'react';
 
 //importing parts of the page
 //import { /*Article,*Fature,*/ Navbar } from '../../components';
-import { Footer, Partners, Header, Preesale, Tokenomics, Brand, Cta } from '../../containers';
+import { Partners, Header, Preesale, Tokenomics, Brand, Cta } from '../../containers';
   
 
 
@@ -20,7 +20,7 @@ const Home = () => {
       <Partners />
       <Tokenomics />
       <Cta/>
-      <Footer />
+      
       
      
     </div>
