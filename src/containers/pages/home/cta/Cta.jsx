@@ -12,7 +12,6 @@ const Cta = () => {
         <div className='meow_cta__input'>
           <input className='testando12' type='email' placeholder='Your email' />
           <img className='meow_cta__input_email' src={Email} alt='Email' />
-          <img className='meow_cta__input_subscribe' src={Subscribe} alt='Subscribe' />
           <button className='button1' type='button'> 
           <FaLocationArrow className='meow_cta_arrow_icon'/> 
           <h3 className='meow_cta_text'>Subscribe</h3>
