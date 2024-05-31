@@ -1,7 +1,12 @@
-.meow_brand {
- display: flex;
- 
-
+.meow__brand {
+    background: linear-gradient(90deg, rgba(113, 61, 255, 0.007) 0%,
+    rgba(113, 61, 255, 0.099) 50%, rgba(113, 61, 255, 0.009) 100%); 
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    min-height: calc(70vh + 70rem);
+    margin-top: -5rem;
+    
 }
 
 .overlay-imageback {
@@ -745,14 +750,19 @@
 -----------------------------------------------------
 -----------------------------------------------------*/
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
 
 
-    .meow_brand {
+    .meow__brand {
+        background: linear-gradient(90deg, rgba(113, 61, 255, 0.007) 0%,
+        rgba(113, 61, 255, 0.099) 50%, rgba(113, 61, 255, 0.009) 100%); 
+        padding: 20px;
+        box-sizing: border-box;
         display: flex;
+        min-height: calc(70vh + 72rem);
+        margin-top: -10rem;
         
-       
-       }
+    }
     .overlay-imageback {
         position: absolute;
         top: -600px;

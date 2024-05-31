@@ -5,6 +5,7 @@
     background-color: transparent;
 
     padding: 2rem 6rem;
+   
 
 }
 
@@ -30,8 +31,15 @@
 .meow__navbar-links_container {
     display: flex;
     flex-direction: row;
-
-
+    width: 143px;
+    height: 38px;
+    margin-right: 2em;
+    background-color: #686DF1;
+    color: #ffff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .meow__navbar-sign {
@@ -386,11 +394,6 @@
    }
 }
 
-/* media scren to 550 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
 
 /* media scren to 550 px-------------------------
 -------------------------------------------------

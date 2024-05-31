@@ -70,7 +70,7 @@
 ------------------------------------------
 ------------------------------------------*/
 
- @media screen and (max-width: 426px) {
+ @media screen and (max-width: 500px) {
     .meow__preesale {
         display: flex;
     
@@ -82,8 +82,8 @@
         color: #fff;
         font-family: var(--font-family);
         text-align: center;
-        margin-top: 1rem;
-        margin-left: -21.5rem;
+        margin-top: 4rem;
+        margin-left: -22rem;
     
     }
     

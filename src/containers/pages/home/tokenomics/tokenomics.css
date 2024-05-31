@@ -4,7 +4,7 @@
     background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
      rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); /* Cor de fundo */
     padding: 20px;
-    margin-top: 145rem;
+    margin-top: 55rem;
     margin-left: -0.4rem;
     width: 100%; /* Ocupa toda a largura disponível */
     box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
@@ -72,7 +72,7 @@
         background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
          rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); /* Cor de fundo */
         padding: 20px;
-        margin-top: 134rem;
+        margin-top: 45rem;
         margin-left: -0.2rem;
         width: 100%; /* Ocupa toda a largura disponível */
         box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
@@ -85,7 +85,7 @@
   
       .meow__tokenomics_container {
         position: relative;
-        top: -10rem;
+        top: -12rem;
         left: -11.5rem;
         color: #ffff; /* Ajusta a cor do texto */
         max-width: 800px; /* Define uma largura máxima para o container */

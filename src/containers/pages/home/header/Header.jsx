@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 import Bloor from '../../../../img/assets/bloor.svg';
 import Rede2 from '../../../../img/assets/rede2.svg';
 import Starts from '../../../../img/assets/Canvas.svg';
-import moon from '../../../../img/assets/teste5.svg'
+import moon from '../../../../img/assets/testando.svg'
 import rede from '../../../../img/assets/div3.svg';
 
 const Header =() => {
@@ -42,7 +42,7 @@ const Header =() => {
             <button className='buttonA' type="button" > Preesale</button>
             <button className='buttonB' type="button"  > Lauchpad  <GoArrowRight className='meow_arrow_icon'/></button>
             
-
+ 
 
           </div>
           
