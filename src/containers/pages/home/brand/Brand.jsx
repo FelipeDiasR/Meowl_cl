@@ -10,11 +10,6 @@ const Brand =() => {
   return (
     <div className='meow__brand section__padding' > 
        <div className='meow__brand_first-content'>
-          <div className='overlay-imageback'> <img src={BackgroundHero} alt="BackgroundHero" />
-          
-          
-          </div>
-         
           <h1> What we offer </h1>
           <h2> Launchpad </h2>
           <p>Explore the MeowlVerse Launchpad, where innovative projects <br/> 

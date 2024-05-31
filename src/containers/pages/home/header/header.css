@@ -29,7 +29,7 @@
 
   .overlay-image1 img {
     opacity: 1;
-    width: 2000px; 
+    width: 1000px; 
     
   }
 
@@ -408,7 +408,7 @@
 /*imagem grelha1 ------*/
 .overlay-image {
   position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-  top: -175px; /* Ajuste conforme necessário */
+  top: -160px; /* Ajuste conforme necessário */
   left: 450px; /* Ajuste conforme necessário */
   transform: translate(-50%, -50%); /* Centraliza a imagem */
 }
@@ -419,14 +419,15 @@
  /*imagem Mooon ------*/
 .overlay-image1 {
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-    top: -70px; /* Ajuste conforme necessário */
+    top: -25px; /* Ajuste conforme necessário */
     left: 450px; /* Ajuste conforme necessário */
     transform: translate(-50%, -50%); /* Centraliza a imagem */
+    
   }
 
   .overlay-image1 img {
     opacity: 1;
-    width: 2000px; 
+    width: 1200px; 
     
   }
 
@@ -989,9 +990,12 @@
   /* tela até 800px -------------------
 --------------------------------------
 ------------------------------*/  
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
+  /* mexe todo o container */
   .meow__header {
     display: flex;
+    margin-top: -8.5rem;
+    margin-left: -12rem;
     
 
     /*background-image: url(../../img/assets/moon.png);
@@ -1076,7 +1080,7 @@
     flex-direction: column;
     position: relative;
     left: 177px;
-    top: 240px;
+    top: 110px;
     text-align: center;
 
 
@@ -1191,7 +1195,7 @@
 @media screen and (max-width: 500px) {
   .meow__header {
     display: flex;
-    margin-top: -36rem;
+    margin-top: -45rem;
     margin-left: 0.9rem;
     
 
@@ -1216,6 +1220,7 @@
 }
  /*imagem Mooon ------*/
 .overlay-image1 {
+    display: none;
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
     top: -150px; /* Ajuste conforme necessário */
     left: 200px; /* Ajuste conforme necessário */
@@ -1230,6 +1235,7 @@
 
  /*imagem Blooor ------*/
 .overlay-image2 {
+    display: none;
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
     top: 50px; /* Ajuste conforme necessário */
     left: 220px; /* Ajuste conforme necessário */
@@ -1243,7 +1249,7 @@
   }
   /*imagem grelha2 ------*/
   .overlay-image3 {
-    
+    display: none;
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
     top: 13px; /* Ajuste conforme necessário */
     left: 10px; /* Ajuste conforme necessário */
@@ -1259,7 +1265,7 @@
   }
    /*----------stars--------*/
   .overlay-image4 {
-    
+    display: none;
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
     top: -50px; /* Ajuste conforme necessário */
     left: -70px; /* Ajuste conforme necessário */
@@ -1290,7 +1296,7 @@
 .meow__header-content h1 {
     font-size: 2.1em;
     margin-bottom: 1.5em;
-    background: -webkit-linear-gradient(right, #6E56CF 20%, #F9D1FF 100% );
+    background: -webkit-linear-gradient(right, #795cee 20%, #7b1e8a 100% );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -1307,7 +1313,7 @@
     margin-bottom: 1.5em;
     color: #ffff;
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: 1000;
     position: absolute;
     left: -285px;
     top: 13px;
@@ -1326,7 +1332,7 @@
     font-family: var(--font-family);
     font-weight: 800;
     position: absolute;
-    left: 105px;
+    left: 100px;
     top: 55px;
     font-style: italic;
     width: 220px;
