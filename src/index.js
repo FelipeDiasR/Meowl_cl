@@ -7,7 +7,7 @@ import App from './App';
 //import do react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 //import { Footer } from './containers';
-import { Home } from './pages';
+import { Home, Lauchpad } from './pages';
 
 
 const router = createBrowserRouter ([
@@ -19,6 +19,11 @@ const router = createBrowserRouter ([
         path: "home",
         element: <Home />
       },
+      {
+        path: "lauchpad",
+        element: <Lauchpad />
+      },
+      
 
     ]
   },
