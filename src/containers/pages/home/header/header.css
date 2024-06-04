@@ -1,7 +1,7 @@
 .meow__header {
     display: flex;
     position: relative;
-    margin-top: -30rem;
+    margin-top: auto;
     /*background-image: url(../../img/assets/moon.png);
     background-position: bottom;*/
     
@@ -20,6 +20,7 @@
   opacity: 1; /* Define a transparência, ajuste conforme necessário */
 }
 
+/* moon */
 .overlay-image1 {
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
     top: -70px; /* Ajuste conforme necessário */
@@ -419,7 +420,7 @@
  /*imagem Mooon ------*/
 .overlay-image1 {
     position: absolute; /* Posiciona de forma absoluta em relação ao .gradient_bg */
-    top: -25px; /* Ajuste conforme necessário */
+    top: 0px; /* Ajuste conforme necessário */
     left: 450px; /* Ajuste conforme necessário */
     transform: translate(-50%, -50%); /* Centraliza a imagem */
     
@@ -498,7 +499,7 @@
     font-family: var(--font-family);
     position: absolute;
     top: 60px;
-    left: 75px;
+    left: 100px;
     
 }
 

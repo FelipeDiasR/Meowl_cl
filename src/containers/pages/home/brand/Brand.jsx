@@ -3,7 +3,7 @@ import './brand.css';
 import Foguete from '../../../../img/assets/foguete.svg';
 import Game from '../../../../img/assets/game.svg';
 import Staking from '../../../../img/assets/staking .svg';
-import BackgroundHero from '../../../../img/assets/backgroundhero.svg';
+//import BackgroundHero from '../../../../img/assets/backgroundhero.svg';
 
 
 const Brand =() => {

@@ -21,12 +21,13 @@ const Navbar = () => {
         <img src={Logotipo} alt='logotipo'/> 
         </div>
       <div className='meow__navbar_preesale'>
-        <button > Preesale </button>    
+        <button > <a href="http://localhost:3000/lauchpad/" rel="noopener noreferrer">
+        Preesale</a> </button>    
         </div>
       <div className='meow__navbar_whitepaper_wallet'>
         <a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
          Whitepaper</a>
-        <button> Connect Wallet</button>
+        <button> Connect Wallet </button>
         </div>
       <div className='meow__navbar-menu'>
         {toggleMenu

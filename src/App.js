@@ -20,11 +20,8 @@ import { Footer } from './components';
 
 const App = () => {
   return (
-    <div className='App'>
-      <div className='gradient_bg'  >
-         <Navbar />
-        
-        </div>
+    <div className='App'>     
+    <Navbar />
     <Outlet />  
     <Footer />
     </div>
