@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "MeowlVerse Round One ",
+      "status": "open soon",
+      "social_links": {
+        "website": "https://www.facebook.com/projeto1",
+        "twitter": "https://www.twitter.com/projeto1",
+        "telegram": "https://www.instagram.com/projeto1"
+      },
+      "sales_opening_date": "2024-06-15",
+      "sales_closing_date": "2024-07-01",
+      "total_to_raise": 100000,
+      "token_price": 0.0001,
+      "image": "/meowlverse.svg"
+    },
+    {
+      "id": 2,
+      "name": "MeowlVerse Round two",
+      "status": "comming soon",
+      "social_links": {
+        "website": "https://www.facebook.com/projeto2",
+        "twitter": "https://www.twitter.com/projeto2",
+        "telegram": "https://www.instagram.com/projeto2"
+      },
+      "sales_opening_date": "2024-06-01",
+      "sales_closing_date": "2024-06-30",
+      "total_to_raise": 60000,
+      "token_price": 0.00012,
+      "image": "/meowlverse.svg"
+    },
+    {
+      "id": 3,
+      "name": "MeowlVerse Round three",
+      "status": "comming soon",
+      "social_links": {
+        "website": "https://www.facebook.com/projeto3",
+        "twitter": "https://www.twitter.com/projeto3",
+        "telegram": "https://www.instagram.com/projeto3"
+      },
+      "sales_opening_date": "2024-08-31",
+      "sales_closing_date": "2024-08-31",
+      "total_to_raise": 42000,
+      "token_price": 0.00014,
+      "image": "/meowlverse.svg"
+    }
+
+    
+    
+  ]
+}
