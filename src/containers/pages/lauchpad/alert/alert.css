@@ -56,8 +56,8 @@
     display: flex;
     position: relative;
     margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
-    width: 65%;
-    margin-left: 30rem;
+    width: 90%;
+    margin-left: 4.5rem;
     padding: 1rem;
     color: rgb(12, 1, 1);
     background-color: #fee2e2;

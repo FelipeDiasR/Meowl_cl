@@ -10,6 +10,7 @@ import './App.css';
 
 import { Navbar } from './components';
 import { Footer } from './components';
+import { Home } from './pages';
   
 /* <div className='teste'>
             <img src={moon} alt="moon"/>
