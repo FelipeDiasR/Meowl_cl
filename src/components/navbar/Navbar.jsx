@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-
+import { Link } from 'react-router-dom';
 import Logotipo from '../../img/logotipo.svg';
 import './navbar.css';
 
@@ -18,11 +18,12 @@ const Navbar = () => {
   return (
     <div className="meow__navbar">
       <div className='meow__navbar_logo'>
-        <img src={Logotipo} alt='logotipo'/> 
+       <Link to="/home"> <img src={Logotipo} alt='logotipo'/></Link>
         </div>
       <div className='meow__navbar_preesale'>
-        <button > <a href="http://localhost:3000/lauchpad/" rel="noopener noreferrer">
-        Preesale</a> </button>    
+        <Link to="/lauchpad">
+          <button>Preesale</button>
+        </Link>   
         </div>
       <div className='meow__navbar_whitepaper_wallet'>
         <a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">

@@ -23,6 +23,12 @@ const router = createBrowserRouter ([
         path: "lauchpad",
         element: <Lauchpad />
       },
+      {
+        path: "projects",
+        element: <Lauchpad />
+      },
+      
+      
       
 
     ]

@@ -3,7 +3,7 @@ import './cards.css';
 import { FaTelegram } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 import { FaSquareXTwitter } from "react-icons/fa6";
-
+import { Link } from 'react-router-dom';
 
 const Cards =({ logo, status, name, website, twitter, telegram, open_sale, close_sale, token_price, total_raise, }) => {
   return (
@@ -32,8 +32,10 @@ const Cards =({ logo, status, name, website, twitter, telegram, open_sale, close
           <h3>Total Raise</h3>
           <p> {total_raise} </p>
       </div>
-      <div className='meow__cards_seedetails'>
-           <button>See Details</button>
+      <div className='meow__cards_seedetails'> 
+      <Link to="/projects">
+          <button>See Details</button>
+        </Link>
 
       </div>
   

@@ -1,7 +1,208 @@
 .meow__banner {
-    margin-top: 15rem;
-    margin-left: 15rem;
+    width: 90%;
+    height: 290px;
+    background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%, rgba(24, 86, 110, 0.966) 50%, rgba(67, 40, 143, 0.562) 100%);
+    padding: 20px;
     color: #ffff;
-    border-radius: #ffff;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #ffffff35;
+    margin-top: 6rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .meow__banner_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .meow__banner_text {
+    max-width: 70%;
+  }
+  
+  .meow__banner_content h1 {
+    font-size: 1.5rem;
+    color: rgba(2, 3, 22, 0.973);
+  }
+  
+  .meow__banner_content p {
+    font-size: 1rem;
+    color: rgba(2, 3, 22, 0.973);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .meow__banner__button {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;;
+  }
+  
+  .meow__banner__button button {
+    font-family: var(--font-family);
+    width: 15%;
+    height: 35px;
+    background-color: #d862ff75;
+    color: rgba(2, 3, 22, 0.973);
+    border: none;
+    border-radius: 8px;
+    margin-left: 1.2rem;
+  }
+  
+  .meow__banner_logo img {
+    max-width: 500px; /* Ajuste conforme necessário */
+    max-height: 200px; /* Ajuste conforme necessário */
+    margin-left: 3rem;
+  }
+  
 
-}
+  /*-----------max 850 ---------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  -----------------------------------------------------*/
+
+  @media screen and (max-width: 851px) {
+    .meow__banner {
+        width: 83%;
+        height: 490px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%, rgba(24, 86, 110, 0.966) 50%, rgba(67, 40, 143, 0.562) 100%);
+        padding: 20px;
+        color: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .meow__banner_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      
+      .meow__banner_text {
+        max-width: 70%;
+      }
+      
+      .meow__banner_content h1 {
+        font-size: 1.5rem;
+        color: rgba(2, 3, 22, 0.973);
+      }
+      
+      .meow__banner_content p {
+        font-size: 1rem;
+        color: rgba(2, 3, 22, 0.973);
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .meow__banner__button {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;;
+      }
+      
+      .meow__banner__button button {
+        font-family: var(--font-family);
+        width: 15%;
+        height: 35px;
+        background-color: #d862ff75;
+        color: rgba(2, 3, 22, 0.973);
+        border: none;
+        border-radius: 8px;
+        margin-left: 1.2rem;
+      }
+      
+      .meow__banner_logo img {
+        max-width: 500px; /* Ajuste conforme necessário */
+        max-height: 200px; /* Ajuste conforme necessário */
+        margin-left: 3rem;
+      }
+      
+  }
+
+   /*-----------max 500 ---------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  -----------------------------------------------------*/
+
+  @media screen and (max-width: 500px) {
+    .meow__banner {
+        width: 83%;
+        height: 490px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%, rgba(24, 86, 110, 0.966) 50%, rgba(67, 40, 143, 0.562) 100%);
+        padding: 20px;
+        color: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 6rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .meow__banner_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      
+      .meow__banner_text {
+        max-width: 70%;
+      }
+      
+      .meow__banner_content h1 {
+        font-size: 1.5rem;
+        color: rgba(2, 3, 22, 0.973);
+        width: 250px;
+      }
+      
+      .meow__banner_content p {
+        font-size: 1rem;
+        color: rgba(2, 3, 22, 0.973);
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        width: 280px;
+      }
+      
+      .meow__banner__button {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;;
+      }
+      
+      .meow__banner__button button {
+        font-family: var(--font-family);
+        width: 40%;
+        height: 35px;
+        background-color: #d862ff75;
+        color: rgba(2, 3, 22, 0.973);
+        border: none;
+        border-radius: 8px;
+        margin-left: 1.2rem;
+      }
+      
+      .meow__banner_logo img {
+        display: none;
+        max-width: 500px; /* Ajuste conforme necessário */
+        max-height: 200px; /* Ajuste conforme necessário */
+        margin-left: -8rem;
+        margin-top: 10rem;
+      }
+      
+  }
