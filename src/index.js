@@ -7,7 +7,7 @@ import App from './App';
 //import do react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 //import { Footer } from './containers';
-import { Home, Lauchpad } from './pages';
+import { Home, Lauchpad, Details } from './pages';
 
 
 const router = createBrowserRouter ([
@@ -24,8 +24,8 @@ const router = createBrowserRouter ([
         element: <Lauchpad />
       },
       {
-        path: "projects",
-        element: <Lauchpad />
+        path: "details/:id",
+        element: <Details />
       },
       
       

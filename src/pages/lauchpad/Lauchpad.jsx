@@ -56,7 +56,7 @@ const Launchpad = () => {
                 website={repo.social_links.website} twitter={repo.social_links.twitter}
                 telegram={repo.social_links.telegram} open_sale={formatDate(repo.sales_opening_date)}
                 close_sale={formatDate(repo.sales_closing_date)} token_price={repo.token_price}
-                total_raise={formatCurrency(repo.total_to_raise)}/>
+                total_raise={formatCurrency(repo.total_to_raise)} id={repo.id}/>
               ) )          
             }
          </div>
