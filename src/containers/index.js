@@ -12,3 +12,10 @@ export { default as Cta } from './pages/home/cta/Cta.jsx';
 export { default as Alert } from './pages/lauchpad/alert/Alert.jsx';
 export { default as Banner } from './pages/lauchpad/banner/Banner.jsx';
 export { default as Cards } from './pages/lauchpad/projects/Cards.jsx';
+
+
+//Project
+
+export { default as Buy } from './pages/projects/buy/Buy.jsx';
+export { default as Raise } from './pages/projects/raise/Raise.jsx';
+export { default as Description } from './pages/projects/description/Description.jsx';

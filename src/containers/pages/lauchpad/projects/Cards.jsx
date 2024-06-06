@@ -5,7 +5,7 @@ import { TfiWorld } from "react-icons/tfi";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
-const Cards =({ logo, status, name, website, twitter, telegram, open_sale, close_sale, token_price, total_raise, }) => {
+const Cards =({ id, logo, status, name, website, twitter, telegram, open_sale, close_sale, token_price, total_raise }) => {
   return (
   <div className='meow__cards section__padding'>
       <div className='meow__cards_logo_button'>
@@ -33,7 +33,7 @@ const Cards =({ logo, status, name, website, twitter, telegram, open_sale, close
           <p> {total_raise} </p>
       </div>
       <div className='meow__cards_seedetails'> 
-      <Link to="/projects">
+      <Link to={`/details/${id}`}>
           <button>See Details</button>
         </Link>
 
