@@ -14,14 +14,14 @@ import './description.css'
 
 
 
-const Description  = ({ logo, status, name, website, twitter, telegram, open_sale, close_sale, token_price, total_raise }) => {
+const Description  = ({ logo, name, website, twitter, telegram, open_sale, close_sale, token_price, total_raise, closed, open }) => {
   
 
     return (
         <div className='meow__description section__padding'>
             <div className='meow__description_logo_button'>
                 <img src={logo} alt='projectlogo'/> 
-                <button> {status} </button> 
+                <button> {closed ? 'Closed' : open ? 'Open' : 'Open Soon'} </button>
                    
             </div>
             <div className='meow__description_text'>
@@ -45,7 +45,7 @@ const Description  = ({ logo, status, name, website, twitter, telegram, open_sal
             </div>
             <div className='meow__description_seedetails'> 
             
-                <button>See Details</button>
+                <button>{closed ? 'Closed' : open ? 'Buy' : 'Subscribe in the waitlist'}</button>
               
       
             </div>

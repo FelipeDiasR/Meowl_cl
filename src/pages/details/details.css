@@ -1,0 +1,10 @@
+.meow__description_firstsection {
+    display: flex;
+}
+
+@media screen and (max-width: 900px) {
+    .meow__description_firstsection {
+        display: flex;
+        flex-direction: column;
+    } 
+}

@@ -49,7 +49,7 @@ const Details = () => {
                     <div className='meow__description_firstsection'>
                         <Description 
                             name={project.name}
-                            status={project.status}
+                            open={project.open}
                             open_sale={formatDate(project.sales_opening_date)}
                             close_sale={formatDate(project.sales_closing_date)}
                             token_price={project.token_price}
@@ -57,15 +57,26 @@ const Details = () => {
                             website={project.social_links.website}
                             twitter={project.social_links.twitter}
                             telegram={project.social_links.telegram}
-                            logo={project.image}
+                            logo={project.image} 
+                            closed={project.closed}
                         />
+                        <div>
+                            
+                        </div>
+                         <Raise 
+                            description={project.description} 
+                            ticker={project.ticker}
+                            raising_on={project.raising_on}
+                            raising_in={project.raising_in}
+                            token_address={project.token_address}
+                         />
                     </div>
                 ) : (
                     <p>Loading project details...</p>
                 )
             }
-            <Raise />
-            <Buy />
+           
+           
             <Banner />
         </div>
     );
