@@ -20,7 +20,7 @@ const router = createBrowserRouter ([
         element: <Home />
       },
       {
-        path: "lauchpad",
+        path: "launchpad",
         element: <Lauchpad />
       },
       {
