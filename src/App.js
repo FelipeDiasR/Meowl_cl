@@ -10,7 +10,8 @@ import './App.css';
 
 import { Navbar } from './components';
 import { Footer } from './components';
-import { Home } from './pages';
+import {WalletProvider} from './components/wallet/Walletcontext.jsx';
+
   
 /* <div className='teste'>
             <img src={moon} alt="moon"/>
@@ -21,10 +22,12 @@ import { Home } from './pages';
 
 const App = () => {
   return (
-    <div className='App'>     
+    <div className='App'>  
+    <WalletProvider>
     <Navbar />
     <Outlet />  
     <Footer />
+    </WalletProvider>   
     </div>
 
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import { Web3Provider } from '@ethersproject/providers';  // Importando Web3Provider corretamente
 import Logotipo from '../../img/logotipo.svg';
 import './navbar.css';
+import { useWallet } from '../wallet/Walletcontext';
 
 const Menu = () => (
   <>
@@ -15,23 +15,7 @@ const Menu = () => (
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [account, setAccount] = useState(null);
-
-  const connectWallet = async () => {
-    if (window.ethereum) {
-      try {
-        const provider = new Web3Provider(window.ethereum);  // Instanciando Web3Provider corretamente
-        await provider.send("eth_requestAccounts", []);
-        const signer = provider.getSigner();
-        const account = await signer.getAddress();
-        setAccount(account);
-      } catch (error) {
-        console.error("Error connecting to wallet", error);
-      }
-    } else {
-      alert("MetaMask is not installed. Please install it to use this app.");
-    }
-  };
+  const { account, connectWallet } = useWallet();  // Usando o contexto
 
   return (
     <div className="meow__navbar">
