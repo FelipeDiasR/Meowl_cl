@@ -174,7 +174,7 @@ const Description  = ({ logo, name, website, twitter, telegram, open_sale, close
     
 
 
-    return (
+    return ( 
         <div className='meow__description section__padding'>
             <div className='meow__description_logo_button'>
                 <img src={logo} alt='projectlogo'/> 

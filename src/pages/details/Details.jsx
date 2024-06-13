@@ -61,9 +61,7 @@ const Details = () => {
                             logo={project.image} 
                             closed={project.closed}
                         />
-                        <div>
-                            
-                        </div>
+                        
                          <Raise 
                             description={project.description} 
                             ticker={project.ticker}
@@ -75,11 +73,35 @@ const Details = () => {
                             
                          />
                     </div>
+                   
                 ) : (
                     <p>Loading project details...</p>
                 )
             }
-            <Buy />
+            {
+                project ? (
+                <Buy
+                    name={project.name}
+                    status={project.status}
+                    open={project.open}
+                    ticker={project.ticker}
+                    closed={project.closed}
+                    raising_on={project.raising_on}
+                    raising_in={project.raising_in}
+                    smartcontractaddress={project.smartcontractaddress}
+                    smartcontractabi={project.smartcontractabi}
+                    tottal_supply={project.tottal_supply}
+                    initial_supply={project.initial_supply}
+                    marketcap={project.marketcap}
+                    claimed_on={project.claimed_on}
+                    vesting={project.vesting}
+
+                />) : (
+                
+                
+                <p>Loading project details...</p>)
+                }
+          
            
             <Banner />
         </div>

@@ -12,3 +12,11 @@
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
 }
+button:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+} 
+button:hover {
+  background-color: rgba(0, 0, 255, 0.164);
+  color:white;
+}

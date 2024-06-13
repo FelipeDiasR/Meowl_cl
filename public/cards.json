@@ -22,7 +22,13 @@
       "token_price": 0.0001,
       "image": "/meowlverse.svg",
       "smartcontractaddress":  "0x7B8690423A6f90d631905acEDbA4F8cBD5416D38",
-      "smartcontractabi": true
+      "smartcontractabi": true,
+      "tottal_supply": "100 000 000 MWOL",
+      "initial_supply": "6 720 000 MWOL",
+      "marketcap": "$200 000",
+      "claimed_on": "MeowlPad",
+      "vesting": "10% at TGE, then vesting for 3 months"
+      
     },
     {
       "id": 2,
@@ -46,7 +52,12 @@
       "token_price": 0.01,
       "image": "/meowlverse.svg",
       "smartcontractaddress": "",
-      "ABI": ""
+      "smartcontractabi": false,
+      "tottal_supply": "100 000 000 MWOL",
+      "initial_supply": "6 720 000 MWOL",
+      "marketcap": "$200 000",
+      "claimed_on": "MeowlPad",
+      "vesting": "10% at TGE, then vesting for 3 months"
     },
     {
       "id": 3,
@@ -70,7 +81,12 @@
       "token_price": 0.001,
       "image": "/meowlverse.svg",
       "smartcontractaddress": "",
-      "ABI": ""
+      "smartcontractabi": false,
+      "tottal_supply": "800 000 000 MWOL",
+      "initial_supply": "7 720 000 MWOL",
+      "marketcap": "$300 000",
+      "claimed_on": "MeowlPad",
+      "vesting": "20% at TGE, then vesting for 3 months"
     }
   ]
 }

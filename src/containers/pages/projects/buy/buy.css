@@ -1,0 +1,190 @@
+.meow__buy {
+    width: 90.5%;
+    height: 350px;
+    background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+    rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+    padding: 20px;
+    color: #ffff;
+    border-radius: #ffff;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #ffffff35;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    display: flex;
+    
+    
+    justify-content: space-between;
+
+
+}
+
+/* Text -----------------------------------------*/
+.meow__buy h1 {
+    font-family: var(--font-family); 
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.meow__buy h2 {
+    font-family: var(--font-family); 
+    font-size: 0.95rem;
+}
+
+.meow__buy h3 {
+    font-size: 0.75rem;
+    margin-bottom: 1.4px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.534);
+}
+
+.meow__buy p {
+    font-size: 0.75rem;
+    
+}
+
+/*position --------------------------------------------*/
+.meow__buy_pool {
+    margin-left: 2rem;
+    justify-content: space-between; 
+}
+
+.meow__buy_section {
+    
+    justify-content: space-between; 
+}
+
+.meow__buy_inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: space-between; 
+
+}
+.meow__buy_text p {
+    margin-bottom: 1rem;
+}
+
+.meow__buy_inputs input {
+        flex: 2;
+        background-color: #d862ff1f;
+        width: 100%;
+        min-height: 10px;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 16px;
+        line-height: 27px;
+        outline: none;
+        border: 2px solid transparent;
+        padding: 0 1rem;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        color: #fff; /* Cor do texto digitado */
+        margin-bottom: 1rem;
+    
+}
+
+.meow__buy_inputs button {
+    font-family: var(--font-family);
+    width: 50%;
+    height: 31px;
+    background-color: #d862ff75;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+   
+
+}
+
+
+.meow__buy_distribution_seedetails {
+   
+    justify-content: space-between; 
+
+}
+.meow__buy_claim_section{
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;    
+}
+
+.meow__buy_claim_section button {
+    font-family: var(--font-family);
+    width: 50%;
+    height: 31px;
+    background-color: #d862ff75;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: 0.1rem;
+
+}
+
+
+
+
+
+
+/* ------------max 500px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 500px) {
+    .meow__buy {
+        width: 90.5%;
+        height: 500px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 3rem;
+        margin-left: 5rem;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+    
+    
+    }
+    .meow__buy h1 {
+        font-family: var(--font-family); 
+        font-size: 1.4rem;
+    }
+    
+    .meow__buy h2 {
+        font-family: var(--font-family); 
+        font-size: 0.95rem;
+    }
+    
+    .meow__buy h3 {
+        font-size: 0.75rem;
+        margin-bottom: 1.4px;
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.534);
+    }
+    
+    .meow__buy p {
+        font-size: 0.75rem;
+        
+    }
+    .meow__buy_pool {
+        padding: 9px;
+        justify-content: space-between; 
+    }
+
+}
