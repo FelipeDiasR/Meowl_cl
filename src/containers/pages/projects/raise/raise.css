@@ -82,6 +82,157 @@
     border-bottom-left-radius: 8px;
 
 }
+/* raise.css */
+.meow__raise_progress {
+    background-color: #e0e0e01e;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    margin: 30px 0;
+    height: 30px;
+    width: 100%;
+  }
+  
+  .meow__raise_progress_bar {
+    background-color: #d862ff75;
+    height: 100%;
+    border-radius: 25px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 253, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .meow__raise_progress_bar > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+/* ------------max 2561 -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 2561px) {
+    .meow__raise {
+        width: 73%;
+        height: 500px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 6rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+    
+    
+    }   
+
+}    
+
+
+/* ------------max 2100 -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 2100px) {
+    .meow__raise {
+        width: 62%;
+        height: 500px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 6rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+    
+    
+    }   
+
+}  
+
+/* ------------max 1025 -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 1025px) {
+    .meow__raise {
+        width: 47%;
+        height: 500px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 6rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+    
+    
+    }   
+
+}  
+
+
+/* ------------max 769px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 801px) {
+    .meow__raise {
+        width: 83%;
+        height: 500px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+    
+    
+    } 
+
+}  
 
 /* ------------max 500px -----------------------------------------
 ----------------------------------------------------------------
@@ -120,7 +271,7 @@
 @media screen and (max-width: 426px) {
     .meow__raise{
         width: 83%;
-        height: 500px;
+        height: 540px;
         background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
         rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
         padding: 20px;
@@ -149,7 +300,7 @@
 @media screen and (max-width: 376px) {
     .meow__raise{
         width: 83%;
-        height: 530px;
+        height: 560px;
         background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
         rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
         padding: 20px;
@@ -177,7 +328,7 @@
 @media screen and (max-width: 326px) {
     .meow__raise{
         width: 83%;
-        height: 530px;
+        height: 595px;
         background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
         rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
         padding: 20px;

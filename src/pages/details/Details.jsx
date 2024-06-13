@@ -9,6 +9,7 @@ const Details = () => {
     console.log('ID from URL:', id);
     const [project, setProject] = useState(null); // Estado para armazenar o projeto específico
 
+
     useEffect(() => {
         const searchingRepositories = async () => {
             try {
@@ -69,13 +70,16 @@ const Details = () => {
                             raising_on={project.raising_on}
                             raising_in={project.raising_in}
                             token_address={project.token_address}
+                            smartcontractaddress={project.smartcontractaddress}
+                            smartcontractabi={project.smartcontractabi}
+                            
                          />
                     </div>
                 ) : (
                     <p>Loading project details...</p>
                 )
             }
-           
+            <Buy />
            
             <Banner />
         </div>

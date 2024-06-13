@@ -1,0 +1,293 @@
+{
+    "ContractFundingABI": [
+      {
+        "constant": false,
+        "inputs": [
+          { "indexed": false, "internalType": "address", "name": "_tokenAddress", "type": "address" },
+          { "indexed": false, "internalType": "address", "name": "_stablecoinAddress", "type": "address" },
+          { "indexed": false, "internalType": "uint256", "name": "_vestingPeriod", "type": "uint256" },
+          { "indexed": false, "internalType": "uint256", "name": "_vestingInterval", "type": "uint256" },
+          { "indexed": false, "internalType": "uint256", "name": "_tgePercentage", "type": "uint256" }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          { "indexed": true, "internalType": "address", "name": "previousOwner", "type": "address" },
+          { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+        ],
+        "name": "OwnershipTransferred",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "address", "name": "user", "type": "address" }],
+        "name": "SubscribedToWaitList",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          { "indexed": false, "internalType": "address", "name": "user", "type": "address" },
+          { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+        ],
+        "name": "TokensClaimed",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }],
+        "name": "TokensDeposited",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          { "indexed": false, "internalType": "address", "name": "buyer", "type": "address" },
+          { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+        ],
+        "name": "TokensPurchased",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          { "indexed": true, "internalType": "address", "name": "owner", "type": "address" },
+          { "indexed": true, "internalType": "address", "name": "token", "type": "address" },
+          { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+        ],
+        "name": "TokensWithdrawn",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+          { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+        ],
+        "name": "tgeClaimed",
+        "payable": false,
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "uint256", "name": "_stablecoinAmount", "type": "uint256" }],
+        "name": "buyTokens",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "claimTge",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "claimTokens",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "uint256", "name": "_amount", "type": "uint256" }],
+        "name": "depositTokens",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "fundraising",
+        "outputs": [
+          { "internalType": "uint256", "name": "fundraisingGoal", "type": "uint256" },
+          { "internalType": "uint256", "name": "alreadyCapitated", "type": "uint256" }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "getBalanceStablecoin",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "getBalanceToken",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "isContractActived",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "isPromotionActived",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "isTgeActivated",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "bool", "name": "_isActive", "type": "bool" }],
+        "name": "setContractActivation",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "bool", "name": "_isActive", "type": "bool" }],
+        "name": "setPromotionActived",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "bool", "name": "_isActive", "type": "bool" }],
+        "name": "setTgeActivation",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "uint256", "name": "_price", "type": "uint256" }],
+        "name": "setTokenPrice",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "address", "name": "_user", "type": "address" }],
+        "name": "subscribeToWaitList",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "totalTokens",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "totalTokensDeposited",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "totalTokensPurchased",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "totalTokensWithdrawn",
+        "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "transferOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [{ "indexed": false, "internalType": "address", "name": "_tokenAddress", "type": "address" }],
+        "name": "withdrawStablecoin",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+  }
+  
