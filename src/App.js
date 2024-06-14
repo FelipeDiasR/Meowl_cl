@@ -13,11 +13,7 @@ import { Footer } from './components';
 import {WalletProvider} from './components/wallet/Walletcontext.jsx';
 
   
-/* <div className='teste'>
-            <img src={moon} alt="moon"/>
-            </div>
-             
-            style={{ backgroundImage:`url(${moon})`}}//*/
+
 
 
 const App = () => {

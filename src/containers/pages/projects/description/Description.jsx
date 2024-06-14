@@ -119,7 +119,7 @@ const Description = ({ logo, name, website, twitter, telegram, open_sale, close_
                 : subscribed
                   ? 'You are subscribed in the waitlist'
                   : 'Subscribe in the Waitlist'}
-        </button>
+        </button> 
       </div>
     </div>
   );
