@@ -20,10 +20,10 @@ const Navbar = () => {
   return (
     <div className="meow__navbar">
       <div className='meow__navbar_logo'>
-        <Link to="/home"> <img src={Logotipo} alt='logotipo' /></Link>
+        <Link to="/"> <img src={Logotipo} alt='logotipo' /></Link>
       </div>
       <div className='meow__navbar_preesale'>
-        <Link to="/lauchpad">
+        <Link to="/launchpad">
           <button>Preesale</button>
         </Link>
       </div>
