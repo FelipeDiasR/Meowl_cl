@@ -10,7 +10,7 @@
       "raising_on": "BASE",
       "raising_in": "USDC",
       "token_address": "Soon",
-      "closed": true,
+      "closed": false,
       "social_links": {
         "website": "https://www.meowlverse.com/home",
         "twitter": "https://x.com/MeowlVerse",

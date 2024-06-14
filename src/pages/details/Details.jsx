@@ -90,7 +90,7 @@ const Details = () => {
                     raising_in={project.raising_in}
                     smartcontractaddress={project.smartcontractaddress}
                     smartcontractabi={project.smartcontractabi}
-                    tottal_supply={project.tottal_supply}
+                    total_supply={project.tottal_supply}
                     initial_supply={project.initial_supply}
                     marketcap={project.marketcap}
                     claimed_on={project.claimed_on}
