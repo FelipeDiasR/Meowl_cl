@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Banner, Description, Raise, Buy } from '../../containers';
+import { Banner, Description, Raise, Buy, } from '../../containers';
+import { Loading, Approved, Denied } from '../../components';
 import { format } from 'date-fns';
 import './details.css'; // Certifique-se de que o CSS está importado
 
@@ -95,6 +96,8 @@ const Details = () => {
                     marketcap={project.marketcap}
                     claimed_on={project.claimed_on}
                     vesting={project.vesting}
+                    tge_avalilble={project.tge_avalilble}
+                    token_price={project.token_price}
 
                 />) : (
                 
@@ -102,8 +105,8 @@ const Details = () => {
                 <p>Loading project details...</p>)
                 }
           
-           
             <Banner />
+
         </div>
     );
 };

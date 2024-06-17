@@ -21,13 +21,14 @@
       "total_to_raise": 100000,
       "token_price": 0.0001,
       "image": "/meowlverse.svg",
-      "smartcontractaddress":  "0x7B8690423A6f90d631905acEDbA4F8cBD5416D38",
+      "smartcontractaddress":  "0x151E64F54EBfCB213F46f0fa75393Aef4f960222",
       "smartcontractabi": true,
       "tottal_supply": "10 000 000 000 MWOL", 
       "initial_supply": "1 000 000 000 MWOL",
       "marketcap": "$200 000",
       "claimed_on": "MeowlPad",
-      "vesting": "10% at TGE, then vesting for 3 months"
+      "vesting": "10% at TGE, then vesting for 3 months",
+      "tge_avalilble": "Available every 30 days after the TGE"
       
     },
     {
@@ -57,7 +58,8 @@
       "initial_supply": "1 800 000 000 MWOL",
       "marketcap": "$200 000",
       "claimed_on": "MeowlPad",
-      "vesting": "10% at TGE, then vesting for 3 months"
+      "vesting": "10% at TGE, then vesting for 3 months",
+      "tge_avalilble": "Available every 30 days after the TGE"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
       "initial_supply": "1 800 000 000 MWOL",
       "marketcap": "$200 000",
       "claimed_on": "MeowlPad",
-      "vesting": "10% at TGE, then vesting for 3 months"
+      "vesting": "10% at TGE, then vesting for 3 months",
+      "tge_avalilble": "Available every 30 days after the TGE"
     }
   ]
 }
