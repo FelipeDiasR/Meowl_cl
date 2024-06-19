@@ -2,52 +2,80 @@ import React, { useState, useEffect } from 'react';
 import { FaTelegram } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { getFundraising, isSubscribedToWaitlist, getTgeActivation, getContractActivation, getBalancesStablecoin, getTgePercentage, getPromotionActivation } from './ContractIntecgration';
+import { checkWaitlistStatus }  from './ContractIntecgration';
 import { Link } from 'react-router-dom';
-import { ContractFundingABI, ContractFundingAddress } from '../../../../Abi';
+import { ContractFundingABI, ContractFundingAddress, usdcAbi } from '../../../../Abi';
 import { ethers } from 'ethers';
 import './description.css';
 import { useWallet } from '../../../../components/wallet/Walletcontext';
+import abis from '../../../../abiteste'
+import { Loading, Approved, Denied } from '../../../../components';
 
-const Description = ({ logo, name, website, twitter, telegram, open_sale, close_sale, token_price, total_raise, closed, open }) => {
+
+const Description = ({ logo, name, website, twitter, telegram,
+open_sale, close_sale, token_price, total_raise, closed, open_buy, 
+smartcontractaddress, open_subscription, smartcontractabi, status }) => {
   const { account, connectWallet } = useWallet();
   const [fundraising, setFundraising] = useState(null);
   const [stableBalance, setStableBalance] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
   const [connecting, setConnecting] = useState(false);
+  const [fundingcontract, setContract] = useState(null);
+  const [fundingAbi, setFundingAbi] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [ approved, setApproved] = useState(false);
+  const [ denied, setDenied ] = useState(false);
+
 
   useEffect(() => {
-    async function checkWaitlistStatus() {
-      if (account) {
-        const provider = new ethers.BrowserProvider(window.ethereum);
-        const subscribedStatus = await isSubscribedToWaitlist(provider, account);
-        setSubscribed(subscribedStatus);
-      }
-    }
-
-    checkWaitlistStatus();
-  }, [account]);
-
-  useEffect(() => {
-    async function fetchData() {
-      if (window.ethereum) {
+    async function fetchDatas() {
+      if (smartcontractabi !== false) {
         try {
-          const provider = new ethers.BrowserProvider(window.ethereum);
-          const fundraisingData = await getFundraising(provider);
-          setFundraising(fundraisingData);
-          const stBalance = await getBalancesStablecoin(provider);
-          const isActived = await getContractActivation(provider);
-          const isPromotionActived = await getPromotionActivation(provider);
-          const isTgeActived = await getTgeActivation(provider);
-          const tgePercentge = await getTgePercentage(provider);
+          const smartcontract = smartcontractaddress;
+          setContract(smartcontract);
+          console.log("SmartContract", smartcontract)
         } catch (error) {
           console.error('Error fetching data:', error);
         }
       }
     }
 
-    fetchData();
-  }, [account]);
+    fetchDatas();
+  }, [smartcontractaddress, smartcontractabi]); 
+
+  useEffect(() => {
+    const loadABI = () => {
+      if (smartcontractaddress) {
+        const abiItem = abis.find((item) => item.address === smartcontractaddress);
+        if (abiItem) {
+          console.log("abi encontrada", abiItem)
+          setFundingAbi(abiItem.abi); // Supondo que cada item tenha um campo `abi`
+        } else {
+          console.error("ABI not found for the given address");
+        }
+      }
+    };
+
+    loadABI();
+  }, [smartcontractaddress]);
+
+  useEffect(() => {
+    const fetchWaitlistStatus = async () => {
+      if(account && fundingcontract && fundingAbi)
+      try {
+        const status = await checkWaitlistStatus(account, fundingAbi, fundingcontract);
+
+        console.log("subscription:", status)
+        setSubscribed(status);
+      } catch (error) {
+        console.error("Error fetching waitlist status:", error);
+      }
+    };
+
+    if (account) {
+      fetchWaitlistStatus();
+    }
+  }, [account, fundingAbi, fundingcontract]);
 
   const subscribeToWaitlist = async () => {
     let provider, signer, currentAccount;
@@ -55,36 +83,60 @@ const Description = ({ logo, name, website, twitter, telegram, open_sale, close_
       if (!account) {
         await connectWallet();
         provider = new ethers.BrowserProvider(window.ethereum);
-        signer = provider.getSigner();
+        signer = await provider.getSigner();
         currentAccount = await signer.getAddress();
       } else {
         provider = new ethers.BrowserProvider(window.ethereum);
-        signer = provider.getSigner();
+        signer = await provider.getSigner();
         currentAccount = account;
       }
 
-      const contract = new ethers.Contract(ContractFundingAddress, ContractFundingABI, signer);
-      const tx = await contract.subscribeToWaitList();
+      const contractInstance = new ethers.Contract(fundingcontract, fundingAbi, signer);
+      const tx = await contractInstance.subscribeToWaitList();  
+      
+      
+      setLoading(true);
+
+      await tx.wait();
+
       console.log('Transaction sent:', tx);
+
+      setLoading(false);
+      setApproved(true);
+      setSubscribed(true);
+
+      setTimeout(() => {
+        setApproved(false);
+      }, 3000);
     } catch (error) {
-      checkEvents();
+      
+      setDenied(true);
+
+      setTimeout(() => {
+        setDenied(false);
+      }, 3000);
+      console.error('Error subscribing to waitlist:', error);
+    } finally {
+      setLoading(false);
+       // Atualize os dados do usuário após a conclusão da operação
     }
   };
 
-  const checkEvents = async () => {
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    const contract = new ethers.Contract(ContractFundingAddress, ContractFundingABI, provider);
-    contract.on('SubscribedToWaitList', (user, event) => {
-      console.log('You are Subscribed', user);
-      console.log(event);
-    });
-  };
+
+ 
 
   return (
-    <div className='meow__description section__padding'>
+    <div className={`meow__description section__padding ${loading ? 'loading-active' : ''}`}>
+    {loading && <Loading />} {/* Exibir o componente de loading */}
+
+    {approved && <Approved />} {/* Exibir o componente Approved */}
+    {denied && <Denied />} {/* Exibir o componente Denied */}
+    
       <div className='meow__description_logo_button'>
         <img src={logo} alt='projectlogo' />
-        <button> {closed ? 'Closed' : open ? 'Open' : 'Open Soon'} </button>
+        <button>
+          {closed ? status : open_buy ? 'Open' : 'Open Soon'}
+        </button>
       </div>
       <div className='meow__description_text'>
         <h1> {name} </h1>
@@ -106,20 +158,36 @@ const Description = ({ logo, name, website, twitter, telegram, open_sale, close_
             <p> {total_raise} </p>
       </div>
       <div className='meow__description_seedetails'>
-        <button
-          onClick={!account ? connectWallet : (closed ? null : subscribeToWaitlist)}
-          disabled={connecting || closed || (account && subscribed)}
-        >
-          {connecting
-            ? 'Connecting...'
-            : closed
-              ? 'Open Soon'
-              : !account
-                ? 'Connect Wallet'
-                : subscribed
-                  ? 'You are subscribed in the waitlist'
-                  : 'Subscribe in the Waitlist'}
-        </button> 
+      <button
+  onClick={
+    closed
+      ? null
+      : open_subscription
+      ? !account
+        ? connectWallet
+        : !subscribed
+        ? subscribeToWaitlist
+        : null
+      : null
+  }
+  disabled={
+    connecting || closed || (open_subscription && account && subscribed) || (open_buy && account)
+  }
+>
+  {connecting
+    ? 'Connecting...'
+    : closed
+    ? status
+    : open_subscription
+    ? !account
+      ? 'Connect Wallet'
+      : !subscribed
+      ? 'Subscribe in the Waitlist'
+      : 'You are subscribed, soon you will be able to buy!'
+    : open_buy && account
+    ? 'Buy Your tokens below!'
+    : 'Connect Wallet'}
+</button>
       </div>
     </div>
   );

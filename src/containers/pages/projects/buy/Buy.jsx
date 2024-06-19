@@ -3,13 +3,17 @@ import { useWallet } from '../../../../components/wallet/Walletcontext';
 import './buy.css';
 import abis from '../../../../abiteste'
 import { ethers } from 'ethers';
-import {ContractTest}  from '../../../../Abi.js'
+import {ContractTest, usdcAbi}  from '../../../../Abi.js'
 
 import { Loading, Approved, Denied } from '../../../../components';
 
 
 
-const Buy = ({ name, status, open, ticker, closed, raising_on, raising_in, smartcontractaddress, smartcontractabi, total_supply, initial_supply, marketcap, claimed_on, vesting, tge_avalilble, token_price }) => {
+const Buy = ({ name, status, open_buy, ticker, closed,
+ raising_on, raising_in, smartcontractaddress, 
+ smartcontractabi, total_supply, initial_supply, 
+ marketcap, claimed_on, vesting, tge_avalilble, 
+ token_price, tge_Availble, claim_Avalible}) => {
   const { account, connectWallet } = useWallet();
   const [contract, setContract] = useState(null)
   const [ abi, setABI] = useState(null);
@@ -81,7 +85,7 @@ const Buy = ({ name, status, open, ticker, closed, raising_on, raising_in, smart
         const formatAndRound = (value) => Math.round(parseFloat(value.toString()) / (10 ** 18));
 
         const formattedUserData = {
-          totalInvested: formatAndRound(userData[0]),
+          totalInvested: (userData[0].toString()) / (10 ** 6),
           totalPurchased: formatAndRound(userData[1]),
           claimedAmount: formatAndRound(userData[2]),
           tokensPerClaim: formatAndRound(userData[4]),
@@ -150,7 +154,7 @@ const handleAmountToBuyChange = (e) => {
     return;
   }
 
-  const amountInWei = ethers.parseUnits(inputAmount, 18); // Converte para BigNumber
+  const amountInWei = ethers.parseUnits(inputAmount, 6); // Converte para BigNumber
   setAmountToBuy(inputAmount);
   setAmountBlockchain(amountInWei); // Salva o valor como BigNumber
 
@@ -168,7 +172,7 @@ const handleTokensReceivedChange = (e) => {
     return;
   }
 
-  const amountInWei = ethers.parseUnits(inputAmount, 18); // Converte para BigNumber
+  const amountInWei = ethers.parseUnits(inputAmount, 6); // Converte para BigNumber
   setTokensReceived(e.target.value);
 
   // Lógica para calcular quantidade necessária para receber os tokens
@@ -195,7 +199,7 @@ const aprove = async () => {
 
     const spender = contract;
     const amountToSpend = amountBlock; //amountToBuy amountBlock
-    const contractInstance = new ethers.Contract(stableAddress, ContractTest, signer); // Utilize o signer aqui
+    const contractInstance = new ethers.Contract(stableAddress, usdcAbi, signer); // Utilize o signer aqui
     const tx = await contractInstance.approve(spender, amountToSpend);
     console.log('Transaction sent:', tx);
 
@@ -362,7 +366,7 @@ const aprove = async () => {
         <p> {marketcap} </p>
       </div>
 
-      <div className={`meow__buy_section ${!account || !open ? 'opaque' : ''}`}>
+      <div className={`meow__buy_section ${!account || !open_buy ? 'opaque' : ''}`}>
         <div className='meow__buy_text'>
           <h1> Buy </h1>
           <p> To be able to buy it you must have {raising_in} <br /> on {raising_on} </p>
@@ -370,7 +374,7 @@ const aprove = async () => {
         <div className='meow__buy_inputs'>
         <input className='meow_buy_input1' type='text' value={amountToBuy} onChange={handleAmountToBuyChange} placeholder={raising_in}/>
         <input className='meow_buy_input2' type='text' value={tokensReceived} onChange={handleTokensReceivedChange} placeholder={ticker} />
-        <button disabled={!account || !open} onClick={aprove}> Buy </button>
+        <button disabled={!account || !open_buy} onClick={aprove}> Buy </button>
         </div>
       </div>
 
@@ -382,8 +386,10 @@ const aprove = async () => {
         <p> {vesting} </p>
       </div>
 
-      <div className={`meow__buy_claim_section ${!account || !open ? 'opaque' : ''}`}>
+      <div className={`meow__buy_claim_section ${!account || !tge_Availble ? 'opaque' : ''}`}>
         <h1> Claim Section </h1>
+        <h3> Total Purchased </h3>
+        <p> {userData.totalPurchased} {ticker} </p>
         <h3> Claim TGE </h3>
         <p> {userData.tgeAmount || '0'} {ticker} </p>
         <button onClick={claimTge} disabled={!isTgeActivated || loading}>
@@ -393,9 +399,9 @@ const aprove = async () => {
         <p> Number of claims: {userData.numberOfClaims || '50'} </p>
         <p> Claim value: {userData.tokensPerClaim || '0'} MWOL </p>
         <p> {tge_avalilble}</p>
-        <button onClick={claimTokens} disabled={!account || !open}> Claim Tokens </button>
+        <button onClick={claimTokens} disabled={!account || !claim_Avalible}> Claim Tokens </button>
       </div>
-    </div>
+    </div>   
   );
 };
 

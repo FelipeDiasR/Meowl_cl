@@ -51,7 +51,7 @@ const Details = () => {
                     <div className='meow__description_firstsection'>
                         <Description 
                             name={project.name}
-                            open={project.open}
+                            open_buy={project.open_buy}
                             open_sale={formatDate(project.sales_opening_date)}
                             close_sale={formatDate(project.sales_closing_date)}
                             token_price={project.token_price}
@@ -61,6 +61,11 @@ const Details = () => {
                             telegram={project.social_links.telegram}
                             logo={project.image} 
                             closed={project.closed}
+                            smartcontractaddress={project.smartcontractaddress}
+                            smartcontractabi={project.smartcontractabi}
+                            open_subscription={project.open_subscription}
+                            status={project.status}
+                            
                         />
                         
                          <Raise 
@@ -84,7 +89,7 @@ const Details = () => {
                 <Buy
                     name={project.name}
                     status={project.status}
-                    open={project.open}
+                    open_buy={project.open_buy}
                     ticker={project.ticker}
                     closed={project.closed}
                     raising_on={project.raising_on}
@@ -98,7 +103,8 @@ const Details = () => {
                     vesting={project.vesting}
                     tge_avalilble={project.tge_avalilble}
                     token_price={project.token_price}
-
+                    tge_Availble={project.tge_Availble}
+                    claim_Avalible={project.claim_Avalible}
                 />) : (
                 
                 

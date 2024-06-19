@@ -1,5 +1,5 @@
 // contractInteraction.js
-
+import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 
 import { ContractFundingABI, ContractFundingAddress, ContractStableABI, ContractStableAddress, ContractTokenABI, ContractTokenAddress } from '../../../../Abi';
@@ -74,16 +74,20 @@ export async function getTgePercentage(provider){
 
 
 // Função para verificar se um usuário está inscrito na waitlist
-export async function isSubscribedToWaitlist(provider, address) {
-    try {
-        const contract = new ethers.Contract(ContractFundingAddress, ContractFundingABI, provider);
-        const isSubscribed = await contract.waitlist(address);
-        return isSubscribed;
-    } catch (error) {
-        console.log("Error checking waitlist status:", error);
-       
+export const checkWaitlistStatus = async (account, fundingAbi, contractAddress) => {
+    if (!account) {
+      throw new Error("Account is not available");
     }
-}
+  
+    try {
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const contract = new ethers.Contract(contractAddress, fundingAbi, provider);
+      const isSubscribed = await contract.waitlist(account); // Use o endereço da conta
+      return isSubscribed;
+    } catch (error) {
+      console.error("Error checking waitlist status:", error);
+      throw error;
+    }
+  };
 
-console.warn = () => {};
-
+  

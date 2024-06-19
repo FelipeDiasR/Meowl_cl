@@ -17,7 +17,9 @@ const Banner = () => {
         </div>
       </div>
       <div className="meow__banner__button">
-        <button>Launch Project</button>
+        <a href="https://forms.gle/niLDyFN1MhRRySmn9" target="_blank" rel="noopener noreferrer" className="meow__banner__link">
+          Launch Project
+        </a>
       </div>
     </div>
   )
