@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import Logotipo from '../../img/logotipo.svg';
@@ -6,10 +6,15 @@ import './navbar.css';
 import { useWallet } from '../wallet/Walletcontext';
 
 const Menu = () => (
-  <>
-    <a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
+  <><ul>
+    <li><a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
       Whitepaper
     </a>
+    </li>
+    <li><Link to="/launchpad" className="link">
+      Preesale
+    </Link></li>
+    </ul>
   </>
 );
 
@@ -20,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="meow__navbar">
       <div className='meow__navbar_logo'>
-        <Link to="/"> <img src={Logotipo} alt='logotipo' /></Link>
+        <Link to="/"><img src={Logotipo} alt='logotipo' /></Link>
       </div>
       <div className='meow__navbar_preesale'>
         <Link to="/launchpad">

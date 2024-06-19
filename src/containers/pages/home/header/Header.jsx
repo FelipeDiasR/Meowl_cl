@@ -21,7 +21,7 @@ const Header =() => {
             <img src={rede} alt="rede" />
         </div> 
         <div className='overlay-image2'>
-            <img src={Bloor} alt="bloor" />
+            <img src={Bloor} alt="bloor" /> 
           </div>
 
           <div className='overlay-image3'>
@@ -41,13 +41,13 @@ const Header =() => {
           ecosystem that transcends traditional boundaries.</p>
 
           <div className="meow__header_buttons"> 
-          <Link to="/launchpad">
-            <button className='buttonA' type="button" > Preesale</button>
-            </Link>
-            <Link to="/launchpad">
-            <button className='buttonB' type="button"  > Lauchpad  <GoArrowRight className='meow_arrow_icon'/></button>
-            </Link>
-            
+              <Link to="/launchpad">
+                  <button className='buttonA' type="button" > Preesale</button>
+              </Link>
+              <Link to="/launchpad">
+                  <button className='buttonB' type="button"  > Lauchpad  <GoArrowRight className='meow_arrow_icon'/></button>
+              </Link>
+              
  
 
           </div>
