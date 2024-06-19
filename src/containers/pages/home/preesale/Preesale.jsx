@@ -1,5 +1,6 @@
 import React from 'react';
 import './preesale.css';
+import { Link } from 'react-router-dom';
 
 const Preesale = () =>  {
   return (
@@ -11,15 +12,18 @@ const Preesale = () =>  {
           and see your contribution grow to new heights.</p>
 
         <div className='meow__preesale_buttons'></div>
+        <Link to="/launchpad">
         <button className='meow__preesale_buttons_waitlist' type='button' 
         href="blocklize.io" target="_blank">
           Wait list
           </button>
+          </Link>
+          <Link to="/launchpad">
           <button className='meow__preesale_buttons_htbuy' type='button' 
         href="blocklize.io" target="_blank">
           How to buy
-          </button>
-        
+          </button></Link>
+         
         
        </div>
       

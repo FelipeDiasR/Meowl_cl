@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Banner, Description, Raise, Buy } from '../../containers';
+import { Banner, Description, Raise, Buy, } from '../../containers';
+import { Loading, Approved, Denied } from '../../components';
 import { format } from 'date-fns';
 import './details.css'; // Certifique-se de que o CSS está importado
 
@@ -50,7 +51,7 @@ const Details = () => {
                     <div className='meow__description_firstsection'>
                         <Description 
                             name={project.name}
-                            open={project.open}
+                            open_buy={project.open_buy}
                             open_sale={formatDate(project.sales_opening_date)}
                             close_sale={formatDate(project.sales_closing_date)}
                             token_price={project.token_price}
@@ -60,6 +61,11 @@ const Details = () => {
                             telegram={project.social_links.telegram}
                             logo={project.image} 
                             closed={project.closed}
+                            smartcontractaddress={project.smartcontractaddress}
+                            smartcontractabi={project.smartcontractabi}
+                            open_subscription={project.open_subscription}
+                            status={project.status}
+                            
                         />
                         
                          <Raise 
@@ -83,27 +89,30 @@ const Details = () => {
                 <Buy
                     name={project.name}
                     status={project.status}
-                    open={project.open}
+                    open_buy={project.open_buy}
                     ticker={project.ticker}
                     closed={project.closed}
                     raising_on={project.raising_on}
                     raising_in={project.raising_in}
                     smartcontractaddress={project.smartcontractaddress}
                     smartcontractabi={project.smartcontractabi}
-                    tottal_supply={project.tottal_supply}
+                    total_supply={project.tottal_supply}
                     initial_supply={project.initial_supply}
                     marketcap={project.marketcap}
                     claimed_on={project.claimed_on}
                     vesting={project.vesting}
-
+                    tge_avalilble={project.tge_avalilble}
+                    token_price={project.token_price}
+                    tge_Availble={project.tge_Availble}
+                    claim_Avalible={project.claim_Avalible}
                 />) : (
                 
                 
                 <p>Loading project details...</p>)
                 }
           
-           
             <Banner />
+
         </div>
     );
 };

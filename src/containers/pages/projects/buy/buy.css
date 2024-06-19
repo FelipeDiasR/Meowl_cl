@@ -14,7 +14,7 @@
     display: flex;
     
     
-    justify-content: space-between;
+    justify-content: space-between; 
 
 
 }
@@ -130,20 +130,43 @@
 
 }
 
+.blurred {
+    filter: blur(1.2px); /* Ajuste a intensidade do desfoque conforme necessário */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.185);
+    color: rgba(255, 255, 255, 0.842);
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-family); 
+    font-size: 35px;
+    pointer-events: none; /* Garante que a sobreposição não seja clicável */
+    width: 200%;
+    z-index: 10; /* Coloca a sobreposição acima do conteúdo desfocado */
+  }
 
+  .opaque {
+    opacity: 0.5; /* Define a opacidade para as seções desativadas */
+    pointer-events: none; /* Impede interações com as seções desativadas */
+  }
+  
+  
 
+/*-----------max 1441 ---------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  -----------------------------------------------------*/
 
-
-
-/* ------------max 500px -----------------------------------------
-----------------------------------------------------------------
--------------------------------------------------------------------
--------------------------------------------------------------------
-----------------------------------------------------------------*/
-@media screen and (max-width: 500px) {
+  @media screen and (max-width: 1441px) {
     .meow__buy {
-        width: 90.5%;
-        height: 500px;
+        width: 92%;
+        height: 350px;
         background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
         rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
         padding: 20px;
@@ -155,36 +178,146 @@
         margin-top: 3rem;
         margin-left: 5rem;
         display: flex;
+        
+        
+        justify-content: space-between;
+    
+    
+    }
+  }
+
+
+/*-----------max 1025 ---------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  -----------------------------------------------------*/
+
+  @media screen and (max-width: 1441px) {
+    .meow__buy {
+        width: 92.5%;
+        height: 350px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 3rem;
+        margin-left: 5rem;
+        display: flex;
+        
+        
+        justify-content: space-between;
+    
+    
+    }
+  }
+
+  /*-----------max 1025 ---------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  ------------------------------------------------------
+  -----------------------------------------------------*/
+
+  @media screen and (max-width: 800px) {
+    .meow__buy {
+        width: 84%;
+        height: 350px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 3rem;
+        margin-left: 5rem;
+        display: flex;
+        
+        
+        justify-content: space-between;
+    
+    
+    }
+  }
+
+
+
+/* ------------max 500px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 500px) {
+    .meow__buy {
+        width: 83%;
+        height: 920px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 3rem;
+        margin-left: 2.1rem;
+        display: flex;
         flex-direction: column;
         
         justify-content: space-between;
     
     
     }
-    .meow__buy h1 {
-        font-family: var(--font-family); 
-        font-size: 1.4rem;
-    }
-    
-    .meow__buy h2 {
-        font-family: var(--font-family); 
-        font-size: 0.95rem;
-    }
-    
-    .meow__buy h3 {
-        font-size: 0.75rem;
-        margin-bottom: 1.4px;
-        margin-top: 8px;
-        color: rgba(255, 255, 255, 0.534);
-    }
-    
-    .meow__buy p {
-        font-size: 0.75rem;
-        
-    }
-    .meow__buy_pool {
-        padding: 9px;
-        justify-content: space-between; 
-    }
+
+
+/*position --------------------------------------------*/
+.meow__buy_pool {
+    margin-left: 0.1rem;
+    justify-content: space-between; 
+}
+
 
 }
+
+/* ------------max 330px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 330px) {
+    .meow__buy {
+        width: 83%;
+        height: 920px;
+        background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%,
+        rgba(47, 24, 110, 0.966) 50%, rgba(43, 9, 138, 0.562) 100%);;
+        padding: 20px;
+        color: #ffff;
+        border-radius: #ffff;
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ffffff35;
+        margin-top: 3rem;
+        margin-left: 3.8rem;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+    
+    
+    }
+
+
+/*position --------------------------------------------*/
+.meow__buy_pool {
+    margin-left: 0.1rem;
+    justify-content: space-between; 
+}
+
+
+}
+
