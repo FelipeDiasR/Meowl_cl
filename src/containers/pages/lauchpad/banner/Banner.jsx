@@ -6,6 +6,7 @@ import './banner.css';
 
 const Banner = () => {
   return (
+    
     <div className='meow__banner section__padding'>
       <div className='meow__banner_content'>
         <div className='meow__banner_text'>

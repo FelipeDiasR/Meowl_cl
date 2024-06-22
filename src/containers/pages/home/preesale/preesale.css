@@ -1,148 +1,99 @@
 .meow__preesale {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
-
-}
-
-
-.meow__preesale_container{
+  }
+  
+  .meow__preesale_container {
     color: #fff;
     font-family: var(--font-family);
     text-align: center;
-    position: absolute;
-    top: 2565px;
-    left: 375px;
+    padding: 2rem;
+    margin-top: 5rem; /* Ajuste a margem superior conforme necessário */
+    margin-bottom: 5rem; /* Ajuste a margem inferior conforme necessário */
+  }
 
-}
-
-.meow__preesale_container h1 {
+  
+  
+  .meow__preesale_container h1 {
     font-size: 2.5em;
     margin-bottom: 0.85em;
-}
-
-.meow__preesale_container p {
+  }
+  
+  .meow__preesale_container p {
     font-size: 1em;
-    margin-bottom: 4em;
+    margin-bottom: 5em;
     font-weight: 250;
+  }
+  
+  .meow__preesale_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+  
+  .meow__preesale_buttons_waitlist,
+  .meow__preesale_buttons_htbuy {
+    font-family: var(--font-family);
+    width: 250px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 8px;
+  }
 
-
-}
-
-.meow__preesale_buttons {
-    position: absolute;
-}
-
-.meow__preesale_buttons_waitlist {
-    width: 143px;
-    height: 38px;
-    margin-right: 2em;
-    background-color: #686DF1;
-    color: #ffff;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-
-}
-
-.meow__preesale_buttons_htbuy {
-    width: 143px;
-    height: 38px;
-    background-color: #ffffff26;
-    color: #ffff;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-
-}
-
-
-
-
-
-
-/*--------------max 426 px----------------
-------------------------------------------
-------------------------------------------
-------------------------------------------
-------------------------------------------
-------------------------------------------
-------------------------------------------*/
-
- @media screen and (max-width: 500px) {
-    .meow__preesale {
-        display: flex;
-    
-    
-    }
-    
-    
-    .meow__preesale_container{
-        color: #fff;
-        font-family: var(--font-family);
-        text-align: center;
-        margin-top: 4rem;
-        margin-left: -22rem;
-    
-    }
-    
+  .meow__preesale_buttons_waitlist{
+    background-color: #d862ff93;
+  }
+  
+  .meow__preesale_buttons_htbuy {
+    background-color: #428eae;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 800px) {
     .meow__preesale_container h1 {
-        font-size: 1.8em;
-        margin-bottom: 0.85em;
-        margin-left: 40px;
+      font-size: 1.8em;
     }
-    
+  
     .meow__preesale_container p {
-        font-size: 1em;
-        margin-bottom: 4em;
-        font-weight: 250;
-        width: 250px;
-        margin-left: 55px;
-        
-    
-    
+      font-size: 1em;
+      margin-bottom: 2em;
     }
-    
+  
     .meow__preesale_buttons {
-        position: absolute;
-        margin-left: 50px;
-        
+      flex-direction: column;
+      gap: 1em;
     }
-    
-    .meow__preesale_buttons_waitlist {
-        width: 143px;
-        height: 38px;
-        margin-right: 2em;
-        background-color: #686DF1;
-        color: #ffff;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        position: absolute;
-        left: 28px;
-    
+  }
+  
+  @media screen and (max-width: 500px) {
+    .meow__preesale_container {
+      padding: 1rem;
     }
-    
+  
+    .meow__preesale_container h1 {
+      font-size: 1.5em;
+    }
+  
+    .meow__preesale_container p {
+      font-size: 1em;
+      margin-bottom: 1.5em;
+    }
+  
+    .meow__preesale_buttons {
+      flex-direction: column;
+      gap: 1em;
+    }
+  
+    .meow__preesale_buttons_waitlist,
     .meow__preesale_buttons_htbuy {
-        width: 143px;
-        height: 38px;
-        background-color: #ffffff26;
-        color: #ffff;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        position: absolute;
-        left: 185px;
-    
+      width: 100%;
+      height: 48px;
     }
-    
-     
-
-
-
-
-
- }
+  }
+  

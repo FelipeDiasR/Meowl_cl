@@ -201,6 +201,40 @@
     
     
     } 
+
+    /* raise.css */
+.meow__raise_progress {
+    background-color: #e0e0e01e;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    margin-left: 8rem;
+    bottom: 3.5rem;
+    height: 30px;
+    width: 70%;
+  }
+  
+  .meow__raise_progress_bar {
+    background-color: #d862ff75;
+    height: 100%;
+    border-radius: 25px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 253, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .meow__raise_progress_bar > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
     
      
 
@@ -233,6 +267,39 @@
     
     
     } 
+ /* raise.css */
+ .meow__raise_progress {
+    background-color: #e0e0e01e;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    bottom: 1rem;
+    margin: 30px 0;
+    height: 30px;
+    width: 100%;
+}
+
+.meow__raise_progress_bar {
+    background-color: #d862ff75;
+    height: 100%;
+    border-radius: 25px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 253, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meow__raise_progress_bar > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 }  
 
@@ -262,6 +329,39 @@
     
     
     } 
+    /* raise.css */
+    .meow__raise_progress {
+        background-color: #e0e0e01e;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        position: relative;
+        top: 0.1rem;
+        margin: 30px 0;
+        height: 30px;
+        width: 100%;
+    }
+    
+    .meow__raise_progress_bar {
+        background-color: #d862ff75;
+        height: 100%;
+        border-radius: 25px;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        color: rgb(255, 253, 253);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .meow__raise_progress_bar > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
 }
 
@@ -291,6 +391,7 @@
     
     
     } 
+    
 
 }
 
@@ -340,7 +441,7 @@
         border-radius: 10px;
         box-shadow: 5px 5px 10px #ffffff35;
         margin-top: 5rem;
-        margin-left: 3.8rem;
+        margin-left: 1.9rem;
         display: flex;
         flex-direction: column;
         
