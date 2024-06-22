@@ -15,7 +15,7 @@
       "open_subscription": false,
       "closed": true,
       "social_links": {
-        "website": "https://www.meowlverse.com/home",
+        "website": "https://www.meowlverse.com",
         "twitter": "https://x.com/MeowlVerse",
         "telegram": "https://t.me/+riHQZk6L02I4ODNh"
       },
@@ -24,7 +24,7 @@
       "total_to_raise": 100000,
       "token_price": 0.0001,
       "image": "/meowlverse.svg",
-      "smartcontractaddress":  "0x151E64F54EBfCB213F46f0fa75393Aef4f960222",
+      "smartcontractaddress":  "x",
       "smartcontractabi": true,
       "tottal_supply": "10 000 000 000 MWOL", 
       "initial_supply": "1 000 000 000 MWOL",
@@ -45,11 +45,11 @@
       "token_address": "Soon",
       "tge_Availble": false,
       "claim_Avalible": false,
-      "open_buy": false,
+      "open_buy": true,
       "open_subscription": false,
-      "closed": true,
+      "closed": false,
       "social_links": {
-        "website": "https://www.meowlverse.com/home",
+        "website": "https://www.meowlverse.com",
         "twitter": "https://x.com/MeowlVerse",
         "telegram": "https://t.me/+riHQZk6L02I4ODNh"
       },
@@ -58,7 +58,7 @@
       "total_to_raise": 60000,
       "token_price": 0.001,
       "image": "/meowlverse.svg",
-      "smartcontractaddress":  "0x4988d77D4C91A9A5B93B9F8e26f4ef5b48496819",
+      "smartcontractaddress":  "x",
       "smartcontractabi": true,
       "tottal_supply": "10 000 000 000 MWOL", 
       "initial_supply": "1 800 000 000 MWOL",
@@ -82,7 +82,7 @@
       "open_subscription": false,
       "closed": true,
       "social_links": {
-        "website": "https://www.meowlverse.com/home",
+        "website": "https://www.meowlverse.com",
         "twitter": "https://x.com/MeowlVerse",
         "telegram": "https://t.me/+riHQZk6L02I4ODNh"
       },

@@ -12,9 +12,8 @@ import { Partners, Header, Preesale, Tokenomics, Brand, Cta } from '../../contai
 const Home = () => {
   return (
     <div className='meow_home'>
-      <div className='gradient_bg'  >
-         <Header />
-        </div>
+      
+      <Header />
       <Brand />
       <Preesale />
       <Partners />

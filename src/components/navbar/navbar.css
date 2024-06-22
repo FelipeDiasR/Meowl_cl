@@ -4,9 +4,12 @@
     align-items: center;
     background-color: transparent;
     font-family: var(--font-family);
-    margin-top: 1.5rem;
+    margin-top: 0rem;
     margin-left: 0.1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
+    background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
+     rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); /* Cor de fundo */
+    
 }
 
 .meow__navbar_logo {
@@ -133,9 +136,9 @@ li {
 
     .meow__navbar {
         
-        margin-top: 1.5rem;
+        margin-top: 0;
         margin-left: -1rem;
-        margin-bottom: 4rem;
+        margin-bottom: 0rem;
     }
 
     
@@ -167,9 +170,9 @@ li {
 
     .meow__navbar {
         
-        margin-top: 1.5rem;
+        margin-top: 0;
         margin-left: -1rem;
-        margin-bottom: 4rem;
+        margin-bottom: 0rem;
     }
 
     
@@ -203,9 +206,9 @@ li {
 
     .meow__navbar {
         
-        margin-top: 1.5rem;
-        margin-left: -2rem;
-        margin-bottom: 4rem;
+        margin-top: 0;
+        margin-left: -2.2rem;
+        margin-bottom: 0rem;
     }
 
     

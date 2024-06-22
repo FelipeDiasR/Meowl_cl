@@ -1,32 +1,24 @@
 import React from 'react';
 import './partners.css';
-import { Base, MeowlVerse, Pollygon} from '../../../../img/partners/imports'
+import { Base, mwol, Pollygon } from '../../../../img/partners/imports';
 
 function Partners() {
   return (
     <div className='meow__partners section__padding'>
-      <h2> Backed by</h2> 
-      <div className='mewo_partners-container'>  
-
-           
-        <div className='overlay-imagepolly'>
-        <img src={Pollygon} alt="Pollygon" />
+      <h2>Backed by</h2> 
+      <div className='meow__partners_container'>  
+        <div className='meow__partner_image'>
+          <img src={Base} alt="Pollygon" />
         </div>
-        
-        <div className='overlay-imagebase'>
-        <img src={Base} alt="Base" />
-      	</div>
-      	<div className='overlay-imagemeowl'>
-        <img src={MeowlVerse} alt="MeowlVerse" />
-	      </div>
-        
+        <div className='meow__partner_image'>
+          <img src={Pollygon} alt="Base" />
+        </div>
+        <div className='meow__partner_image'>
+          <img src={mwol} alt="MeowlVerse" />
         </div>
       </div>
-      
-      
-      
-  
+    </div>
   )
 }
 
-export default Partners 
+export default Partners;

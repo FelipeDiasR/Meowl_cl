@@ -1,3 +1,4 @@
+
 .meow__banner {
   width: 90.8%;
   height: 290px;
@@ -49,7 +50,7 @@
   width: 15%;
   height: 35px;
   background-color: #d862ff75;
-  color: rgba(2, 3, 22, 0.973);
+  color: rgba(254, 254, 255, 0.5);
   border: none;
   border-radius: 8px;
   margin-left: 1.2rem;
@@ -169,7 +170,7 @@
       width: 15%;
       height: 35px;
       background-color: #d862ff75;
-      color: rgba(2, 3, 22, 0.973);
+      color: rgba(254, 254, 255, 0.5);
       border: none;
       border-radius: 8px;
       margin-left: 1.2rem;
@@ -246,7 +247,7 @@
       width: 40%;
       height: 35px;
       background-color: #d862ff75;
-      color: rgba(2, 3, 22, 0.973);
+      color: rgba(254, 254, 255, 0.5);
       border: none;
       border-radius: 8px;
       margin-left: 1.2rem;
@@ -282,7 +283,7 @@
       border-radius: 10px;
       box-shadow: 5px 5px 10px #ffffff35;
       margin-top: 6rem;
-      margin-left: 3.8rem;
+      margin-left: 1.9rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -293,5 +294,11 @@
       margin-top: 2rem;
       margin-bottom: 1.5rem;
       width: 220px;
+  }
+  .meow__banner__button {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 350px;
   }
 }

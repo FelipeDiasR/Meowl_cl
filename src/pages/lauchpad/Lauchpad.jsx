@@ -44,27 +44,29 @@ const Launchpad = () => {
 
   return (
       <div className='meow__lauchpad'>
-        <Alert /> 
-        <h1 className='meow__lauchpad_global'> Welcome to MeowPad</h1>
-         {
-           repositories.length > 0 ? (
-            <div className='meow__lauchpad_cards'>
-            {console.log(repositories)}
-            { 
-              repositories.map((repo) => (
-                <Cards logo={repo.image} status={repo.status} name={repo.name}
-                website={repo.social_links.website} twitter={repo.social_links.twitter}
-                telegram={repo.social_links.telegram} open_sale={formatDate(repo.sales_opening_date)}
-                close_sale={formatDate(repo.sales_closing_date)} token_price={repo.token_price}
-                total_raise={formatCurrency(repo.total_to_raise)} id={repo.id}/>
-              ) )          
-            }
-         </div>
+        <div className= "meow__lauchpad_container">
+          <Alert /> 
+          <h1 className='meow__lauchpad_global'> Welcome to MeowPad</h1>
+          {
+            repositories.length > 0 ? (
+              <div className='meow__lauchpad_cards'>
+                  {console.log(repositories)}
+                  { 
+                    repositories.map((repo) => (
+                      <Cards logo={repo.image} status={repo.status} name={repo.name}
+                      website={repo.social_links.website} twitter={repo.social_links.twitter}
+                      telegram={repo.social_links.telegram} open_sale={formatDate(repo.sales_opening_date)}
+                      close_sale={formatDate(repo.sales_closing_date)} token_price={repo.token_price}
+                      total_raise={formatCurrency(repo.total_to_raise)} id={repo.id}/>
+                    ) )          
+                  }
+                </div>
 
-           ) : (
-             <p> Soon we are going to have projects...</p>
-           )
-         }
+            ) : (
+              <p> Soon we are going to have projects...</p>
+            )
+          }
+          </div>
         <Banner/>
       </div>
 

@@ -1,67 +1,51 @@
 import React from 'react';
 import './header.css';
 
-import { GoArrowRight } from "react-icons/go";
-import Bloor from '../../../../img/assets/bloor.svg';
-import Rede2 from '../../../../img/assets/rede2.svg';
-import Starts from '../../../../img/assets/Canvas.svg';
-import moon from '../../../../img/assets/testando.svg'
-import rede from '../../../../img/assets/div3.svg';
-
+import Logo from '../../../../img/assets/logomwol.svg';
 import { Link } from 'react-router-dom';
 
-const Header =() => {
+const Header = () => {
   return (
-    <div className= "meow__header section__padding" id="home" >
-      <div className="meow__header-content">
-        <div className='overlay-image1'>
-        <img src={moon} alt="moon" />
-          </div>
-        <div className='overlay-image' >   
-            <img src={rede} alt="rede" />
-        </div> 
-        <div className='overlay-image2'>
-            <img src={Bloor} alt="bloor" /> 
-          </div>
-
-          <div className='overlay-image3'>
-            <img src={Rede2} alt="rede" />
-          </div>
-
-          <div className='overlay-image4'>
-            <img src={Starts} alt="strats" />
-          </div>
-
-
-        <h1 className="meow__first-text"> New Era Of Memes </h1> 
-        <h2 className="meow__first-h2"> The First Meme, Launchpad, and Game All in One. </h2> 
-        <p className="meow_second-p"> At MeowlVerse, we believe in the power of memes to inspire, entertain, and unite people <br/>
-         across the globe. Our mission is to harness the viral appeal of memes and leverage the <br/> transformative
-         potential of blockchain technology to create a dynamic and inclusive <br/>
-          ecosystem that transcends traditional boundaries.</p>
-
-          <div className="meow__header_buttons"> 
-              <Link to="/launchpad">
-                  <button className='buttonA' type="button" > Preesale</button>
+    <div className="meow__header" id="home">
+      <div className="meow_header_container">
+        <div className="meow__header_content">
+          <h1 className="gradient_text">
+            New Era Of Memes,
+            <br />
+            Launchpads and
+            <br />
+            Games.
+          </h1>
+          <p>
+            At MeowlVerse, we believe in the power of memes to inspire and unite
+            <br />
+            people across the globe. Our mission is to harness the viral appeal of
+            <br />
+            memes and leverage the transformative potential of blockchain technology
+            <br />
+            to create a dynamic and inclusive ecosystem that transcends
+            <br />
+            traditional boundaries.
+          </p>
+          <div className="meow__header_buttons">
+            <div className="meow__header_buttons-button1">
+              <Link to={`/details/01`}>
+                <button>Buy $ MWOL</button>
               </Link>
-              <Link to="/launchpad">
-                  <button className='buttonB' type="button"  > Lauchpad  <GoArrowRight className='meow_arrow_icon'/></button>
+            </div>
+            <div className="meow__header_buttons-button2">
+              <Link to={`/launchpad`}>
+                <button>Start Investing</button>
               </Link>
-              
- 
-
+            </div>
           </div>
-          
-        
-        
-       </div>
-
-       
-
-      
-      
+        </div>
+        <div className="meow__header-img">
+          <img src={Logo} alt="image" />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
