@@ -8,6 +8,8 @@ import Starts from '../../../../img/assets/Canvas.svg';
 import moon from '../../../../img/assets/testando.svg'
 import rede from '../../../../img/assets/div3.svg';
 
+import { Link } from 'react-router-dom';
+
 const Header =() => {
   return (
     <div className= "meow__header section__padding" id="home" >
@@ -19,7 +21,7 @@ const Header =() => {
             <img src={rede} alt="rede" />
         </div> 
         <div className='overlay-image2'>
-            <img src={Bloor} alt="bloor" />
+            <img src={Bloor} alt="bloor" /> 
           </div>
 
           <div className='overlay-image3'>
@@ -38,10 +40,14 @@ const Header =() => {
          potential of blockchain technology to create a dynamic and inclusive <br/>
           ecosystem that transcends traditional boundaries.</p>
 
-          <div className="meow__header_buttons">
-            <button className='buttonA' type="button" > Preesale</button>
-            <button className='buttonB' type="button"  > Lauchpad  <GoArrowRight className='meow_arrow_icon'/></button>
-            
+          <div className="meow__header_buttons"> 
+              <Link to="/launchpad">
+                  <button className='buttonA' type="button" > Preesale</button>
+              </Link>
+              <Link to="/launchpad">
+                  <button className='buttonB' type="button"  > Lauchpad  <GoArrowRight className='meow_arrow_icon'/></button>
+              </Link>
+              
  
 
           </div>

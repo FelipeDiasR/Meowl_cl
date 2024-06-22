@@ -7,7 +7,7 @@ import App from './App';
 //import do react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 //import { Footer } from './containers';
-import { Home } from './pages';
+import { Home, Lauchpad, Details } from './pages';
 
 
 const router = createBrowserRouter ([
@@ -16,9 +16,20 @@ const router = createBrowserRouter ([
     element: <App/>,
     children: [
       {
-        path: "home",
+        path: "/",
         element: <Home />
       },
+      {
+        path: "launchpad",
+        element: <Lauchpad />
+      },
+      {
+        path: "details/:id",
+        element: <Details />
+      },
+      
+      
+      
 
     ]
   },

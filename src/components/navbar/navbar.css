@@ -1,474 +1,234 @@
-.meow__navbar{
+.meow__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-
-    padding: 2rem 6rem;
-   
-
+    font-family: var(--font-family);
+    margin-top: 1.5rem;
+    margin-left: 0.1rem;
+    margin-bottom: 4rem;
 }
 
-.meow__navbar-links {
+.meow__navbar_logo {
+    flex: 1;
+}
+
+.meow__navbar_logo img {
+    width: 350px;
+}
+
+.meow__navbar_preesale {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
 }
 
-.meow__navbar-links_logo {
-    margin-right: 2rem;
-
+.meow__navbar_preesale button {
+    font-family: var(--font-family);
+    width: 163px;
+    height: 33px;
+    background-color: rgba(255, 255, 255, 0.103);
+    color: rgba(255, 255, 255, 0.774);
+    border: none;
+    border-radius: 15px;
 }
 
-.meow__navbar-links_logo_img {
-    position: relative;
-    left: -50px;
-    width: 75%;
-    height: 166;
-}
-
-.meow__navbar-links_container {
-    display: flex;
-    flex-direction: row;
-    width: 143px;
-    height: 38px;
-    margin-right: 2em;
-    background-color: #686DF1;
-    color: #ffff;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-.meow__navbar-sign {
+.meow__navbar_whitepaper_wallet {
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-}
-
-.meow__navbar-links_container {
-    color: #CAECF1;
+    color: #fff;
     font-family: var(--font-family);
-    position: relative;
-    left: 300px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    text-transform: capitalize;
-    
-
-    margin: 0 1rem;
-    cursor: pointer;
+    font-size: 0.9rem;
 }
 
+.meow__navbar_whitepaper_wallet a {
+    margin-right: 1.5rem;
+}
 
-
-.meow__navbar-whitepaper-buy {
-    width: auto;
-    height: auto;
-    position: relative;
-    left: -30px;
-    top: 0px;
+.meow__navbar_whitepaper_wallet button {
     font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    text-transform: capitalize;
-    color:#fff;
-    border-radius: 5px;
-
-
-}
-.meow__navbar-menu_container_button {
-    width: auto;
-    height: auto;
-    position: relative;
-    left: -10px;
-    top: 0px;
-    font-family: var(--font-family);
-    color:#fff;
-    border-radius: 5px;
-
+    width: 163px;
+    height: 33px;
+    background-color: rgba(255, 255, 255, 0.103);
+    color: rgba(255, 255, 255, 0.774);
+    border: none;
+    border-radius: 15px;
+    margin-right: 2rem;
 }
 
+/* Estilos para o menu responsivo */
 .meow__navbar-menu {
-    margin-left: 1rem;
-
     display: none;
-    position: relative;
-    width: auto;
-    height: auto;
-    
-    font-family: var(--font-family);
-    color:#fff;
-    border-radius: 5px;
-
-
-
 }
 
 .meow__navbar-menu svg {
     cursor: pointer;
-
 }
 
 .meow__navbar-menu_container {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     flex-direction: column;
-
-    text-align: end;
-    background-color: var(--color-footer);
+    color: #fff;
     padding: 2rem;
     position: absolute;
-    top: 40px;
+    top: 60px;
     right: 0;
     margin-top: 1rem;
     min-width: 210px;
     border-radius: 5px;
-    box-shadow: 0 0 5 rgba(221, 215, 215, 0.2);
-    
-
-
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.meow__navbar_menu_whitepaper-buy{
-    margin: 1rem;
-
-
+.meow__navbar-menu a,
+.meow__navbar-menu .link {
+    margin-bottom: 1rem;
+    color: inherit;
+    text-decoration: none;
 }
 
-.meow__navbar-menu_container_link{
-    display: none;
-
+.meow__navbar-menu a:hover,
+.meow__navbar-menu .link:hover {
+    text-decoration: underline;
 }
-/* media scren to 2561 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
-@media screen and  (max-width: 2561px){
-    
-    .meow__navbar-links_container{
-       position: absolute;
-       left: 785px;
-   
-    }
-    .meow__navbar-menu {
-       display: none;
-   
-    }
-   
-    .meow__navbar-links_logo_img {
-       width: 225px;
-       position: relative;
-       left: -100px;
-   
-   
-    }
-    .meow__navbar-whitepaper-buy {
-        position: absolute;
-        left: 1350px;
-        top: 80px;
 
+li {
+    list-style-type: none;
+  }
+
+/* Estilos para telas menores que 800px */
+@media screen and (max-width: 800px) {
+
+    .meow__navbar_logo img {
+        width: 250px;
+       
     }
 
-    .meow__navbar-menu_container_button {
-        position: absolute;
-        left: 1475px;
-        top: 75px;
-        
-    }
-   
-   
-   
-   }
-
-/* media scren to 2561 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
-
-@media screen and  (max-width: 1921px){
-    
-    /*preesale button  */
-    .meow__navbar-links_container{
-       position: absolute;
-       left: 700px;
-   
-    }
-
-    /*menu button */
-    .meow__navbar-menu {
-       display: none;
-   
-    }
-    /*logo*/
-    .meow__navbar-links_logo_img {
-       width: 225px;
-       position: relative;
-       left: -100px;
-   
-    /* whitepaper button  */
-    }
-    .meow__navbar-whitepaper-buy {
-        position: absolute;
-        left: 1250px;
-        top: 80px;
-
-    }
-    /* but button  */
-    .meow__navbar-menu_container_button {
-        position: absolute;
-        left: 1375px;
-        top: 75px;
-        
-    }
-   
-   
-   
-   }   
-
-/* media scren to 1441 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
- @media screen and  (max-width: 1441px){
-    
-
-    /*---preeslae button ---*/
-    .meow__navbar-links_container{
-       position: absolute;
-       left: 500px;
-   
-    }
-    .meow__navbar-menu {
-       display: none;
-   
-    }
-   
-    /*----logo-------*/
-    .meow__navbar-links_logo_img {
-       width: 225px;
-       position: relative;
-       left: -100px;
-   
-   
-    }
-
-    /*-----whitepaper nutton----*/
-    .meow__navbar-whitepaper-buy {
-        position: absolute;
-        left: 760px;
-        top: 80px;
-
-    }
-    /*-------buy button ----*/
-    .meow__navbar-menu_container_button {
-        position: absolute;
-        left: 875px;
-        top: 75px;
-        
-    }
-   
-   
-   
-   }   
-
-/* media scren to 1113 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
-@media screen and  (max-width: 1113px){
-    
-
-    /*---preeslae button ---*/
-    .meow__navbar-links_container{
+    .meow__navbar_preesale {
         display: none;
-        position: absolute;
-        left: 500px;
-   
-    }
-    .meow__navbar-menu {
-       display: flex;
-   
-    }
-   
-    /*----logo-------*/
-    .meow__navbar-links_logo_img {
-       width: 225px;
-       position: relative;
-       left: -100px;
-   
-   
     }
 
-    /*-----whitepaper----*/
-    .meow__navbar-whitepaper-buy {
-        position: absolute;
-        left: 425px;
-        top: 80px;
-
-    }
-    /*-------buy button ----*/
-    .meow__navbar-menu_container_button {
-        position: absolute;
-        left: 550px;
-        top: 75px;
-        
-    }
-   
-   
-   
-   }  
-
-/* media scren to 1025 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
-@media screen and  (max-width: 1025px){
-    
-
-    /*---preeslae button ---*/
-    .meow__navbar-links_container{
+    .meow__navbar_whitepaper_wallet a {
         display: none;
-        position: absolute;
-        left: 500px;
-   
     }
 
-    /*-----menu button  */
-    .meow__navbar-menu {
-       display: flex;
-       position: absolute;
-       left: 700px;
-   
-    }
-   
-    /*----logo-------*/
-    .meow__navbar-links_logo_img {
-       width: 225px;
-       position: relative;
-       left: -100px;
-   
-   
+    .meow__navbar_whitepaper_wallet {
+        justify-content: flex-end;
+        width: 100%;
     }
 
-    /*-----whitepaper----*/
-    .meow__navbar-whitepaper-buy {
-        position: absolute;
-        left: 425px;
-        top: 80px;
-
+    .meow__navbar_whitepaper_wallet button {
+        margin-right: 11.9rem;
     }
-    /*-------buy button ----*/
-    .meow__navbar-menu_container_button {
-        position: absolute;
-        left: 550px;
-        top: 75px;
-        
-    }
-   
-   
-   
-   } 
-   
-/* media scren to 700 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/   
 
-@media screen and  (max-width: 700px){
-    .meow__navbar{
-       padding: 2rem 4rem;
-   
-   }
-}
-
-
-/* media scren to 550 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
-
-@media screen and  (max-width: 550px){
-    .meow__navbar{
-       padding: 2rem;
-   
-   }
-
-   .meow__navbar-whitepaper-buy{
-    display: none;
-
-   }
-    /*-----menu button  */
     .meow__navbar-menu {
         display: flex;
-        position: absolute;
-        left: 400px;
-    
-     }
-
-   .meow__navbar-menu_container_button {
-    display: none;
-
-   }
-   .meow__navbar-links_logo_img {
-    width: 170px;
-    position: relative;
-    left: -50px;
-
+        margin-right: 2rem;
     }
 }
 
-/* media scren to 426 px-------------------------
--------------------------------------------------
---------------------------------------------------
---------------------------------------------------
-----------------------------------------------*/
+/* Estilos para telas menores que 500px */
+@media screen and (max-width: 500px) {
 
-@media screen and  (max-width: 426px){
-    .meow__navbar{
-       padding: 2rem;
-   
-   }
-
-   .meow__navbar-whitepaper-buy{
-    display: none;
-
-   }
-    /*-----menu button  */
-    .meow__navbar-menu {
+    .meow__navbar {
         
-        display: flex;
-        position: absolute;
-        left: 300px;
+        margin-top: 1.5rem;
+        margin-left: -1rem;
+        margin-bottom: 4rem;
+    }
+
     
-     }
+    .meow__navbar_logo img {
+       
+        margin-right: 0rem;
+        width: 180px;
+    }
 
-   .meow__navbar-menu_container_button {
-    display: none;
+    .meow__navbar_whitepaper_wallet button {
+        width: 123px;
+        margin-right: 1rem;
+    }
 
-   }
-   .meow__navbar-links_logo_img {
-    width: 280px;
-    position: relative;
-    left: -50px;
+    .meow__navbar_whitepaper_wallet {
+        justify-content: center;
+        margin-top: 0.1rem;
+        
+    }
+    .meow__navbar-menu {
+        display: flex;
+        margin-left: 3rem;
+        margin-right: 2rem;
+    }
+}
 
+/* Estilos para telas menores que 380px */
+@media screen and (max-width: 380px) {
+
+    .meow__navbar {
+        
+        margin-top: 1.5rem;
+        margin-left: -1rem;
+        margin-bottom: 4rem;
+    }
+
+    
+    .meow__navbar_logo img {
+       
+        margin-right: 0rem;
+        width: 180px;
+    }
+
+    .meow__navbar_whitepaper_wallet button {
+        width: 123px;
+        margin-right: 0.2rem;
+    }
+
+    .meow__navbar_whitepaper_wallet {
+        justify-content: center;
+        margin-top: 0.1rem;
+        
+    }
+    .meow__navbar-menu {
+        display: flex;
+        margin-left: 3rem;
+        margin-right: 2rem;
     }
 }
 
 
 
+/* Estilos para telas menores que 325px */
+@media screen and (max-width: 325px) {
 
+    .meow__navbar {
+        
+        margin-top: 1.5rem;
+        margin-left: -2rem;
+        margin-bottom: 4rem;
+    }
+
+    
+    .meow__navbar_logo img {
+       
+        margin-right: -1.5rem;
+        width: 180px;
+    }
+
+    .meow__navbar_whitepaper_wallet button {
+        width: 123px;
+        margin-right: -1rem;
+    }
+
+    .meow__navbar_whitepaper_wallet {
+        justify-content: center;
+        margin-top: 0.1rem;
+        
+    }
+    .meow__navbar-menu {
+        display: flex;
+        margin-left: 3rem;
+        margin-right: 2rem;
+    }
+}
 

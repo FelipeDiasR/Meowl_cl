@@ -10,23 +10,20 @@ import './App.css';
 
 import { Navbar } from './components';
 import { Footer } from './components';
+import {WalletProvider} from './components/wallet/Walletcontext.jsx';
+
   
-/* <div className='teste'>
-            <img src={moon} alt="moon"/>
-            </div>
-             
-            style={{ backgroundImage:`url(${moon})`}}//*/
+
 
 
 const App = () => {
   return (
-    <div className='App'>
-      <div className='gradient_bg'  >
-         <Navbar />
-        
-        </div>
+    <div className='App'>  
+    <WalletProvider>
+    <Navbar />
     <Outlet />  
     <Footer />
+    </WalletProvider>   
     </div>
 
 

@@ -1,0 +1,494 @@
+.meow__alert {
+  display: flex;
+  position: relative;
+  margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+  width: 1370px;
+  margin-left: 4.5rem;
+  max-width: 100%;
+  padding: 1rem;
+  color: rgb(12, 1, 1);
+  background-color: #fee2e2;
+  font-family: var(--font-family);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meow__alert_icon {
+  color: red;
+  margin-right: 1rem;
+  align-self: center; /* Centraliza verticalmente o ícone */
+}
+
+.meow__alert_content {
+  flex: 1;
+}
+
+.meow__alert_content h1 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+  line-height: 1.2; /* Ajusta a altura da linha */
+}   
+
+.meow__alert_content p {
+  margin: 0;
+}
+
+.meow__alert_icon_close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+.meow__alert_secondh1 {
+  position: absolute;
+  top: 10rem;
+  color: #ffff;
+}
+/* ------------max 2100px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 2600px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 90%;
+    margin-left: 4.5rem;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+
+
+/* ------------max 2100px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 2100px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 1370px;
+    margin-left: 4.5rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+
+/* ------------max 1441 -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 1441px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 1325px;
+    margin-left: 4.5rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+
+/* ------------max 1025px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 1025px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 900px;
+    margin-left: 4.5rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+
+/* ------------max 821px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 821px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 650px;
+    margin-left: 4.5rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+
+/* ------------max 376px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 500px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 345px;
+    margin-left: 2rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+
+/* ------------max 376px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 376px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 320px;
+    margin-left: 2rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
+/* ------------max 321px -----------------------------------------
+----------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 321px) { 
+  .meow__alert {
+    display: flex;
+    position: relative;
+    margin-top: auto; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 275px;
+    margin-left: 2rem;
+    max-width: 100%;
+    padding: 1rem;
+    color: rgb(12, 1, 1);
+    background-color: #fee2e2;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meow__alert_icon {
+    color: red;
+    margin-right: 1rem;
+    align-self: center; /* Centraliza verticalmente o ícone */
+  }
+  
+  .meow__alert_content {
+    flex: 1;
+  }
+  
+  .meow__alert_content h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0; /* Margem inferior para o parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+  }   
+  
+  .meow__alert_content p {
+    margin: 0;
+  }
+  
+  .meow__alert_icon_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .meow__alert_secondh1 {
+    position: absolute;
+    top: 10rem;
+    color: #ffff;
+  }
+}
