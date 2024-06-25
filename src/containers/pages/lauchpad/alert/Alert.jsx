@@ -18,10 +18,10 @@ const Alert = () => {
     <div className='meow__alert'>
       <div className='meow__alert_header'>
         <LuAlertCircle className='meow__alert_icon' />
-        <h1 className='meow__alert_title'>Always make sure the URL is www.meowl.com</h1>
+        <h1 className='meow__alert_title'>Always make sure the URL is www.meowlverse.com</h1>
         <MdClose className='meow__alert_icon_close' onClick={handleClose} />
       </div>
-      <p className='meow__alert_message'>Be careful with traps</p>
+      <p className='meow__alert_message'>Be cautious of phishing scams.</p>
     </div>
   );
 }

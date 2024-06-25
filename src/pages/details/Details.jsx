@@ -65,7 +65,7 @@ const Details = () => {
                             smartcontractabi={project.smartcontractabi}
                             open_subscription={project.open_subscription}
                             status={project.status}
-                            
+                            network={project.network}
                         />
                         
                          <Raise 
