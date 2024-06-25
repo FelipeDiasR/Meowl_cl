@@ -15,7 +15,8 @@ import { Loading, Approved, Denied } from '../../../../components';
 
 const Description = ({ logo, name, website, twitter, telegram,
 open_sale, close_sale, token_price, total_raise, closed, open_buy, 
-smartcontractaddress, open_subscription, smartcontractabi, status, network }) => {
+smartcontractaddress, open_subscription, smartcontractabi, status, network, rpc,
+chain_name, token_name, symbol, decimals, explorerUrl}) => {
   const { account, connectWallet } = useWallet();
   const [fundraising, setFundraising] = useState(null);
   const [stableBalance, setStableBalance] = useState(false);
@@ -99,39 +100,79 @@ smartcontractaddress, open_subscription, smartcontractabi, status, network }) =>
   }
 }, [rightnetwork]);
 
-  useEffect(() => {
-    const changingNetwork = async () => {
-      if(account && fundingcontract && rightnetwork )
-      try {
-        setLoading(true);
-        await window.ethereum.request({
-          method: 'wallet_switchEthereumChain',
-          params: [{ chainId: rightnetwork }],
-        });
-        console.log('Switched to the correct network');
-        setLoading(false);
-        setApproved(true);
+useEffect(() => {
+  const changingNetwork = async () => {
+    try {
+      if ((open_subscription || open_buy) && account && fundingcontract && rightnetwork) {
+        if (typeof window.ethereum !== 'undefined') {
+          const provider = new ethers.BrowserProvider(window.ethereum);
+          const { chainId } = await provider.getNetwork();
 
-        setTimeout(() => {
-          setApproved(false);
-        }, 3000);
-        
-      } catch (error) {
-        console.log('Switched to the correct network');
-        setLoading(false);
-        setDenied(true); // Indica falha
-      } finally {
-         // Finaliza o estado de carregamento
-        setTimeout(() => {
-          setDenied(false);
-        }, 3000); // Remove a mensagem de sucesso/erro após 3 segundos
+          if (chainId !== parseInt(rightnetwork, 16)) {
+            setLoading(true);
+
+            try {
+              await window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: rightnetwork }],
+              });
+              console.log('Switched to the correct network');
+              
+            } catch (switchError) {
+              if (switchError.code === 4902) {
+                try {
+                  await window.ethereum.request({
+                    method: 'wallet_addEthereumChain',
+                    params: [{
+                      chainId: rightnetwork,
+                      rpcUrls: [rpc], // Corrigido de "rpcUrl" para "rpcUrls"
+                      chainName: chain_name,
+                      nativeCurrency: {
+                        name: token_name,
+                        symbol: symbol,
+                        decimals: 18
+                      },
+                      blockExplorerUrls: [explorerUrl] // Corrigido de "blockExplorerUrl" para "blockExplorerUrls"
+                    }],
+                  });
+                  setApproved(true);
+                  console.log('Network added and switched to the correct network');
+                } catch (addError) {
+                  console.error('Failed to add network:', addError);
+                  setDenied(true);
+                }
+              } else {
+                console.error('Failed to switch network:', switchError);
+                setDenied(true);
+              }
+            } finally {
+              setLoading(false);
+              setTimeout(() => {
+                setApproved(false);
+                setDenied(false);
+              }, 1500);
+            }
+          } else {
+            console.log('Already on the correct network');
+          }
+        } else {
+          console.error('Ethereum object not found, install Metamask.');
+        }
+      } else {
+        console.log('No need to switch network');
       }
-    };
-  
-    if (account) {
-      changingNetwork();
+    } catch (error) {
+      console.error('Error:', error);
     }
-  }, [account, rightnetwork]);
+  };
+
+  if (account) {
+    changingNetwork();
+  }
+}, [account, fundingcontract, rightnetwork, open_subscription, 
+  open_buy, rpc, chain_name, token_name, symbol, decimals, 
+  explorerUrl]);
+
 
   const subscribeToWaitlist = async () => {
     let provider, signer, currentAccount;

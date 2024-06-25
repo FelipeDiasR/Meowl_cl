@@ -9,7 +9,7 @@ import './App.css';
 
 
 import { Navbar } from './components';
-import { Footer } from './components';
+import { Footer, ScrollTop } from './components';
 import {WalletProvider} from './components/wallet/Walletcontext.jsx';
 
   
@@ -21,6 +21,7 @@ const App = () => {
     <div className='App'>  
     <WalletProvider>
     <Navbar />
+    <ScrollTop />
     <Outlet />  
     <Footer />
     </WalletProvider>   

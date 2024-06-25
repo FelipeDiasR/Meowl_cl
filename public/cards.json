@@ -32,6 +32,12 @@
       "claimed_on": "MeowlPad",
       "vesting": "10% at TGE, then vesting for 3 months",
       "tge_avalilble": "Available every 30 days after the TGE",
+      "rpc": "https://mainnet.base.org",
+      "explorerUrl": "https://basescan.org",
+      "chain_name": "Base Mainnet",
+      "token_name": "ETH",
+      "symbol": "ETH",
+      "decimals": "18",
       "network": "0x1"
       
     },
@@ -46,7 +52,7 @@
       "token_address": "Soon",
       "tge_Availble": false,
       "claim_Avalible": false,
-      "open_buy": true,
+      "open_buy": false,
       "open_subscription": false,
       "closed": true,
       "social_links": {
@@ -67,6 +73,12 @@
       "claimed_on": "MeowlPad",
       "vesting": "10% at TGE, then vesting for 3 months",
       "tge_avalilble": "Available every 30 days after the TGE",
+      "rpc": "https://mainnet.base.org",
+      "explorerUrl": "https://basescan.org",
+      "chain_name": "Base Mainnet",
+      "token_name": "ETH",
+      "symbol": "ETH",
+      "decimals": "18",
       "network": "0x2105"
     },
     {
@@ -101,6 +113,12 @@
       "claimed_on": "MeowlPad",
       "vesting": "10% at TGE, then vesting for 3 months",
       "tge_avalilble": "Available every 30 days after the TGE",
+      "rpc": "https://mainnet.base.org",
+      "explorerUrl": "https://basescan.org",
+      "chain_name": "Base Mainnet",
+      "token_name": "ETH",
+      "symbol": "ETH",
+      "decimals": "18",
       "network": "0x1"
     }
   ]
