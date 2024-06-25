@@ -26,12 +26,13 @@
       "image": "/meowlverse.svg",
       "smartcontractaddress":  "x",
       "smartcontractabi": true,
-      "tottal_supply": "10 000 000 000 MWOL", 
-      "initial_supply": "1 000 000 000 MWOL",
+      "tottal_supply": "100 000 000 000  MWOL", 
+      "initial_supply": "1 800 000 000 MWOL",
       "marketcap": "$200 000",
       "claimed_on": "MeowlPad",
       "vesting": "10% at TGE, then vesting for 3 months",
-      "tge_avalilble": "Available every 30 days after the TGE"
+      "tge_avalilble": "Available every 30 days after the TGE",
+      "network": "0x1"
       
     },
     {
@@ -60,12 +61,13 @@
       "image": "/meowlverse.svg",
       "smartcontractaddress":  "x",
       "smartcontractabi": true,
-      "tottal_supply": "10 000 000 000 MWOL", 
+      "tottal_supply": "100 000 000 000  MWOL", 
       "initial_supply": "1 800 000 000 MWOL",
       "marketcap": "$200 000",
       "claimed_on": "MeowlPad",
       "vesting": "10% at TGE, then vesting for 3 months",
-      "tge_avalilble": "Available every 30 days after the TGE"
+      "tge_avalilble": "Available every 30 days after the TGE",
+      "network": "0x2105"
     },
     {
       "id": 3,
@@ -93,12 +95,13 @@
       "image": "/meowlverse.svg",
       "smartcontractaddress":  "",
       "smartcontractabi": false,
-      "tottal_supply": "10 000 000 000 MWOL", 
+      "tottal_supply": "100 000 000 000  MWOL", 
       "initial_supply": "1 800 000 000 MWOL",
       "marketcap": "$200 000",
       "claimed_on": "MeowlPad",
       "vesting": "10% at TGE, then vesting for 3 months",
-      "tge_avalilble": "Available every 30 days after the TGE"
+      "tge_avalilble": "Available every 30 days after the TGE",
+      "network": "0x1"
     }
   ]
 }

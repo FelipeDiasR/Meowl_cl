@@ -12,9 +12,10 @@ import abis from '../../../../abiteste'
 import { Loading, Approved, Denied } from '../../../../components';
 
 
+
 const Description = ({ logo, name, website, twitter, telegram,
 open_sale, close_sale, token_price, total_raise, closed, open_buy, 
-smartcontractaddress, open_subscription, smartcontractabi, status }) => {
+smartcontractaddress, open_subscription, smartcontractabi, status, network }) => {
   const { account, connectWallet } = useWallet();
   const [fundraising, setFundraising] = useState(null);
   const [stableBalance, setStableBalance] = useState(false);
@@ -25,7 +26,9 @@ smartcontractaddress, open_subscription, smartcontractabi, status }) => {
   const [loading, setLoading] = useState(false);
   const [ approved, setApproved] = useState(false);
   const [ denied, setDenied ] = useState(false);
+  const [ rightnetwork, setrightNetworok] = useState(null);
 
+  
 
   useEffect(() => {
     async function fetchDatas() {
@@ -42,6 +45,8 @@ smartcontractaddress, open_subscription, smartcontractabi, status }) => {
 
     fetchDatas();
   }, [smartcontractaddress, smartcontractabi]); 
+
+  
 
   useEffect(() => {
     const loadABI = () => {
@@ -76,6 +81,57 @@ smartcontractaddress, open_subscription, smartcontractabi, status }) => {
       fetchWaitlistStatus();
     }
   }, [account, fundingAbi, fundingcontract]);
+
+  useEffect(() =>{
+    const setingRightNetwork = async () => {
+    if(network)
+    try{
+      const network1 = network;
+      console.log("Aqui está a chain", network1);
+      setrightNetworok(network1);
+    } catch (error) {
+      console.error("Error setingRghitNetwork:", error);
+    }
+  };
+
+  if (network) {
+    setingRightNetwork();
+  }
+}, [rightnetwork]);
+
+  useEffect(() => {
+    const changingNetwork = async () => {
+      if(account && fundingcontract && rightnetwork )
+      try {
+        setLoading(true);
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: rightnetwork }],
+        });
+        console.log('Switched to the correct network');
+        setLoading(false);
+        setApproved(true);
+
+        setTimeout(() => {
+          setApproved(false);
+        }, 3000);
+        
+      } catch (error) {
+        console.log('Switched to the correct network');
+        setLoading(false);
+        setDenied(true); // Indica falha
+      } finally {
+         // Finaliza o estado de carregamento
+        setTimeout(() => {
+          setDenied(false);
+        }, 3000); // Remove a mensagem de sucesso/erro após 3 segundos
+      }
+    };
+  
+    if (account) {
+      changingNetwork();
+    }
+  }, [account, rightnetwork]);
 
   const subscribeToWaitlist = async () => {
     let provider, signer, currentAccount;
