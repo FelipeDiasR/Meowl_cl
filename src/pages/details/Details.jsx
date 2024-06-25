@@ -66,6 +66,13 @@ const Details = () => {
                             open_subscription={project.open_subscription}
                             status={project.status}
                             network={project.network}
+                            rpc={project.rpc}
+                            chain_name={project.chain_name}
+                            token_name={project.token_name}
+                            symbol={project.symbol}
+                            decimals={project.decimals}
+                            explorerUrl={project.explorerUrl}
+
                         />
                         
                          <Raise 
