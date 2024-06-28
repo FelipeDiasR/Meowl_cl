@@ -30,7 +30,7 @@ const Header = () => {
           <div className="meow__header_buttons">
             <div className="meow__header_buttons-button1">
               <Link to={`/details/01`}>
-                <button>Buy $ MWOL</button>
+                <button>Buy $ MEOWL</button>
               </Link>
             </div>
             <div className="meow__header_buttons-button2">
@@ -41,7 +41,7 @@ const Header = () => {
           </div>
         </div>
         <div className="meow__header-img">
-          <img src={Logo} alt="image" />
+          <img src={Logo} alt="LOGO" />
         </div>
       </div>
     </div>
