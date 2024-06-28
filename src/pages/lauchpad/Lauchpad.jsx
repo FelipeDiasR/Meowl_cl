@@ -46,7 +46,7 @@ const Launchpad = () => {
       <div className='meow__lauchpad'>
         <div className= "meow__lauchpad_container">
           <Alert /> 
-          <h1 className='meow__lauchpad_global'> Welcome to MeowPad</h1>
+          <h1 className='meow__lauchpad_global'> Welcome to MeowlPad</h1>
           {
             repositories.length > 0 ? (
               <div className='meow__lauchpad_cards'>
