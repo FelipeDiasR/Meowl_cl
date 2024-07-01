@@ -19,3 +19,9 @@ export { default as Cards } from './pages/lauchpad/projects/Cards.jsx';
 export { default as Buy } from './pages/projects/buy/Buy.jsx';
 export { default as Raise } from './pages/projects/raise/Raise.jsx';
 export { default as Description } from './pages/projects/description/Description.jsx';
+
+
+//Gamming
+
+export { default as Gamming } from './pages/gamming//games/Gamming.jsx';
+export { default as CardsGames } from './pages/gamming/cards_games/CardsGames.jsx'

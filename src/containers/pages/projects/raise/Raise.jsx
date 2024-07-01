@@ -22,8 +22,8 @@ const Raise = ({ description, ticker, raising_on, raising_in,
 
   //const goal = 100000; // Meta total a ser captada TESTE
   //const alreadyCaptured = 5000; // Valor já captado TESTE
-  const goal = parseFloat(fundraising.totalToRaise / (10**18) || '1');
-  const alreadyCaptured = parseFloat(fundraising.alreadyCaptured / (10**18) || '0');
+  const goal = parseFloat(fundraising.totalToRaise / (10**6) || '1');
+  const alreadyCaptured = parseFloat(fundraising.alreadyCaptured / (10**6) || '0');
 
   // Calcular o percentual de progresso
   const progressPercentage = (alreadyCaptured / goal) * 100;
