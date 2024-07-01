@@ -1,0 +1,36 @@
+.meow__gamming{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    color: #ffff;
+    width: 100%;
+   
+}
+
+.meow__gamming__container{
+    
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    margin-left: 7rem;
+}
+
+.meow__gaming_content p{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.meow__gaming_welcome{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1370px;
+    padding: 1rem;
+    color: rgb(247, 247, 247);
+    background-color: #044755;
+    border-radius: 28px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family);
+}

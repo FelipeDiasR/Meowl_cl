@@ -256,35 +256,36 @@ useEffect(() => {
       </div>
       <div className='meow__description_seedetails'>
       <button
-  onClick={
-    closed
-      ? null
-      : open_subscription
-      ? !account
-        ? connectWallet
-        : !subscribed
-        ? subscribeToWaitlist
-        : null
-      : null
-  }
-  disabled={
-    connecting || closed || (open_subscription && account && subscribed) || (open_buy && account)
-  }
->
-  {connecting
-    ? 'Connecting...'
-    : closed
-    ? status
-    : open_subscription
-    ? !account
-      ? 'Connect Wallet'
-      : !subscribed
-      ? 'Subscribe in the Waitlist'
-      : 'You are subscribed, soon you will be able to buy!'
-    : open_buy && account
-    ? 'Buy Your tokens below!'
-    : 'Connect Wallet'}
-</button>
+   onClick={() => {
+            if (closed) {
+              return;
+            }
+            if (open_subscription || open_buy) {
+              if (!account) {
+                connectWallet();
+              } else if (open_subscription && !subscribed) {
+                subscribeToWaitlist();
+              }
+            }
+          }}
+          disabled={
+            connecting || closed || (open_subscription && account && subscribed) || (open_buy && account)
+          }
+        >
+          {connecting
+            ? 'Connecting...'
+            : closed
+            ? status
+            : open_subscription
+            ? !account
+              ? 'Connect Wallet'
+              : !subscribed
+                ? 'Subscribe in the Waitlist'
+                : 'You are subscribed, soon you will be able to buy!'
+            : open_buy && account
+              ? 'Buy Your tokens below!'
+              : 'Connect Wallet'}
+        </button>
       </div>
     </div>
   );
