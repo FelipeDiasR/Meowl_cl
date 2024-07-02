@@ -1,0 +1,14 @@
+/* Adicione ou modifique esses estilos em seu arquivo CSS */
+
+  .meow_game_cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se não houver espaço */
+    gap: 20px; /* Espaçamento entre os cards */
+   
+  }
+  
+  .meow__cardsGames__container {
+    width: 300px; /* Ajuste conforme necessário */
+    height: 400px; /* Ajuste conforme necessário */
+  }
+  

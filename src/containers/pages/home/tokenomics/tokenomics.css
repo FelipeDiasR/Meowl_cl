@@ -118,6 +118,57 @@
   
     .meow__tokenomics_container h3 {
       text-align: center;
+      margin-left: 6.5rem;
+    }
+    .meow__tokenomics_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.1rem; /* Adiciona espaço entre a imagem e o texto */
+      }
+  }
+
+   /* Media Queries para telas menores que 376px */
+   @media screen and (max-width: 376px) {
+
+    .meow__tokenomics_container h3 {
+      text-align: center;
+      margin-left: 4.9rem;
+    }
+
+   }
+
+
+   /* Media Queries para telas menores que 325px */
+   @media screen and (max-width: 325px) {
+    .meow__tokenomics {
+      font-size: 1.5em;
+      padding: 10px;
+      margin-top: 0rem;
+      min-height: calc(70vh + 5rem);
+    }
+  
+    .meow__tokenomics_container h1 {
+      font-size: 2rem;
+    }
+  
+    .meow__tokenomics_content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .meow__tokenomics_image {
+      text-align: center;
+      margin-bottom: 0rem;
+    }
+  
+    .meow__tokenomics_image img {
+      width: 100%;
+      max-width: 400px; /* Ajuste o tamanho da imagem para dispositivos menores */
+    }
+  
+    .meow__tokenomics_container h3 {
+      text-align: center;
       margin-left: 3rem;
     }
     .meow__tokenomics_content {

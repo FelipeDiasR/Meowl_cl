@@ -11,9 +11,9 @@
       "token_address": "Soon",
       "tge_Availble": false,
       "claim_Avalible": false,
-      "open_buy": true,
+      "open_buy": false,
       "open_subscription": false,
-      "closed": false,
+      "closed": true,
       "social_links": {
         "website": "https://www.meowlverse.com",
         "twitter": "https://x.com/MeowlVerse",
