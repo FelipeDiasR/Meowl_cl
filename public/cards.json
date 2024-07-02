@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "MeowlVerse Round One",
-      "status": "Open",
+      "status": "Open soon",
       "description": "MeowlVerse is a groundbreaking project that merges meme culture with blockchain technology. With its token launchpad and integrated gaming platform, it aims to create an inclusive and collaborative ecosystem. Its mission is to redefine the meme coin landscape, celebrating creativity and fostering innovation among meme enthusiasts worldwide.",
       "ticker": "MEOWL",
       "raising_on": "BASE",
@@ -11,9 +11,9 @@
       "token_address": "Soon",
       "tge_Availble": false,
       "claim_Avalible": false,
-      "open_buy": true,
+      "open_buy": false,
       "open_subscription": false,
-      "closed": false,
+      "closed": true,
       "social_links": {
         "website": "https://www.meowlverse.com",
         "twitter": "https://x.com/MeowlVerse",

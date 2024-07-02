@@ -12,7 +12,7 @@ function Gamming () {
         <div className="meow__gamming__container">
             <div className="meow__gaming_content">
                 <h1> Gamming platform</h1>
-                <p> Soon we will find here all the main games from MewolVerse</p>
+                <p> Soon, you will find all the main games from MeowlVerse here.</p>
              </div>
              <div className="meow__gaming_welcome">
                 <p>Welcome to the MeowlGaming platform! Here you can choose a game, place your bets, and have fun!</p>

@@ -18,7 +18,9 @@ const Footer = () => {
         </div>
         <div className='meow__footer_firstcolun'>
           <h4>Meowl Verse</h4>
+          <Link to="/game" className="link">
           <p>Gamming Platform</p>
+          </Link>
           <Link to="/launchpad" className="link">
           <p>Lauchpad</p>
           </Link>

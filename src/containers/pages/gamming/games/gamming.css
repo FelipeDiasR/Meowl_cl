@@ -26,11 +26,151 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    max-width: 1370px;
     padding: 1rem;
     color: rgb(247, 247, 247);
     background-color: #044755;
     border-radius: 28px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: var(--font-family);
+}
+
+/* tela até 1025 px ---------------------
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+--------------------------------------*/
+
+
+@media screen and (max-width: 1025px) {
+
+    .meow__gaming_welcome{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        padding: 1rem;
+        color: rgb(247, 247, 247);
+        background-color: #044755;
+        border-radius: 28px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: var(--font-family);
+    }
+
+
+}
+
+/* tela até 800 px ---------------------
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+--------------------------------------*/
+
+
+@media screen and (max-width: 800px) {
+
+    .meow__gaming_welcome{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 1rem;
+        color: rgb(247, 247, 247);
+        background-color: #044755;
+        border-radius: 28px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: var(--font-family);
+    }
+
+
+}
+
+
+/* tela até 500 px ---------------------
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+--------------------------------------*/
+
+
+@media screen and (max-width: 500px) {
+
+    .meow__gaming_content p{
+        max-width: 300px;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        overflow-wrap: break-word;
+    }
+
+    .meow__gamming__container{
+    
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        width: 100%;
+        margin-left: 4rem;
+    }
+    
+
+    .meow__gaming_welcome{
+        margin-top: 2rem;
+        margin-left: -1.2rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 1rem;
+        color: rgb(247, 247, 247);
+        background-color: #044755;
+        border-radius: 28px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: var(--font-family);
+    }
+
+
+}
+
+/* tela até 376 px ---------------------
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+--------------------------------------*/
+
+
+@media screen and (max-width: 376px) {
+
+    .meow__gaming_content h1{
+        font-size: 1.8rem;
+    }
+
+    .meow__gaming_content p{
+        max-width: 283px;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        overflow-wrap: break-word;
+    }
+
+    .meow__gamming__container{
+    
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        width: 100%;
+        margin-left: 2.5rem;
+    }
+    
+
+    .meow__gaming_welcome{
+        margin-top: 2rem;
+        margin-left: -0.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        padding: 1rem;
+        color: rgb(247, 247, 247);
+        background-color: #044755;
+        border-radius: 28px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: var(--font-family);
+    }
+
+
 }
