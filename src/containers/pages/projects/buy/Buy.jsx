@@ -396,7 +396,7 @@ const aprove = async () => {
         Claim TGE
       </button>
         <h3> Claim Tokens </h3>
-        <p> Number of claims: {userData.numberOfClaims || '50'} </p>
+        <p> Number of claims: {userData.numberOfClaims || '0'} </p>
         <p> Claim value: {userData.tokensPerClaim || '0'} MWOL </p>
         <p> {tge_avalilble}</p>
         <button onClick={claimTokens} disabled={!account || !claim_Avalible}> Claim Tokens </button>
