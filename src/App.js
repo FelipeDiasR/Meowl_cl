@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 import { Outlet } from 'react-router-dom';
 import { initGA, logPageView } from './analytics';
+
 import RouteTrack from './components/tracker/RouteTracker.jsx';
 
 import './App.css';
