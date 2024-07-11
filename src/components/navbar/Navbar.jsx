@@ -12,7 +12,7 @@ const Menu = () => (
     </a>
     </li>
     <li><Link to="/launchpad" className="link">
-      Preesale
+      Launchpad
     </Link></li>
     </ul>
   </>
@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
       <div className='meow__navbar_preesale'>
         <Link to="/launchpad">
-          <button>Preesale</button>
+          <button>Launchpad</button>
         </Link>
       </div>
       <div className='meow__navbar_whitepaper_wallet'>
