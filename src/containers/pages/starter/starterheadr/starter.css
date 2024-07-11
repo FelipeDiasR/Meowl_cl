@@ -1,0 +1,389 @@
+/* src/components/wheelLanding.css */
+.meow__starter_landing {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo ao início da tela */
+    padding: 20px;
+}
+  
+.meow__starter_landing_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-left: 5rem; /* Margem do lado esquerdo do conteúdo */
+    position: relative; /* Necessário para a posição dos botões */
+}
+  
+.meow__starter_landing_content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+  
+.meow__starter-image {
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+}
+  
+.meow__starter_wheel-text {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--font-family);
+}
+  
+.meow__starter_rules-section {
+    display: flex;
+    align-items: center;
+}
+.meow__starter_wheel-text h1 {
+    font-size: 2.5rem;
+
+}
+  
+.meow__starter_rules-section p {
+    margin-right: 1rem;
+}
+  
+.icon-image {
+    width: 23.5px; /* Ajuste conforme necessário */
+    height: auto;
+}
+  
+.meow__starter_landing_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem; /* Espaço entre os botões */
+    position: absolute;
+    right: -45rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.meow__starter_status-button {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 1000; /* Torna a fonte mais grossa */
+    font-family: var(--font-family); /* Usa a mesma fonte do restante do código */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+}
+  
+.house-edge {
+    background-color: rgba(255, 255, 255, 0.504);
+    border: 1px solid white;
+    width: 200px;
+    height: 70px;
+}
+  
+.meowl-pot {
+    background-color: #00000080;
+    border: none;
+    width: 200px;
+    height: 70px;
+}
+.meow_icon-image {
+    cursor: pointer;
+    color: #DE8DFF; /* Altere conforme necessário */
+  }
+
+/* Estilos para telas menores que 2560px 
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------*/
+@media screen and (max-width: 2560px) {
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: -105rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .house-edge {
+        background-color: rgba(255, 255, 255, 0.504);
+        border: 1px solid white;
+        width: 350px;
+        height: 70px;
+    }
+      
+    .meowl-pot {
+        background-color: #00000080;
+        border: none;
+        width: 350px;
+        height: 70px;
+    }
+
+
+}
+
+
+/* Estilos para telas menores que 2100px 
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------*/
+@media screen and (max-width: 2100px) {
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: -35rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .house-edge {
+        background-color: rgba(255, 255, 255, 0.504);
+        border: 1px solid white;
+        width: 200px;
+        height: 70px;
+    }
+      
+    .meowl-pot {
+        background-color: #00000080;
+        border: none;
+        width: 200px;
+        height: 70px;
+    }
+
+
+}
+
+/* Estilos para telas menores que 2100px 
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------*/
+@media screen and (max-width: 1024px) {
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: -15rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* Estilos para telas menores que 2100px 
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------*/
+@media screen and (max-width: 800px) {
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: 0rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+
+    .meow__starter_status-button {
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 1000; /* Torna a fonte mais grossa */
+        font-family: var(--font-family); /* Usa a mesma fonte do restante do código */
+        text-align: center; /* Centraliza o texto dentro dos botões */
+    }
+    .house-edge {
+        background-color: rgba(255, 255, 255, 0.504);
+        border: 1px solid white;
+        width: 133.44px;
+        height: 70px;
+    }
+      
+    .meowl-pot {
+        background-color: #00000080;
+        border: none;
+        width: 133.44px;
+        height: 70px;
+    }
+}
+
+/* Estilos para telas menores que 500px 
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------*/
+@media screen and (max-width: 500px) {
+
+    .meow__starter_landing_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        margin-left: 0rem; /* Margem do lado esquerdo do conteúdo */
+        position: relative; /* Necessário para a posição dos botões */
+    }
+
+    .meow__starter_wheel-text h1 {
+        font-size: 1.2rem;
+    
+    }
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: 2.5rem;
+        top: 75%;
+        transform: translateY(-50%);
+
+    }
+
+    .meow__starter_status-button {
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 1000; /* Torna a fonte mais grossa */
+        font-family: var(--font-family); /* Usa a mesma fonte do restante do código */
+        text-align: center; /* Centraliza o texto dentro dos botões */
+    }
+    .house-edge {
+        background-color: rgba(255, 255, 255, 0.504);
+        border: 1px solid white;
+        width: 133.44px;
+        height: 35px;
+    }
+      
+    .meowl-pot {
+        background-color: #00000080;
+        border: none;
+        width: 133.44px;
+        height: 35px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+
+    .meow__starter_landing_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        margin-left: 0rem; /* Margem do lado esquerdo do conteúdo */
+        position: relative; /* Necessário para a posição dos botões */
+    }
+
+    .meow__starter_wheel-text h1 {
+        font-size: 1.2rem;
+    
+    }
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: 1.5rem;
+        top: 85%;
+        transform: translateY(-50%);
+
+    }
+
+    .meow__starter_status-button {
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 1000; /* Torna a fonte mais grossa */
+        font-family: var(--font-family); /* Usa a mesma fonte do restante do código */
+        text-align: center; /* Centraliza o texto dentro dos botões */
+    }
+    .house-edge {
+        background-color: rgba(255, 255, 255, 0.504);
+        border: 1px solid white;
+        width: 133.44px;
+        height: 35px;
+    }
+      
+    .meowl-pot {
+        background-color: #00000080;
+        border: none;
+        width: 133.44px;
+        height: 35px;
+    }
+}
+
+
+@media screen and (max-width: 325px) {
+
+    .meow__starter_landing_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        margin-left: -1rem; /* Margem do lado esquerdo do conteúdo */
+        position: relative; /* Necessário para a posição dos botões */
+    }
+
+    .meow__starter_wheel-text h1 {
+        font-size: 1.2rem;
+    
+    }
+
+    .meow__starter_landing_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem; /* Espaço entre os botões */
+        position: absolute;
+        right: 1.5rem;
+        top: 85%;
+        transform: translateY(-50%);
+
+    }
+
+    .meow__starter_status-button {
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 1000; /* Torna a fonte mais grossa */
+        font-family: var(--font-family); /* Usa a mesma fonte do restante do código */
+        text-align: center; /* Centraliza o texto dentro dos botões */
+    }
+    .house-edge {
+        background-color: rgba(255, 255, 255, 0.504);
+        border: 1px solid white;
+        width: 123.44px;
+        height: 35px;
+    }
+      
+    .meowl-pot {
+        background-color: #00000080;
+        border: none;
+        width: 123.44px;
+        height: 35px;
+    }
+}

@@ -1,13 +1,13 @@
 /* src/components/cards_games.css */
 
-.meow__cardsOptions {
+.meow__cardsGames {
     display: flex;
     margin-left: 10rem;
     align-items: center;
     margin-top: 3rem;
   }
   
-  .meow__cardsOptions__container {
+  .meow__cardsGames__container {
     background: #184e6eab;
     border-radius: 8px;
     overflow: hidden;
@@ -19,7 +19,7 @@
     flex-direction: column;
   }
   
-  .meow__cardsOptions__background {
+  .meow__cardsGames__background {
     position: relative;
     width: 100%;
     height: 200px; /* Ajuste a altura conforme necessário */
@@ -35,7 +35,7 @@
   .status-button {
     font-family: var(--font-family);
     position: absolute;
-    width: 110px;
+    width: 100px;
     height: 30px;
     top: 10px;
     right: 10px;
@@ -47,32 +47,32 @@
     cursor: pointer;
   }
   
-  .meow__cardsOptions__logo {
+  .meow__cardsGames__logo {
     margin-top: -30px; /* Ajuste conforme necessário */
     margin-left: 10px;
     z-index: 1;
   }
   
-  .meow__cardsOptions__logo img {
+  .meow__cardsGames__logo img {
     width: 100px; /* Aumentando o tamanho da logo */
     height: auto;
   }
   
-  .meow__cardsOptions__text {
+  .meow__cardsGames__text {
     padding: 20px;
     text-align: left; /* Alinhando o texto à esquerda */
     margin-top: -10px; /* Diminuindo a margem superior para reduzir o espaço entre o logo e o h1 */
   }
   
   
-  .meow__cardsOptions__text h1 {
+  .meow__cardsGames__text h1 {
     margin-bottom: 10px;
     color: #ffff;
     font-family: var(--font-family);
     font-size: 1.5rem;
   }
   
-  .meow__cardsOptions__text p {
+  .meow__cardsGames__text p {
     margin-bottom: 20px;
     color: #ffff;
     font-family: var(--font-family);
@@ -100,7 +100,7 @@
 
 @media screen and (max-width: 500px) {
 
-  .meow__cardsOptions {
+  .meow__cardsGames {
     display: flex;
     margin-left: 4rem;
     align-items: center;
@@ -119,7 +119,7 @@
 
 @media screen and (max-width: 376px) {
 
-  .meow__cardsOptions {
+  .meow__cardsGames {
     display: flex;
     margin-left: 3rem;
     align-items: center;
@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 321px) {
 
-  .meow__cardsOptions {
+  .meow__cardsGames {
     display: flex;
     margin-left: 0.8rem;
     align-items: center;

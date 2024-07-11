@@ -9,3 +9,4 @@ export { default as Denied } from './denied/Denied.jsx';
 
 
 export { default as ScrollTop } from './scrollTop/ScrollTop.jsx';
+export { default as InfoPopup } from './info/InfoPopup.jsx';

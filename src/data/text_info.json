@@ -1,0 +1,15 @@
+{
+    "meowlWheelRules": {
+    "title": "MeowlWheel Game Rules",
+    "content": "<h3>Welcome to MeowlWheel!</h3><br><h3>Here's how to play:</h3><br><br><h4>Betting</h4><br><br>To participate, players have the opportunity to place bets in USDC on our platform. Once Meowl tokens are on the market, players will also be able to bet Meowl tokens for a chance to win prizes.<br><br><h4>Spinning the Wheel</h4><br><br>Once the bet is placed, the wheel will spin randomly, and players have a chance to win one of the following prizes:<br><br><h2>- Meowl Starter Wheel</h2> <h5>Bet Amount: $1</h5><br> <h5>Prizes:</h5><br>    - $15: The player wins $15 USDC.<br>    - Free Spin: The wheel spins again for free.<br>    - $1: The player breaks even, neither winning nor losing.<br>    - $5: The player wins $5 USDC.<br>    - Try Again: The player loses the bet.<br>    - 1 Million Meowl Tokens: The player wins 1 million Meowl tokens.<br>    - $3: The player wins $3 USDC.<br>    - $0.50: The player loses $0.50 USDC.<br>    - 500k Meowl Tokens: The player wins 500k Meowl tokens.<br><br> <h2>- Meowl Intermediate Wheel</h2><br>  <h5> Bet Amount:$5 </h5><br>  - Prizes:<br>    - $1: The player loses $4 USDC.<br>    - $10: The player doubles their bet, winning $10 USDC.<br>    - Try Again: The player loses the bet.<br>    - 5 Million Meowl Tokens: The player wins 5 million Meowl tokens.<br>    - $20: The player wins $20 USDC.<br>    - Free Spin: The wheel spins again for free.<br>    - $2.50: The player loses $2.50 USDC.<br>    - 2.5 Million Meowl Tokens: The player wins 2.5 million Meowl tokens.<br>    - $15: The player wins $15 USDC.<br><br><h2>- Meowl Premium Wheel<br></h2>  <h5> Bet Amount:$10 </h5><br>  <h5>Prizes:</h5><br>    - $5: The player loses $5 USDC.<br>    - $30: The player wins $30 USDC.<br>    - Try Again: The player loses the bet.<br>    - 20 Million Meowl Tokens: The player wins 20 million Meowl tokens.<br>    - $7: The player loses $3 USDC.<br>    - Free Spin: The wheel spins again for free.<br>    - $15: The player wins $15 USDC.<br>    - 500k Meowl Tokens: The player wins 500k Meowl tokens.<br>    - $20: The player wins $20 USDC.<br><br><h1>Winning and Losing</h1><br>The outcome is determined randomly by the wheel, and the player will either win, lose, or break even based on where the wheel stops.<br><br><h1>Repeat Play</h1><br>Players can continue to play and bet as many times as they like, aiming to win the top prizes!"
+    },
+    "houseEdge": {
+      "title": "House Edge",
+      "content": "This is the information about House Edge."
+    },
+    "meowlPot": {
+      "title": "Meowl Pot",
+      "content": "This is the information about Meowl Pot."
+    }
+  }
+  

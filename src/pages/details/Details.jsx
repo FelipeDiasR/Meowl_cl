@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Banner, Description, Raise, Buy, } from '../../containers';
-import { Loading, Approved, Denied } from '../../components';
+//import { Loading, Approved, Denied } from '../../components';
 import { format } from 'date-fns';
 import './details.css'; // Certifique-se de que o CSS está importado
 

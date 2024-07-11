@@ -13,7 +13,7 @@ const Brand = () => {
         </div>
         <div className='meow__brand_content_launch'>
           <div className="meow__header_img_foguete">
-            <img src={Foguete} alt="image" />
+            <img src={Foguete} alt="image2" />
           </div>
           <div className='meow__brand_lauchpad'>
             <h2>LaunchPad</h2>
@@ -42,7 +42,7 @@ const Brand = () => {
 
         <div className='meow__brand_content_launch'>
           <div className="meow__header_img_foguete">
-            <img src={Staking} alt="image" />
+            <img src={Staking} alt="Staking" />
           </div>
           <div className='meow__brand_lauchpad'>
             <h2>Staking System</h2>
