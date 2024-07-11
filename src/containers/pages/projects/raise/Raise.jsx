@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './raise.css';
-import { FaTelegram } from "react-icons/fa";
-import { TfiWorld } from "react-icons/tfi";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+//import { FaTelegram } from "react-icons/fa";
+//import { TfiWorld } from "react-icons/tfi";
+//import { FaSquareXTwitter } from "react-icons/fa6";
+//import { Link } from 'react-router-dom'; 
 import { ethers } from 'ethers';
-import { ContractFundingABI,  
+/*import { ContractFundingABI,  
 ContractStableABI, ContractStableAddress, 
-ContractTokenABI, ContractTokenAddress } from '../../../../Abi';
-import { Web3Provider } from '@ethersproject/providers';
-import { BrowserProvider, parseUnits } from "ethers";
+ContractTokenABI, ContractTokenAddress } from '../../../../Abi';*/
+//import { Web3Provider } from '@ethersproject/providers';
+//import { BrowserProvider, parseUnits } from "ethers";
 import abis from '../../../../abiteste'
 
 const Raise = ({ description, ticker, raising_on, raising_in,

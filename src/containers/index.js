@@ -24,4 +24,12 @@ export { default as Description } from './pages/projects/description/Description
 //Gamming
 
 export { default as Gamming } from './pages/gamming//games/Gamming.jsx';
-export { default as CardsGames } from './pages/gamming/cards_games/CardsGames.jsx'
+export { default as CardsGames } from './pages/gamming/cards_games/CardsGames.jsx';
+
+
+//Wheell
+
+export { default as WheelLanding} from './pages/wheel/whellLanding/WheelLanding.jsx';
+export { default as CardsOptions} from './pages/wheel/cardsoptions/CardsOptions.jsx';
+export { default as StarterWheel} from './pages/starter/starterWheel/StarterWheel.jsx';
+export { default as Starter} from './pages/starter/starterheadr/Starter.jsx';

@@ -3,8 +3,8 @@ import { FaTelegram } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { checkWaitlistStatus }  from './ContractIntecgration';
-import { Link } from 'react-router-dom';
-import { ContractFundingABI, ContractFundingAddress, usdcAbi } from '../../../../Abi';
+//import { Link } from 'react-router-dom';
+//import { ContractFundingABI, ContractFundingAddress, usdcAbi } from '../../../../Abi';
 import { ethers } from 'ethers';
 import './description.css';
 import { useWallet } from '../../../../components/wallet/Walletcontext';
@@ -18,8 +18,8 @@ open_sale, close_sale, token_price, total_raise, closed, open_buy,
 smartcontractaddress, open_subscription, smartcontractabi, status, network, rpc,
 chain_name, token_name, symbol, decimals, explorerUrl}) => {
   const { account, connectWallet } = useWallet();
-  const [fundraising, setFundraising] = useState(null);
-  const [stableBalance, setStableBalance] = useState(false);
+  //const [fundraising, setFundraising] = useState(null);
+  //const [stableBalance, setStableBalance] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
   const [connecting, setConnecting] = useState(false);
   const [fundingcontract, setContract] = useState(null);

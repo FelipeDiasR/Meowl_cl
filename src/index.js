@@ -8,7 +8,7 @@ import ReactGA from "react-ga4";
 //import do react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 //import { Footer } from './containers';
-import { Home, Lauchpad, Details, Game } from './pages';
+import { Home, Lauchpad, Details, Game, WheelMainPage, WeelSelected } from './pages';
 
 
 const router = createBrowserRouter ([
@@ -31,6 +31,14 @@ const router = createBrowserRouter ([
       {
         path: "game",
         element: <Game />
+      },
+      {
+        path: "wheel",
+        element: <WheelMainPage />
+      },
+      {
+        path: "wheelselected/:id",
+        element: <WeelSelected />
       },
       
       
