@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import './wheelselected.css';
-import { StarterWheel, Starter, WheelLanding } from '../../containers';
+import { StarterWheel, Starter, Wheelselec } from '../../containers';
 import { useParams } from 'react-router-dom';
 
 const WeelSelected = () => {
@@ -39,7 +39,7 @@ const WeelSelected = () => {
           <Starter />
         </div>
         <div className="meow_whell_cards">
-          <StarterWheel />
+          <Wheelselec />
         </div>
       </div>
     </div>

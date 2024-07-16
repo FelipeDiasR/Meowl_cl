@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import starter from '../../../../img/gamecards/Meowl_strarter_testing.svg';
+import React, { useState } from 'react';
+import starter from '../../../img/gamecards/Starter.svg';
 import './starterwheel.css';
+import Pin from '../../../img/gamecards/pinWheel.svg';
 
 // Ângulos dos segmentos na roda (em graus)
 const segmentAngles = {
-  1: 365,  //365
-  2: 335, //335
-  3: 305, //305
-  4: 275, //275
-  5: 245, //245
-  6: 215, //215
-  7: 185, //185
-  8: 155, //155
-  9: 125,   //125
-  10: 95, //95
-  11: 65, //65
-  12: 45, //45
+  1: 365,
+  2: 335,
+  3: 305,
+  4: 275,
+  5: 245,
+  6: 215,
+  7: 185,
+  8: 155,
+  9: 125,
+  10: 95,
+  11: 65,
+  12: 45,
 };
 
 // Prêmios correspondentes aos segmentos
@@ -25,16 +26,16 @@ const prizes = {
   3: "Try Again",
   4: "$Meowl 1M",
   5: "$3",
-  6: "Free Spin",
+  6: "Try again2",
   7: "$15",
   8: "$0.50",
   9: "$Meowl 500k",
-  10: "Free Spin",
-  11: "$15",
+  10: "Try again3",
+  11: "$10",
   12: "Free Spin",
 };
 
-function StarterWheel() {
+function StartingWheel() {
   const [isConnected, setIsConnected] = useState(false);
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
@@ -71,7 +72,9 @@ function StarterWheel() {
         <div className="meowl__starter_wheel_wheel" style={{ transform: `rotate(${rotation}deg)` }}>
           <img src={starter} alt='wheel' className="meowl__starter_wheel_wheel"/>
         </div>
-        
+        <div className='meowl__starter_wheel_pin'>
+          <img src={Pin} alt='pin' className="pin-wheel"/>
+        </div>
         <div className="meowl__starter_buttons">
           {!isConnected && (
             <button className="meowl__starter_wallet" onClick={handleConnect}>
@@ -105,4 +108,4 @@ function StarterWheel() {
   );
 }
 
-export default StarterWheel;
+export default StartingWheel;
