@@ -1,6 +1,6 @@
 import React from 'react';
 import './tokenomics.css';
-import Chart from '../../../../img/assets/chart.svg';
+import Chart from '../../../../img/assets/chartused.svg';
 
 const Tokenomics = () => {
   return (
@@ -12,16 +12,7 @@ const Tokenomics = () => {
           <div className='meow__tokenomics_image'>
             <img src={Chart} alt="Chart" />
           </div>
-          <h3>
-            Integrations: 3% <br />
-            LP Incentives: 20% <br />
-            Peesales: 30% <br />
-            Airdrops: 15% <br />
-            Locked LP: 10% <br />
-            Marketing: 7% <br />
-            Team: 10% <br />
-            Development: 5%
-          </h3>
+         
         </div>
       </div>
     </div>
