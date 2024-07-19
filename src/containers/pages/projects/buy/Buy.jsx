@@ -180,6 +180,90 @@ const handleTokensReceivedChange = (e) => {
   setAmountToBuy(calculatedAmount.toFixed(2));
   setAmountBlockchain(amountInWei); // Salva o valor como BigNumber
 };
+const approveTokens = async () => {
+  let provider, signer, currentAccount;
+
+  try {
+    if (!account) {
+      await connectWallet();
+      provider = new ethers.BrowserProvider(window.ethereum);
+      signer = await provider.getSigner();
+      currentAccount = await signer.getAddress();
+    } else {
+      provider = new ethers.BrowserProvider(window.ethereum);
+      signer = await provider.getSigner();
+      currentAccount = account;
+    }
+
+    const spender = contract;
+    const amountToSpend = amountBlock; //amountToBuy amountBlock
+    const contractInstance = new ethers.Contract(stableAddress, usdcAbi, signer);
+    const tx = await contractInstance.approve(spender, amountToSpend);
+    console.log('Transaction sent:', tx);
+
+    setLoading(true);
+
+    await tx.wait();
+
+    console.log('Transaction confirmed:', tx);
+
+    setLoading(false); // Ocultar o popup de carregamento
+
+    setApproved(true);
+    setTimeout(() => {
+      setApproved(false);
+    }, 3000);
+    
+    // Note: Aqui não chamamos a função buyTokens diretamente
+
+  } catch (error) {
+    console.error('Error approving tokens:', error);
+    setLoading(false);
+    setDenied(true);
+    setTimeout(() => {
+      setDenied(false);
+    }, 3000);
+  }
+};
+
+const buyTokens = async () => {
+  if (!account || !amountBlock) {
+    console.error("Account is not available or amountBlock is missing.");
+    return;
+  }
+
+  let provider, signer, currentAccount;
+  try {
+    provider = new ethers.BrowserProvider(window.ethereum);
+    signer = await provider.getSigner();
+    currentAccount = await signer.getAddress();
+    const contractInstance = new ethers.Contract(contract, abi, signer); 
+    const buyTx = await contractInstance.buyTokens(amountBlock);
+    console.log('Buy tokens transaction sent:', buyTx);
+
+    setLoading(true);
+
+    await buyTx.wait();
+
+    console.log('Buy tokens transaction confirmed:', buyTx);
+
+    setApproved(true);
+    setTimeout(() => {
+      setApproved(false);
+    }, 3000);
+
+  } catch (error) {
+    setDenied(true);
+    setTimeout(() => {
+      setDenied(false);
+    }, 3000);
+    console.error("Error buying tokens:", error);
+    
+  } finally {
+    setLoading(false);
+    fetchUserData();
+  }
+};
   
 const aprove = async () => {
   let provider, signer, currentAccount;
@@ -374,7 +458,11 @@ const aprove = async () => {
         <div className='meow__buy_inputs'>
         <input className='meow_buy_input1' type='text' value={amountToBuy} onChange={handleAmountToBuyChange} placeholder={raising_in}/>
         <input className='meow_buy_input2' type='text' value={tokensReceived} onChange={handleTokensReceivedChange} placeholder={ticker} />
-        <button disabled={!account || !open_buy} onClick={aprove}> Buy </button>
+        <div className='meow__buy_buttons'>
+          <button className='desktop-only' disabled={!account || !open_buy} onClick={aprove}> Buy </button>
+          <button className='mobile-only' disabled={!account || !amountBlock} onClick={approveTokens}> Approve </button>
+          <button className='mobile-only buy-tokens-button' disabled={!account || !amountBlock} onClick={buyTokens}> Buy Tokens </button>
+        </div>
         </div>
       </div>
 

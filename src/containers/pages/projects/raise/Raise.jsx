@@ -134,15 +134,15 @@ const Raise = ({ description, ticker, raising_on, raising_in,
         <h3>Raising in</h3>
         <p>{raising_in}</p>
         <h3>Current progress</h3>
-        <p>{progressPercentage.toFixed(2)}</p>
+        <p>{progressPercentage.toFixed(2)} %</p>
 
         {/* Barra de progresso */}
         <div className='meow__raise_progress'>
           <div
             className='meow__raise_progress_bar'
-            style={{ width: `${progressPercentage}%` }}
+            style={{ width: `${progressPercentage} %` }}
           >
-            <span>{account ? `${progressPercentage.toFixed(2)}%` : '0%'}</span>
+            <span>{progressPercentage > 0 ? `${progressPercentage.toFixed(2)}%` : '0%'}</span>
           </div>
         </div>
       </div>
