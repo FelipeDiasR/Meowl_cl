@@ -14,7 +14,6 @@ import './App.css';
 import { Navbar } from './components';
 import { Footer, ScrollTop } from './components';
 import {WalletProvider} from './components/wallet/Walletcontext.jsx';
-import { UserProvider } from './components/userContext/UserProvider.jsx';
 
   
 
@@ -35,13 +34,11 @@ const App = () => {
   return (
     <div className='App'>  
     <WalletProvider>
-    <UserProvider >
     <RouteTrack /> 
     <Navbar />
     <ScrollTop />
     <Outlet />  
     <Footer />
-    </UserProvider>
     </WalletProvider>   
     </div>
 
