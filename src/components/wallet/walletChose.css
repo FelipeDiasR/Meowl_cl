@@ -1,0 +1,54 @@
+/* Add your styles here */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal img {
+    width: 200px;
+
+  }
+  
+  .modal-content {
+    background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%,
+    rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%); 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: rgb(7, 43, 90);
+    color: white;
+  }
+
+  .metamask_button{
+    width: 350px;
+  }
+  
+  .trust_button{
+    width: 350px;
+  }
+  
+  .close_button {
+    background-color: #8a2be2; /* Cor roxa */
+    color: #fff; /* Texto branco */
+    border: none;
+    margin-top: 2rem;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    font-size: 1rem; /* Tamanho da fonte */
+    border-radius: 8px; /* Border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+
+  }

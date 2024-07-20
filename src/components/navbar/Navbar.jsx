@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 import Logotipo from '../../img/logotipo.svg';
 import './navbar.css';
 import { useWallet } from '../wallet/Walletcontext';
+import WalletChoiceModal from '../wallet/WalletChoiceModal';
 
 const Menu = () => (
-  <><ul>
-    <li><a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
-      Whitepaper
-    </a>
-    </li>
-    <li><Link to="/launchpad" className="link">
-      Launchpad
-    </Link></li>
-    </ul>
-  </>
+  <ul>
+    <li><a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
+    <li><Link to="/launchpad" className="link">Launchpad</Link></li>
+  </ul>
 );
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const { account, connectWallet } = useWallet();  // Usando o contexto
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { account, connectWallet } = useWallet();
+
+  const handleConnectWallet = () => {
+    setIsModalOpen(true);
+  };
 
   return (
     <div className="meow__navbar">
@@ -33,13 +33,11 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='meow__navbar_whitepaper_wallet'>
-        <a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
-          Whitepaper
-        </a>
+        <a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">Whitepaper</a>
         {account ? (
           <button>Connected: {account.slice(0, 6)}...{account.slice(-4)}</button>
         ) : (
-          <button onClick={connectWallet}>Connect Wallet</button>
+          <button onClick={handleConnectWallet}>Connect Wallet</button>
         )}
       </div>
       <div className='meow__navbar-menu'>
@@ -55,6 +53,11 @@ const Navbar = () => {
           </div>
         }
       </div>
+      <WalletChoiceModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSelectWallet={connectWallet}
+      />
     </div>
   );
 };
