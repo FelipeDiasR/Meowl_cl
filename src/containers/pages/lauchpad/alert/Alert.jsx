@@ -24,6 +24,6 @@ const Alert = () => {
       <p className='meow__alert_message'>Be cautious of scam links.</p>
     </div>
   );
-}
+} 
 
 export default Alert;
