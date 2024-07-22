@@ -21,7 +21,7 @@ const Alert = () => {
         <h1 className='meow__alert_title'>Always make sure the URL is www.meowlverse.com</h1>
         <MdClose className='meow__alert_icon_close' onClick={handleClose} />
       </div>
-      <p className='meow__alert_message'>Be cautious of phishing scams.</p>
+      <p className='meow__alert_message'>Be cautious of scam links.</p>
     </div>
   );
 }

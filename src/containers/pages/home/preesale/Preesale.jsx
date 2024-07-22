@@ -6,7 +6,7 @@ const Preesale = () => {
   return (
     <div className='meow__preesale section__padding'>
       <div className='meow__preesale_container'>
-        <h1>Preesale start soon</h1>
+        <h1>Presale start soon</h1>
         <p>
           Join the Meowl crypto presale, engage with the project,
           and see your contribution grow to new heights.

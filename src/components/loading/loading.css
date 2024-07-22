@@ -44,3 +44,20 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 1025px) {
+  .loading-popup {
+    width: 30%;
+    height: 300px;
+  
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .loading-popup {
+    width: 60%;
+    height: 300px;
+  
+  }
+}
+

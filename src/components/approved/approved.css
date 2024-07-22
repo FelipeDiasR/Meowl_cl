@@ -35,4 +35,18 @@
   }
   
   
+  @media screen and (max-width: 1025px) {
+    .approved-popup {
+      width: 30%;
+      height: 300px;
+    
+    }
+  }
   
+  @media screen and (max-width: 500px) {
+    .approved-popup {
+      width: 60%;
+      height: 300px;
+    
+    }
+  }

@@ -11,7 +11,7 @@ function Gamming () {
     <div className="meow__gamming">
         <div className="meow__gamming__container">
             <div className="meow__gaming_content">
-                <h1> Gamming platform</h1>
+                <h1> Gaming platform</h1>
                 <p> Soon, you will find all the main games from MeowlVerse here.</p>
              </div>
              <div className="meow__gaming_welcome">

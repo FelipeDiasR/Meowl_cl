@@ -33,3 +33,4 @@ export { default as WheelLanding} from './pages/wheel/whellLanding/WheelLanding.
 export { default as CardsOptions} from './pages/wheel/cardsoptions/CardsOptions.jsx';
 export { default as StarterWheel} from './pages/starter/starterWheel/StarterWheel.jsx';
 export { default as Starter} from './pages/starter/starterheadr/Starter.jsx';
+export { default as Wheelselec} from './pages/starter/starterWheel/Wheelselec.jsx';

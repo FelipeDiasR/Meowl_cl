@@ -33,6 +33,22 @@
     margin-left: 1.2rem;
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: 1025px) {
+    .denied-popup {
+      width: 30%;
+      height: 300px;
+    
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .denied-popup {
+      width: 60%;
+      height: 300px;
+    
+    }
+  }
   
   
   
