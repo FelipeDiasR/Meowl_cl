@@ -364,6 +364,16 @@
         transform: translate(-50%, -50%);
     }
 
+    .meow__raise_content p {
+        font-size: 0.75rem;
+        word-break: break-all; /* Quebra de palavras longas para evitar overflow */
+        overflow-wrap: break-word; /* Quebra de palavras longas em contêineres menores */
+        margin: 0; /* Remove margens se necessário */
+        padding: 0; /* Remove preenchimento se necessário */
+        
+        
+    }
+
 }
 
 /* ------------max 426px -----------------------------------------
