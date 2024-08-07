@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'; // Importe o Link do React Router DOM
 import './brand.css';
 import Foguete from '../../../../img/assets/foguete.svg';
 import Game from '../../../../img/assets/game.svg';
-import Staking from '../../../../img/assets/staking .svg';
+import Staking from '../../../../img/assets/nft2.svg';
 
 const Brand = () => {
   return (
@@ -46,13 +46,13 @@ const Brand = () => {
             <img src={Staking} alt="Staking" />
           </div>
           <div className='meow__brand_lauchpad'>
-            <h2>Staking System</h2>
+            <h2>NFT Collection</h2>
             <p>
-              Stake your MEOWL tokens and earn rewards while taking <br/>
-              advantage of the Launchpad and games, further enhancing your <br/>
-              earning opportunities and interaction with the community.<br/> 
-              Contribute to the consensus mechanism of our blockchain and<br/>
-              enjoy passive income through our staking system..
+              Exclusive MeowlVerse NFT collection. Each NFT offers unique<br/>
+              benefits within the ecosystem, including participation in <br/>
+              special events, rewards, and contributing to the community's <br/>
+              growth. These NFTs are more than collectibles, they have real<br/>
+              utilities. See all details below:
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #150829;
+  background-color: black;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -30,12 +30,7 @@ a {
   background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%, rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%);
 }
 
-.App{
-  background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%, rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%);
 
-
-}
-  
 
   
   

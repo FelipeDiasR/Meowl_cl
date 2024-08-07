@@ -4,6 +4,8 @@ export { default as Preesale } from './pages/home/preesale/Preesale.jsx';
 export { default as Tokenomics } from './pages/home/tokenomics/Tokenomics.jsx';
 export { default as Brand } from './pages/home/brand/Brand.jsx';
 export { default as Cta } from './pages/home/cta/Cta.jsx';
+export { default as  NftInfo} from  './pages/home/nftinfo/NftInfo.jsx';
+
 
 
 
@@ -34,3 +36,8 @@ export { default as CardsOptions} from './pages/wheel/cardsoptions/CardsOptions.
 export { default as StarterWheel} from './pages/starter/starterWheel/StarterWheel.jsx';
 export { default as Starter} from './pages/starter/starterheadr/Starter.jsx';
 export { default as Wheelselec} from './pages/starter/starterWheel/Wheelselec.jsx';
+export { default as  HeaderNFT} from  './pages/nft/nftheader/HeaderNFT.jsx';
+export { default as  NftOffers} from  './pages/nft/nftOffers/NftOffers.jsx';
+export { default as  Nftbenefits} from  './pages/nft/nftbenefits/Nftbenefits.jsx';
+export { default as  NftSelling} from  './pages/nft/nftselling/NftSelling.jsx';
+

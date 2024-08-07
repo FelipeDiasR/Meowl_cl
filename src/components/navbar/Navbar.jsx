@@ -7,6 +7,9 @@ import { useWallet } from '../wallet/Walletcontext';
 
 const Menu = () => (
   <><ul>
+    <Link to="/nft">
+          NFT Collection
+    </Link>
     <li><a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
       Whitepaper
     </a>
@@ -33,6 +36,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='meow__navbar_whitepaper_wallet'>
+        <Link to="/nft">
+          NFT Collection
+          </Link>
         <a href="https://meowl-1.gitbook.io/meowlverse-whitepaper/" target="_blank" rel="noopener noreferrer">
           Whitepaper
         </a>
