@@ -75,7 +75,7 @@
 .meow__navbar-menu_container {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: #000000;
     padding: 2rem;
     position: absolute;
     top: 60px;
@@ -84,6 +84,7 @@
     min-width: 210px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #e0d9e8; /* Cor de fundo sólida */
 }
 
 .meow__navbar-menu a,
@@ -129,7 +130,7 @@ li {
 .light-mode .meow__navbar_whitepaper_wallet button {
     background-color: #27064F !important;
     color: #ffffff !important;
-}
+} 
 
 .light-mode .meow__navbar-menu_container {
     color: #000 !important;
@@ -141,7 +142,29 @@ li {
         width: 250px;
     }
 
+    .meow__navbar-menu button.color-mode-toggle {
+        font-family: var(--font-family);
+        width: 100px; /* Ajuste a largura conforme necessário */
+        height: 33px;
+        background-color: #27064F;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        text-align: left; /* Adiciona alinhamento do texto */
+        
+    }
+    
+    /* Estilo para o modo claro */
+    .light-mode .meow__navbar-menu button.color-mode-toggle {
+        background-color: #27064F !important;
+        color: #ffffff !important;
+    }
+
     .meow__navbar_preesale {
+        display: none;
+    }
+
+    .meow__navbar_lightmode button {
         display: none;
     }
 

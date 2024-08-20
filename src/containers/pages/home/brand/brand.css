@@ -9,7 +9,17 @@
     justify-content: center;
     padding: 2rem 0;
   }
+  .light-mode .meow__brand {
+    background: #E7E4EF; /* Fundo claro para o modo claro */
+    color: #3D004F; /* Texto preto para o modo claro */
+  }
   
+  .light-mode .meow__brand_lauchpad p,
+  .light-mode .meow__brand_content_gaming p
+   {
+    
+    color: #000000; /* Texto preto para o modo claro */
+  }
   .meow__brand_container {
     width: 80%;
     max-width: 1200px;

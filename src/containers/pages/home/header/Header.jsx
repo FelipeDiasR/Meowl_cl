@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './header.css';
-
 import Logo from '../../../../img/assets/logomwol.svg';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
 
 const Header = () => {
+  const { isLigmode } = useContext(ThemeContext);
+
   return (
-    <div className="meow__header" id="home">
+    <div className={`meow__header ${isLigmode ? 'lightmode' : ''}`} id="home">
       <div className="meow_header_container">
         <div className="meow__header_content">
           <h1 className="gradient_text">

@@ -101,6 +101,41 @@
 
 }
 
+/* Modo claro */
+.lightmode .meow__footer {
+    color: #000; /* cor do texto no modo claro */
+}
+
+/* Colunas */
+.meow__footer_firstcolun h4,
+.meow__footer_secondcolun h4 {
+    color: rgba(255, 255, 255, 0.74); /* cor padrão dos títulos */
+}
+
+.lightmode .meow__footer_firstcolun h4,
+.lightmode .meow__footer_secondcolun h4 {
+    color: #000; /* cor dos títulos no modo claro */
+}
+
+.lightmode .meow__footer-logo h3 {
+    font-size: var(--font-family);
+    font-weight: 400;
+    margin-left: 4rem;
+    color: #000; /* cor dos títulos no modo claro */
+}
+
+
+
+.lightmode .meow__footer_firstcolun p,
+.lightmode .meow__footer_secondcolun p,
+.lightmode .meow__footer_copyright p {
+    color: #333; /* cor do parágrafo no modo claro */
+}
+
+.lightmode .meow__footer_sociallist li a {
+    color: #000; /* cor dos ícones de redes sociais no modo claro */
+}
+
 /* tela até 2800 px ---------------------
 -----------------------------------------
 -----------------------------------------
@@ -181,7 +216,7 @@
         font-size: var(--font-family);
         font-weight: 400;
         margin-left: 4rem;
-        color: rgba(255, 255, 255, 0.685);
+       
     }
     
     /* -----meow verse sector --------*/
@@ -194,12 +229,12 @@
     .meow__footer_firstcolun h4 {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.74);
+      
     }
     .meow__footer_firstcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+       
     }
     
     
@@ -208,7 +243,7 @@
         margin-left: 87rem;
         margin-top: -7.5rem;
         font-family: var(--font-family);
-        color:  rgba(255, 255, 255, 0.74);;
+      
     }
     
     .meow__footer_secondcolun h4 {
@@ -218,7 +253,7 @@
     .meow__footer_secondcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+       
     }
     
     .meow__footer_division {
@@ -236,10 +271,6 @@
         margin-left: 2rem;
     }
     
-    .meow__footer_copyright p{
-        color: #9B96B0;
-        
-    }
     
     .meow__footer_sociallist {
         display: flex;
@@ -274,12 +305,12 @@
 .meow__footer_firstcolun h4 {
     margin-bottom: 1.3rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.74);
+    
 }
 .meow__footer_firstcolun p  {
     margin-bottom: 1.3rem;
     font-weight: 400;
-    color: #9B96B0
+    
 }
 
 
@@ -290,7 +321,7 @@
     margin-left: 82rem;
     margin-top: -7.5rem;
     font-family: var(--font-family);
-    color:  rgba(255, 255, 255, 0.74);;
+    
 }
 
 .meow__footer_secondcolun h4 {
@@ -300,7 +331,7 @@
 .meow__footer_secondcolun p  {
     margin-bottom: 1.3rem;
     font-weight: 400;
-    color: #9B96B0
+   
 }
 
 .meow__footer_division {
@@ -328,8 +359,6 @@
         margin-left: 1rem;
         width: auto;
         height: 58rem;
-        background: linear-gradient(90deg, rgba(155, 150, 176, 0.010) 100%,
-         rgba(0, 0, 0, 1) 100%, rgba(210, 208, 211, 0.075) 100%); /* Cor de fundo */
         flex-direction: column;
     
     }
@@ -346,7 +375,7 @@
         font-weight: 500;
         margin-left: 5rem;
         margin-top: 0rem;
-        color: rgba(255, 255, 255, 0.685);
+        
     }
 
     /* -----meow verse sector --------*/
@@ -359,12 +388,12 @@
     .meow__footer_firstcolun h4 {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.74);
+       
     }
     .meow__footer_firstcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+     
     }
 
 
@@ -373,7 +402,7 @@
         margin-left: 6.7rem;
         margin-top: 2.1rem;
         font-family: var(--font-family);
-        color:  rgba(255, 255, 255, 0.74);;
+        
     }
 
     .meow__footer_secondcolun h4 {
@@ -383,7 +412,7 @@
     .meow__footer_secondcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+        
     }
 
     .meow__footer_division {
@@ -400,11 +429,7 @@
     
     }
 
-    .meow__footer_copyright p{
-        color: #9B96B0;
-        
-                
-    }
+    
 
     .meow__footer_sociallist {
         display: flex;
@@ -436,8 +461,6 @@
         margin-left: 1rem;
         width: auto;
         height: 58rem;
-        background: linear-gradient(90deg, rgba(155, 150, 176, 0.010) 100%,
-         rgba(0, 0, 0, 1) 100%, rgba(210, 208, 211, 0.075) 100%); /* Cor de fundo */
         flex-direction: column;
     
     }
@@ -454,7 +477,7 @@
         font-weight: 400;
         margin-left: 27rem;
         margin-top: -5.5rem;
-        color: rgba(255, 255, 255, 0.685);
+        
     }
 
     /* -----meow verse sector --------*/
@@ -467,12 +490,12 @@
     .meow__footer_firstcolun h4 {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.74);
+        
     }
     .meow__footer_firstcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+       
     }
 
 
@@ -481,7 +504,7 @@
         margin-left: 6.7rem;
         margin-top: 2.1rem;
         font-family: var(--font-family);
-        color:  rgba(255, 255, 255, 0.74);;
+        
     }
 
     .meow__footer_secondcolun h4 {
@@ -491,7 +514,7 @@
     .meow__footer_secondcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+       
     }
 
     .meow__footer_division {
@@ -508,11 +531,7 @@
     
     }
 
-    .meow__footer_copyright p{
-        color: #9B96B0;
-        
-                
-    }
+    
 
     .meow__footer_sociallist {
         display: flex;
@@ -544,8 +563,6 @@
         margin-left: 1rem;
         width: auto;
         height: 58rem;
-        background: linear-gradient(90deg, rgba(155, 150, 176, 0.010) 100%,
-         rgba(0, 0, 0, 1) 100%, rgba(210, 208, 211, 0.075) 100%); /* Cor de fundo */
         flex-direction: column;
     
     }
@@ -568,7 +585,7 @@
         font-weight: 400;
         margin-left: 12rem;
         margin-top: -3.5rem;
-        color: rgba(255, 255, 255, 0.685);
+        
     }
 
     /* -----meow verse sector --------*/
@@ -581,12 +598,12 @@
     .meow__footer_firstcolun h4 {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.74);
+    
     }
     .meow__footer_firstcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+       
     }
 
 
@@ -595,7 +612,7 @@
         margin-left: 3.7rem;
         margin-top: 2.1rem;
         font-family: var(--font-family);
-        color:  rgba(255, 255, 255, 0.74);;
+        
     }
 
     .meow__footer_secondcolun h4 {
@@ -605,7 +622,7 @@
     .meow__footer_secondcolun p  {
         margin-bottom: 1.3rem;
         font-weight: 400;
-        color: #9B96B0
+      
     }
 
     .meow__footer_division {
@@ -624,11 +641,7 @@
     
     }
 
-    .meow__footer_copyright p{
-        color: #9B96B0;
-        
-                
-    }
+   
 
     .meow__footer_sociallist {
         display: flex;
@@ -661,11 +674,7 @@
     
     }
 
-    .meow__footer_copyright p{
-        color: #9B96B0;
-        
-                
-    }
+    
 
     .meow__footer_sociallist {
         display: flex;

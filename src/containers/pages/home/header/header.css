@@ -8,6 +8,7 @@
   
 }
 
+
 .meow_header_container {
   display: flex;
   flex-direction: row;
@@ -33,6 +34,7 @@
   letter-spacing: 0.02em;
 }
 
+
 .meow__header_content p {
   font-size: 1.2rem;
   line-height: 1.7em;
@@ -40,6 +42,14 @@
   margin-bottom: 4rem;
 }
 
+.light-mode .meow__header {
+  background: #E7E4EF; /* Fundo claro para o modo claro */
+  color: #000; /* Texto preto para o modo claro */
+}
+
+.light-mode .meow__header_content p {
+  color: #000; /* Texto preto no parágrafo para o modo claro */
+}
 .meow__header_buttons {
   display: flex;
   gap: 2rem;
@@ -78,6 +88,15 @@
 .meow__header-img img {
   width: 100%;
   height: auto;
+}
+.meow__header.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.meow__header.dark-mode {
+  background-color: #000;
+  color: #fff;
 }
 
 /*------------------1025px-----------------------------

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './preesale.css';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
 
 const Preesale = () => {
+  const { isLigmode } = useContext(ThemeContext);
   return (
-    <div className='meow__preesale section__padding'>
+    <div className={`meow__preesale ${isLigmode ? 'lightmode' : ''}`}>
       <div className='meow__preesale_container'>
         <h1>Presale start soon</h1>
         <p>
@@ -25,7 +27,7 @@ const Preesale = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Preesale;
