@@ -14,6 +14,9 @@ export { default as  NftInfo} from  './pages/home/nftinfo/NftInfo.jsx';
 export { default as Alert } from './pages/lauchpad/alert/Alert.jsx';
 export { default as Banner } from './pages/lauchpad/banner/Banner.jsx';
 export { default as Cards } from './pages/lauchpad/projects/Cards.jsx';
+export { default as LaunchHeader } from './pages/launchpadmain/Launchheader/LaunchHeader.jsx';
+export { default as CompletedProjects } from './pages/launchpadmain/completedprojects/CompletedProjects.jsx';
+export { default as UpcomingProjects } from './pages/launchpadmain/upcomingprojects/UpcomingProjects.jsx';
 
 
 //Project

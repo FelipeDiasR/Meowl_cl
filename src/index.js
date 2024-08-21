@@ -8,7 +8,7 @@ import ReactGA from "react-ga4";
 //import do react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 //import { Footer } from './containers';
-import { Home, Lauchpad, Details, Game, WheelMainPage, WeelSelected, NftLanding } from './pages';
+import { Home, Lauchpad, Details, Game, WheelMainPage, WeelSelected, NftLanding, LaunchpadLanding } from './pages';
 
 import { ThemeProvider } from './components/themecontext/ThemeContext.jsx';
 
@@ -45,6 +45,10 @@ const router = createBrowserRouter ([
       {
         path: "nft",
         element: <NftLanding />
+      },
+      {
+        path: "launchpads",
+        element: <LaunchpadLanding />
       },
       
       

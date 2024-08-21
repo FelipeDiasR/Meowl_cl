@@ -1,0 +1,259 @@
+.meowl_launchHeader {
+    display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: var(--font-family);
+  width: 100%;
+  background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%, rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%);
+  
+
+}
+
+.meowl_launchHeader_container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-top: 3rem;
+
+}
+
+.meowl_launchHeader_alert_container{
+    width: 400px;
+    height: 80px;
+    background-color: #f39600d6;
+    border-radius: 8px;
+
+}
+.meowl_launchHeader_close {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 23rem;
+     /* Ajuste o valor negativo para mover o ícone mais para a esquerda */
+}
+.meowl_launchHeader_icon_close{
+    width: 5rem;
+    height: 1.3rem;
+}
+
+
+.meowl_launchHeader_i{
+    display: flex;
+}
+
+
+.meowl_launchHeader_alert_icon {
+    color: #E7E4EF;
+    width: 2.5rem;
+    margin-left: 1rem;
+    margin-top: 0.1rem;
+}
+
+.meowl_launchHeader_alert_title {
+    font-size: 0.8rem;
+    width: 482px;
+    height: 21px;
+}
+
+.meowl_launchHeader_message {
+    font-size: 0.9rem;
+    margin-left: 2.9rem;
+}
+
+.light-mode .meowl_launchHeader {
+    background: #E7E4EF; /* Fundo claro para o modo claro */
+    color: #000; /* Texto preto para o modo claro */
+  }
+
+  .light-mode .meowl_launchHeader_alert h1,
+  .light-mode .meowl_launchHeader_title h1,
+  .light-mode .meowl_launchHeader_alert_icon {
+    color: #000;
+
+  }
+
+
+  .meowl_launchHeader_title_container {
+    max-width: 95%;
+    height: 60px;
+    background-color: #d862ffb4;
+    border-radius: 8px;
+    margin-top: 2rem;
+    
+  }
+
+  .meowl_launchHeader_title h1 {
+    margin-left: 1.5rem;
+    margin-top: 0rem;
+    font-size: 3rem;
+    font-family: var(--font-family);
+  }
+
+  /*------------------500px-----------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+--------------------------------------------------- */
+
+
+@media screen and (max-width: 540px) {
+    .meowl_launchHeader_container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    
+    }
+
+    .meowl_launchHeader_alert_container{
+        width: 95%;
+    }
+    
+    .meowl_launchHeader_title h1 {
+        margin-left: 1.5rem;
+        margin-top: 0.7rem;
+        font-size: 1.8rem;
+        font-family: var(--font-family);
+      }
+
+  }
+
+/*------------------500px-----------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+--------------------------------------------------- */
+
+
+  @media screen and (max-width: 500px) {
+
+    .meowl_launchHeader_container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    
+    }
+
+    .meowl_launchHeader_alert_container{
+        width: 95%;
+    }
+
+    .meowl_launchHeader_close {
+        margin-left: 19.8rem;
+       
+    }
+
+    .meowl_launchHeader_alert_title {
+        font-size: 0.7rem;
+        width: 482px;
+        height: 21px;
+    }
+    .meowl_launchHeader_message {
+        font-size: 0.65rem;
+        margin-left: 2.9rem;
+    }
+    
+    .meowl_launchHeader_title h1 {
+        margin-left: 1.5rem;
+        margin-top: 0.7rem;
+        font-size: 1.8rem;
+        font-family: var(--font-family);
+      }
+
+  }
+
+
+  /*------------------376px-----------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+--------------------------------------------------- */
+
+
+@media screen and (max-width: 391px) {
+
+    .meowl_launchHeader_container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1.5rem;
+        margin-top: 3rem;
+    
+    }
+
+   
+
+    .meowl_launchHeader_close {
+        margin-left: 16.8rem;
+       
+    }
+
+    .meowl_launchHeader_alert_title {
+        font-size: 0.62rem;
+        width: 482px;
+        height: 21px;
+    }
+    
+    .meowl_launchHeader_title h1 {
+        margin-left: 1.8rem;
+        margin-top: 0.85rem;
+        font-size: 1.5rem;
+        font-family: var(--font-family);
+      }
+
+  }
+
+   /*------------------376px-----------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+--------------------------------------------------- */
+
+
+@media screen and (max-width: 321px) {
+
+    
+
+   
+
+    .meowl_launchHeader_close {
+        margin-left: 13.7rem;
+       
+    }
+
+    .meowl_launchHeader_alert_title {
+        font-size: 0.75rem;
+        width: 300px;
+        height: 21px;
+    }
+
+    .meowl_launchHeader_message {
+        margin-top: 0.6rem;
+        font-size: 0.65rem;
+        margin-left: 2.9rem;
+    }
+    
+    
+    .meowl_launchHeader_title h1 {
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        font-family: var(--font-family);
+      }
+
+  }
