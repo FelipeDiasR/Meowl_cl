@@ -80,12 +80,23 @@
     margin-top: 2rem;
     
   }
+  .light-mode .meowl_launchHeader_title_container {
+    background-color: #EDB7FF;
+  }
 
   .meowl_launchHeader_title h1 {
     margin-left: 1.5rem;
-    margin-top: 0rem;
-    font-size: 3rem;
+    margin-top: 0.5rem;
+    font-size: 2.25rem;
     font-family: var(--font-family);
+  }
+
+   .meowl-upcoming_titles {
+    margin-top: 3rem;
+  }
+
+  .meowl-upcoming_titles h1 {
+    margin-bottom: 1rem;
   }
 
   /*------------------500px-----------------------------
@@ -255,5 +266,12 @@
         font-size: 1.3rem;
         font-family: var(--font-family);
       }
+      
 
+      .meowl-upcoming_titles h1 {
+       font-size: 1.5rem;
+      }
+      .meowl-upcoming_titles p {
+        font-size: 0.9rem;
+       }
   }

@@ -34,6 +34,10 @@ const LaunchHeader = () => {
                         <h1> Welcome to MeowlPad </h1>
                     </div>
                 </div>
+                <div className='meowl-upcoming_titles'>
+                    <h1> Upcoming projects </h1>
+                    <p> Discover all the top projects launching on MeowlPad. </p>
+                </div>
             </div>
         </div>
     );
