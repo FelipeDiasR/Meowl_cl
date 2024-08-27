@@ -3,8 +3,8 @@
   flex-direction: column;
   color: #fff;
   font-family: var(--font-family);
-  width: 100%;
-  background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%, rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%);
+  
+  
 }
 
 
@@ -15,7 +15,7 @@
     flex-direction: column;
     margin-left: 5rem;
     margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 .meowl_upcoming_container_card{
@@ -75,10 +75,12 @@
 
 
 .meowl_upcoming_content_first {
+    position: relative;
     display: flex;
     margin-left: 2rem;
+    justify-content: space-between;
     
-    gap: 6rem;
+    
 }
 
 .meowl_upcoming_content_title_midia h1 {
@@ -95,9 +97,19 @@
     position: relative; /* Garantir que os elementos internos não sejam sobrepostos */
 
 }
+.meowl_upcoming_content_built_container{
+  position: relative;
+}
+
+.meowl_upcoming_content_built {
+  margin-right: 1rem;
+ 
+  left: 0rem;
+    
+}
 
 .meowl_upcoming_content_built p{
-    font-size: 0.7rem;
+    font-size: 0.67rem;
     font-weight: bold;
 }
 
@@ -237,4 +249,70 @@
 .light-mode .meowl_upcoming_content_button button {
     color: #000000;
 }
+
+@media screen and (max-width: 500px) {
+  .meowl_upcoming_container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.meowl_upcoming_container_card{
+  max-width: 385px;
+  width: 95%;
+  height: 470px;
+ 
+}
+.meowl_upcoming_content_navbar h3{
+  font-size: 0.9rem;
+}
+
+}
+
+@media screen and (max-width: 392px) {
+  .meowl_upcoming_container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.4rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.meowl_upcoming_container_card{
+  max-width: 385px;
+  width: 85%;
+  height: 485px;
+ 
+}
+.meowl_upcoming_content_navbar h3{
+  font-size: 0.82rem;
+}
+
+}
+
+@media screen and (max-width: 321px) {
+  .meowl_upcoming_container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.4rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.meowl_upcoming_container_card{
+  max-width: 385px;
+  width: 72%;
+  height: 495px;
+ 
+}
+.meowl_upcoming_content_navbar h3{
+  font-size: 0.72rem;
+}
+
+}
+
+
+
       

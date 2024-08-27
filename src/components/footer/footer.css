@@ -560,12 +560,14 @@
         color: #fff;
         border: 1px solid transparent;
         margin-top: 200px;
-        margin-left: 1rem;
+        margin-left: -1rem;
         width: auto;
         height: 58rem;
         flex-direction: column;
     
     }
+
+    
     /* logo */
     .meow__footer-logo {
         margin-top: 0rem;
@@ -582,10 +584,18 @@
     .meow__footer-logo h3 {
         font-size: var(--font-family);
         font-size: 0.9rem;
-        font-weight: 400;
+        font-weight: 600;
         margin-left: 12rem;
         margin-top: -3.5rem;
         
+    }
+
+    .light-mode .meow__footer-logo h3 {
+        font-size: var(--font-family);
+        font-size: 0.9rem;
+        font-weight: 450;
+        margin-left: 12rem;
+        margin-top: -3.5rem;
     }
 
     /* -----meow verse sector --------*/
@@ -666,12 +676,31 @@
 @media screen and (max-width: 380px) {
     
     /* -------copy sector --------*/
+    .meow__footer {
+        display: flex;
+        color: #fff;
+        border: 1px solid transparent;
+        margin-top: 200px;
+        margin-left: -2.2rem;
+        width: auto;
+        height: 58rem;
+        flex-direction: column;
+    
+    }
 
     .meow__footer_copyright {
         display: flex;
         margin-top: 1rem;
         margin-left: 3.5rem;
     
+    }
+
+    .light-mode .meow__footer-logo h3 {
+        font-size: var(--font-family);
+        font-size: 0.8rem;
+        font-weight: 450;
+        margin-left: 11rem;
+        margin-top: -3.5rem;
     }
 
     

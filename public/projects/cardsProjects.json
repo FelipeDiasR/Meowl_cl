@@ -2,7 +2,7 @@
     "projects": [
       {
         "id": 1,
-        "name": "Asymmetry Finance",
+        "name": "MeowlVerse ",
         "card_background": "/cardsprojects/1meowlBackground.svg",
         "project_logo": "/cardsprojects/1meowlLogo.svg",
         "social_links": {
@@ -13,7 +13,7 @@
         "status": "Open",
         "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,
-        "round_start_on": "2024-08-20",
+        "round_start_on": "September 14, 2024",
         "total_raise": "",
         "tag1":"LAUNCHPAD",
         "tag2":"INVESTING",
@@ -21,7 +21,7 @@
         "description": "MeowlVerse is a unique project combining meme culture with blockchain technology. Featuring a token launchpad and gaming platform, it aims to reshape the meme coin space, encouraging creativity and innovation globally.",
         "distribution": "Claimed on MeowlPad",
         "vesting": "10% at TGE, then vesting monthly ",
-        "tge_date": "2024-08-20",
+        "tge_date": "TBD",
         "active": true,
         "ticker": "MEOWL",
 
@@ -60,17 +60,18 @@
    
       {
         "id": 2,
-        "name": "Mystic Games",
-        "card_background": "/cardsprojects/meowlverse.svg",
+        "name": "Asymmetry Finance  ",
+        "card_background": "/cardsprojects/1meowlBackground.svg",
+        "project_logo": "/cardsprojects/1meowlLogo.svg",
         "social_links": {
           "website": "https://www.meowlverse.com",
           "twitter": "https://x.com/MeowlVerse",
           "telegram": "https://t.me/+riHQZk6L02I4ODNh"
         },
         "status": "Open",
-        "built_on_logo": "/cardsprojects/meowlverse.svg",
+        "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,
-        "round_start_on": "2024-08-20",
+        "round_start_on": "September 14, 2024",
         "total_raise": "",
         "tag1":"LAUNCHPAD",
         "tag2":"INVESTING",
@@ -79,6 +80,7 @@
         "distribution": "Claimed on MeowlPad",
         "vesting": "10% at TGE, then vesting monthly ",
         "tge_date": "TBD",
+        "active": true,
         "ticker": "MEOWL",
 
 
@@ -115,17 +117,18 @@
       },
       {
         "id": 3,
-        "name": "MeowlVerse Testing Pool",
-        "card_background": "/cardsprojects/meowlverse.svg",
+        "name": "Asymmetry Finance  ",
+        "card_background": "/cardsprojects/1meowlBackground.svg",
+        "project_logo": "/cardsprojects/1meowlLogo.svg",
         "social_links": {
           "website": "https://www.meowlverse.com",
           "twitter": "https://x.com/MeowlVerse",
           "telegram": "https://t.me/+riHQZk6L02I4ODNh"
         },
         "status": "Open",
-        "built_on_logo": "/cardsprojects/meowlverse.svg",
+        "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,
-        "round_start_on": "2024-08-20",
+        "round_start_on": "September 14, 2024",
         "total_raise": "",
         "tag1":"LAUNCHPAD",
         "tag2":"INVESTING",
@@ -134,6 +137,64 @@
         "distribution": "Claimed on MeowlPad",
         "vesting": "10% at TGE, then vesting monthly ",
         "tge_date": "TBD",
+        "active": true,
+        "ticker": "MEOWL",
+
+
+
+       
+        "raising_in": "USDC",
+        "token_address": "0xF308a1186FF1f161FAddB67114Fd185C4c6C0667",
+        "tge_Availble": true,
+        "claim_Avalible": true,
+        "open_buy": true,
+        "open_subscription": false,
+        "closed": false,
+        
+        
+        "sales_closing_date": "2024-09-15",
+       
+       
+        "image": "/meowlverse.svg",
+        "smartcontractaddress":  "0xc940858200Ab9A3e45253CF3E75049C016801d66",
+        "smartcontractabi": true,
+        "tottal_supply": "100 000 000 000  MWOL", 
+        "initial_supply": "1 800 000 000 MWOL",
+        "marketcap": "$200 000",
+        "claimed_on": "MeowlPad",
+       
+        "tge_avalilble": "Available every hour after the TGE",
+        "rpc": "https://sepolia.infura.io/v3/",
+        "explorerUrl": "https://sepolia.etherscan.io",
+        "chain_name": "Sepolia test network",
+        "token_name": "ETH",
+        "symbol": "ETH",
+        "decimals": "18",
+        "network": "0xaa36a7"
+      },
+      {
+        "id": 4,
+        "name": "Asymmetry Finance  ",
+        "card_background": "/cardsprojects/1meowlBackground.svg",
+        "project_logo": "/cardsprojects/1meowlLogo.svg",
+        "social_links": {
+          "website": "https://www.meowlverse.com",
+          "twitter": "https://x.com/MeowlVerse",
+          "telegram": "https://t.me/+riHQZk6L02I4ODNh"
+        },
+        "status": "Open",
+        "built_on_logo": "/cardschains/base.svg",
+        "token_price": 0.0001,
+        "round_start_on": "September 14, 2024",
+        "total_raise": "",
+        "tag1":"LAUNCHPAD",
+        "tag2":"INVESTING",
+        "tag3":"NFT",
+        "description": "MeowlVerse is a unique project combining meme culture with blockchain technology. Featuring a token launchpad and gaming platform, it aims to reshape the meme coin space, encouraging creativity and innovation globally.",
+        "distribution": "Claimed on MeowlPad",
+        "vesting": "10% at TGE, then vesting monthly ",
+        "tge_date": "TBD",
+        "active": true,
         "ticker": "MEOWL",
 
 

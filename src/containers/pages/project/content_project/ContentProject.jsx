@@ -1,0 +1,64 @@
+import { useState, useContext } from 'react';
+import { LuAlertCircle } from "react-icons/lu";
+import { MdClose } from "react-icons/md"; // Adicionando um ícone de fechar
+import { FaTelegram } from "react-icons/fa";
+import { TfiWorld } from "react-icons/tfi";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
+import './contentproject.css';
+
+import testelogo from '../../../../img/1meowlLogo.svg';
+
+const ContentProject = () => {
+const { isLigmode } = useContext(ThemeContext);
+    const [isAlertVisible, setIsAlertVisible] = useState(true); // Estado para controlar a visibilidade do alerta
+
+    const handleAlertClose = () => {
+        setIsAlertVisible(false);  
+    };
+
+    return (
+        <div className={`meowl_contentProject ${isLigmode ? 'lightmode' : ''}`}>
+            <div className='meowl_contentProject_container'>
+                <div className='meowl_contentProject_title'>
+                    <h6> Project /  MeowlVerse Round one </h6>
+                </div>
+                <div className='meowl_contentProject_content'>
+                    <div className='meowl_contentProject_logo'>
+                      <img src={testelogo} alt="logo" />
+                    </div>
+                    <div className='meowl_contentProject_maincontent'>
+                        <h1> MeowlVerse R. 1 </h1>
+                        <div className="text-box-container">
+                            <div className="text-box box1">
+                                <h5> COMING SOON </h5>
+                            </div>
+                            <div className="text-box box2">
+                                <h5> PUBLIC SALE </h5>
+                            </div>
+                            <div className="text-box box3">
+                                <h5> NO KYC REQUIRED </h5>
+                            </div>
+                        </div>
+                        <div className='meowl_contentProject_maincontent'>
+                            <p> 
+                                MeowlVerse is a unique project combining meme culture with blockchain technology.
+                                Featuring a token launchpad and gaming platform, it aims to reshape the meme coin space, 
+                                encouraging creativity and innovation globally.
+                            </p>
+                            <div className='meowl_upcoming_content_media'>
+                                <a href={'www.meowlverse.com'} target="_blank" rel="noopener noreferrer"><FaSquareXTwitter /></a>
+                                <a href={'www.meowlverse.com'} target="_blank" rel="noopener noreferrer"><FaTelegram /></a>
+                                <a href={'www.meowlverse.com'} target="_blank" rel="noopener noreferrer"><TfiWorld /></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    );
+};
+
+export default ContentProject;

@@ -1,0 +1,23 @@
+.meowl_contentProject {
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+}
+
+.meowl_contentProject_container {
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.meowl_contentProject_title {
+    font-size: 0.9rem;
+}
+
+.meowl_contentProject_content {
+    margin-top: 1.75rem;
+    display: flex;
+}
+
+.meowl_contentProject_maincontent {
+    margin-left: 1rem;
+}

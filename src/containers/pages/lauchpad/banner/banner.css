@@ -7,12 +7,16 @@
   color: #ffff;
   font-family: var(--font-family);
   border-radius: 10px;
-  box-shadow: 5px 5px 10px #ffffff35;
+  box-shadow: 5px 5px 10px #0c004e;
   margin-top: 6rem;
   margin-left: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.light-mode .meow__banner {
+  background:  #2f186ef3;
 }
 
 .meow__banner_content {
@@ -272,7 +276,7 @@
 ------------------------------------------------------
 -----------------------------------------------------*/
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 376px) {
   .meow__banner {
       width: 83%;
       height: 490px;

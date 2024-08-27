@@ -4,9 +4,8 @@ import { FaTelegram } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
-import teste from '../../../../img/teste.svg';
-import testelogo from '../../../../img/testeLogo.svg';
-import testeBase from '../../../../img/testeBase.svg';
+
+import { Link } from 'react-router-dom';
 
 const UpcomingProjects = ({ name, card_background, website,
   twitter, telegram, status, built_on_logo, token_price, project_logo,
@@ -80,7 +79,7 @@ const UpcomingProjects = ({ name, card_background, website,
             </button>
           </div>
           <div className='meowl_upcoming_logo'>
-            <img src={testelogo} alt="logo" />
+            <img src={project_logo} alt="logo" />
           </div>
           <div className='meowl_upcoming_content_first'>
             <div className='meowl_upcoming_content_title_midia'>
@@ -91,9 +90,11 @@ const UpcomingProjects = ({ name, card_background, website,
                 <a href={website} target="_blank" rel="noopener noreferrer"><TfiWorld /></a>
               </div>
             </div>
-            <div className='meowl_upcoming_content_built'>
-              <p> Project built on </p>
-              <img src={built_on_logo} alt='logo' />
+            <div className='meowl_upcoming_content_built_container'>
+              <div className='meowl_upcoming_content_built'>
+                <p> Project built on </p>
+                <img src={built_on_logo} alt='logo' />
+              </div> 
             </div>
           </div>
           <div className='meowl_upcoming_content_second'>
@@ -121,7 +122,9 @@ const UpcomingProjects = ({ name, card_background, website,
               {contentList[activeIndex].content}
             </div>
             <div className='meowl_upcoming_content_button'>
-              <button onClick={() => handleSectionClick(1)}> See Details </button>
+              <Link to={`/projects/${id}`}>
+                <button>See Details</button>
+              </Link>
             </div>
           </div>
         </div>
