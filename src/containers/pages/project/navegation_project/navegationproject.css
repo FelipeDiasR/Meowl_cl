@@ -572,11 +572,11 @@
     }
     .meowl_navegation_paragraph {
         gap: 1rem;
-       
+       font-size: 0.85rem;
     }
     .meowl_navegation_box {
         width: 95%;
-        height: 130px;
+        height: 145px;
     
     }
     .meowl_navegation_description {
