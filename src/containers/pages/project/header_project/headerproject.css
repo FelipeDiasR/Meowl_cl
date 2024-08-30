@@ -17,11 +17,11 @@ display: flex;
 }
 
 .meowl_HeaderProject_alert_container{
-width: 400px;
+    width: 400px;
     height: 80px;
     background-color: #f39600d6;
     border-radius: 8px;
-
+ 
 }
 .meowl_HeaderProject_close {
     display: flex;
@@ -63,10 +63,12 @@ width: 400px;
     color: #000; /* Texto preto para o modo claro */
   }
 
-  .light-mode .meowl_HeaderProjectmeowl_HeaderProject_alert h1,
-  .light-mode .meowl_HeaderProjectmeowl_HeaderProject_title h1,
-  .light-mode .meowl_HeaderProjectmeowl_HeaderProject_alert_icon {
-    color: #000;
+  .light-mode .meowl_HeaderProject_alert_title,
+  .light-mode .meowl_HeaderProject_icon_close,
+  .light-mode .meowl_HeaderProject_message,
+  .light-mode .meowl_HeaderProject_alert_icon,
+  .light-mode .meowl_HeaderProject_title h1 {
+    color: #000000;
 
   }
 
@@ -79,7 +81,7 @@ width: 400px;
     margin-top: 2rem;
     
   }
-  .light-mode .meowl_HeaderProjectmeowl_HeaderProject_title_container {
+  .light-mode .meowl_HeaderProject_title_container {
     background-color: #EDB7FF;
   }
 

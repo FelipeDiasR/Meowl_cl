@@ -67,7 +67,6 @@ const Project = () => {
           </div>
          <ContentProject/>
          </div>
-         <BannerProject />
          <NavegationProject />
         < Banner />
         
