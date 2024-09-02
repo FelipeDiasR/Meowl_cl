@@ -5,6 +5,9 @@ import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
 import testebanner from '../../../../img/testebanner.svg'
 import testebaseProject from '../../../../img/testebaseproject.svg'
 import {logoBlackProject, logoBlackProject2, logoWhiteProject, logoWhiteProject2 } from '../../../../img/index';
+import { InfoPopup } from '../../../../components';
+// Importar seu arquivo JSON com os dados
+import popupData from '../../../../data/text_info.json';
 
 import './navegationproject.css';
 
@@ -13,6 +16,30 @@ const NavegationProject = () => {
     const { isLigmode } = useContext(ThemeContext);
     const [isAlertVisible, setIsAlertVisible] = useState(true); // Estado para controlar a visibilidade do alerta
     const [activeIndex, setActiveIndex] = useState(0);
+    const [popupInfo, setPopupInfo] = useState({ show: false, title: '', content: '' });
+
+     // Função para abrir o popup com as informações corretas
+    const handleOpenPopup = (title, content) => {
+        setPopupInfo({ show: true, title, content });
+    };
+
+    // Função para fechar o popup
+    const handleClosePopup = () => {
+        setPopupInfo({ show: false, title: '', content: '' });
+    };
+    
+    const [isBuyClaimActive, setIsBuyClaimActive] = useState(false);
+
+
+    const handleSectionClick = (index) => {
+        console.log(index);
+        setActiveIndex(index);
+        if (index === 4) {
+            setIsBuyClaimActive(true);
+          } else {
+            setIsBuyClaimActive(false);
+          }
+        };
 
     const contentList = [
         {
@@ -25,7 +52,8 @@ const NavegationProject = () => {
                                     <div className='meowl_vanegation_earlier_title'>
                                         <img src={isLigmode ? logoBlackProject : logoWhiteProject} alt='logotipo' /> 
                                         <h2>EarlierMeowl</h2>
-                                        <IoMdInformationCircleOutline className='meowl_navegation_pools_icon' />
+                                        <IoMdInformationCircleOutline className='meowl_navegation_pools_icon'
+                                         onClick={() => handleOpenPopup(popupData.meowlEarlier.title, popupData.meowlEarlier.content)} />
                                         
                                     </div>
                                     <h3>Open Time</h3>
@@ -41,7 +69,8 @@ const NavegationProject = () => {
                                     <div className='meowl_vanegation_earlier_title'>
                                         <img src={isLigmode ? logoBlackProject2 : logoWhiteProject2} alt='logotipo' /> 
                                         <h2>OpenMeowl   </h2>
-                                        <IoMdInformationCircleOutline className='meowl_navegation_pools_icon' />
+                                        <IoMdInformationCircleOutline className='meowl_navegation_pools_icon'
+                                         onClick={() => handleOpenPopup(popupData.openMeowl.title, popupData.openMeowl.content)} />
                                     </div>
                                     <h3>Open time   </h3> 
                                     <p>TBD</p>
@@ -127,6 +156,8 @@ const NavegationProject = () => {
                         
                                     <div className='meowl_navegation_token_info_h2'>
                                         <h2>Vesting Info</h2>
+                                        <IoMdInformationCircleOutline className='meowl_navegation_pools_icon' 
+                                     onClick={() => handleOpenPopup(popupData.Claimsection.title, popupData.Claimsection.content)}/>
                                     </div>            
                                     <div className='meowl_navegation_token_info_data1'>
                                         <h3>Vesting</h3>
@@ -221,12 +252,11 @@ const NavegationProject = () => {
                     </div>
             </>
           ),
-        }
+        },
+        
       ];
 
-      const handleSectionClick = (index) => {
-        setActiveIndex(index); // Atualiza o estado para a seção ativa
-      };
+   
 
     return (
         <div className={`meowl_navegation ${isLigmode ? 'lightmode' : ''}`}>
@@ -242,26 +272,26 @@ const NavegationProject = () => {
                                 Token Sale
                             </p>
                             <p 
-                                className={activeIndex === 0 ? 'actived' : ''}
+                                className={activeIndex === 1 ? 'actived' : ''}
                                 onClick={() => handleSectionClick(1)}
                             >
                                 Description
                             </p>
                             <p 
-                                className={activeIndex === 0 ? 'actived' : ''}
+                                className={activeIndex === 2 ? 'actived' : ''}
                                 onClick={() => handleSectionClick(2)}
                             >
                                 Token Info
                             </p>
                             <p 
-                                className={activeIndex === 0 ? 'actived' : ''}
+                                className={activeIndex === 3 ? 'actived' : ''}
                                 onClick={() => handleSectionClick(3)}
                             >
                                 Vesting
                             </p>
                             <p 
-                                className={activeIndex === 0 ? 'actived' : ''}
-                                onClick={() => handleSectionClick(4)}
+                                className={activeIndex === 4 ? 'actived' : ''}
+                                onClick={() => handleSectionClick(4)}      
                             >
                                 Buy / Claim
                             </p>
@@ -331,79 +361,82 @@ const NavegationProject = () => {
                     </div>
                     
                 </div>
-                <div className='meowl_navegation_contentThird_buy'>
-                        <div className='meowl_navegation_Third_card'>
-                            <div className='meowl_navegation_card_title'>
-                                <div className='meowl_naegation_third_first_div'>
-                                    <h2> Claim Section</h2>
-                                    <IoMdInformationCircleOutline className='meowl_navegation_pools_icon' />
-                                    
-                                </div>
-                                
-                                <div className='meowl_teste23'>
-                                    <div className='meowl_navegation_title_info'>
-                                        <h2>TGE</h2>
-                                    </div>            
-                                    <div className='meowl_navegation_token_info_data1'>
-                                        <h3>TGE Amount</h3>
-                                        <p>100 000 0</p>
-                                    </div>  
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                
-                                    <div className='meowl_navegation_funding_data2'>
-                                        <h3> Status </h3>
-                                        <p> Claimed</p>
-                                    </div> 
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_title_info'>
-                                        <h2>Claim Vesting</h2>
-                                    </div>            
-                                    <div className='meowl_navegation_token_info_data1'>
-                                        <h3>Total amount to be claimed after TGE</h3>
-                                        <p>100 000 0</p>
-                                    </div>  
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                
-                                    <div className='meowl_navegation_funding_data2'>
-                                        <h3> Amount for claim </h3>
-                                        <p> 45 000 </p>
-                                    </div> 
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                
-                                    <div className='meowl_navegation_funding_data2'>
-                                        <h3> Tota Number of claims </h3>
-                                        <p> 20 </p>
-                                    </div> 
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                
-                                    <div className='meowl_navegation_funding_data2'>
-                                        <h3> Claimed </h3>
-                                        <p> 3 </p>
-                                    </div> 
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                    <div className='meowl_navegation_Third_card_division'>   </div>
-                                
-                                    <div className='meowl_navegation_funding_data2'>
-                                        <h3> Available </h3>
-                                        <p> 1 </p>
-                                    </div> 
-                                    <div className='meow__buy_title_buttons'>
-                                            <button className='desktop-only' > Claim </button>
-                                            
-                                        </div>
-                                </div>
-                                    
-                            </div>
+                {isBuyClaimActive && (
+                    <div className='meowl_navegation_contentThird_buy'>
+                    <div className='meowl_navegation_Third_card'>
+                        <div className='meowl_navegation_card_title'>
+                        <div className='meowl_naegation_third_first_div'>
+                            <h2>Claim Section</h2>
+                            <IoMdInformationCircleOutline
+                            className='meowl_navegation_pools_icon'
+                            onClick={() =>
+                                handleOpenPopup(popupData.Claimsection.title, popupData.Claimsection.content)
+                            }
+                            />
+                        </div>
 
-                            
-                        </div>       
+                        <div className='meowl_teste23'>
+                            <div className='meowl_navegation_title_info'>
+                            <h2>TGE</h2>
+                            </div>
+                            <div className='meowl_navegation_token_info_data1'>
+                            <h3>TGE Amount</h3>
+                            <p>100 000 0</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+
+                            <div className='meowl_navegation_funding_data2'>
+                            <h3>Status</h3>
+                            <p>Claimed</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_title_info'>
+                            <h2>Claim Vesting</h2>
+                            </div>
+                            <div className='meowl_navegation_token_info_data1'>
+                            <h3>Total amount to be claimed after TGE</h3>
+                            <p>100 000 0</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+
+                            <div className='meowl_navegation_funding_data2'>
+                            <h3>Amount for claim</h3>
+                            <p>45 000</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+
+                            <div className='meowl_navegation_funding_data2'>
+                            <h3>Total Number of claims</h3>
+                            <p>20</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+
+                            <div className='meowl_navegation_funding_data2'>
+                            <h3>Claimed</h3>
+                            <p>3</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+
+                            <div className='meowl_navegation_funding_data2'>
+                            <h3>Available</h3>
+                            <p>1</p>
+                            </div>
+                            <div className='meow__buy_title_buttons'>
+                            <button className='desktop-only'>Claim</button>
+                            </div>
+                        </div>
+                        </div>
                     </div>
+                    </div>
+                )}
            </div>
+           <InfoPopup show={popupInfo.show} onClose={handleClosePopup} title={popupInfo.title} content={popupInfo.content} />
         </div>
     );
 };

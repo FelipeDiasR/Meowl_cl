@@ -13,6 +13,14 @@
     display: flex;
     
 }
+.meowl_navegation_paragraph p {
+    cursor: pointer;
+    padding-bottom: 5px;
+  }
+  
+  .meowl_navegation_paragraph p.actived {
+    border-bottom: 2px solid #070000;  /*Cor do texto sublinhado quando ativo */
+  }
 
 .meowl_navegation_paragraph {
     display: flex;
@@ -104,6 +112,9 @@
 }
 .meowl_teste2 {
     margin-top: 2rem;
+}
+.meowl_navegation_token_info_h2 {
+    display: flex;
 }
 .meowl_navegation_token_info_h2 h2 {
     margin-bottom: 1rem;
@@ -203,6 +214,7 @@
     width: 20px;
     height: 22px;
     font-weight: 100;
+    cursor: pointer;
 }
 .meowl_vanegation_earlier_title h2 {
     margin-left: 0.8rem;
