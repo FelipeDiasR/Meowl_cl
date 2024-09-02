@@ -3,13 +3,15 @@
       {
         "id": 1,
         "name": "MeowlVerse ",
+        "sub_title":"Project/MeowlVerse Round one",
         "card_background": "/cardsprojects/1meowlBackground.svg",
         "project_logo": "/cardsprojects/1meowlLogo.svg",
         "social_links": {
-          "website": "https://www.meowlverse.com",
-          "twitter": "https://x.com/MeowlVerse",
-          "telegram": "https://t.me/+riHQZk6L02I4ODNh"
+          "website": "www.meowlverse.com",
+          "twitter": "www.x.com/MeowlVerse",
+          "telegram": "www.t.me/+riHQZk6L02I4ODNh"
         },
+        "isCompleted": false,
         "status": "Open",
         "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,
@@ -18,12 +20,16 @@
         "tag1":"LAUNCHPAD",
         "tag2":"INVESTING",
         "tag3":"NFT",
+        "tagProject1":"COMING SOON",
+        "tagProject2":"PUBLIC SALE",
+        "tagProject3":"NO KYC REQUIRED",
         "description": "MeowlVerse is a unique project combining meme culture with blockchain technology. Featuring a token launchpad and gaming platform, it aims to reshape the meme coin space, encouraging creativity and innovation globally.",
         "distribution": "Claimed on MeowlPad",
         "vesting": "10% at TGE, then vesting monthly ",
         "tge_date": "TBD",
         "active": true,
         "ticker": "MEOWL",
+        "clock":"",
 
 
 
@@ -68,6 +74,7 @@
           "twitter": "https://x.com/MeowlVerse",
           "telegram": "https://t.me/+riHQZk6L02I4ODNh"
         },
+        "isCompleted": false,
         "status": "Open",
         "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,
@@ -125,6 +132,7 @@
           "twitter": "https://x.com/MeowlVerse",
           "telegram": "https://t.me/+riHQZk6L02I4ODNh"
         },
+        "isCompleted": false,
         "status": "Open",
         "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,
@@ -182,6 +190,7 @@
           "twitter": "https://x.com/MeowlVerse",
           "telegram": "https://t.me/+riHQZk6L02I4ODNh"
         },
+        "isCompleted": true,
         "status": "Open",
         "built_on_logo": "/cardschains/base.svg",
         "token_price": 0.0001,

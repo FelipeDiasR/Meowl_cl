@@ -3,47 +3,39 @@ import { HeaderProject, ContentProject, BannerProject, NavegationProject, Banner
 import { format } from 'date-fns';
 import { ThemeContext } from '../../components/themecontext/ThemeContext';
 //import './launchpadLanding.css';
+import { useParams } from 'react-router-dom';
 
 
 const Project = () => {
   const { isLigmode } = useContext(ThemeContext);
   const [repositories , setRepositories] = useState([]);
   const [completedRepositories, setCompletedRepositories] = useState([]);
-
+  const { id } = useParams(); // Pega o ID da URL
+  console.log('ID from URL:', id);
+  const [project, setProject] = useState(null);
   
   
-  useEffect ( ( ) =>  {
+  useEffect(() => {
     const searchingRepositories = async () => {
-      try {
-        const response = await fetch('/projects/cardsProjects.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+            const response = await fetch('/projects/cardsProjects.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log('Data fetched:', data);
+
+            // Converte o ID da URL para número antes de comparar
+            const selectedProject = data.projects.find(project => project.id === Number(id));
+            console.log('Selected Project:', selectedProject);
+            setProject(selectedProject); 
+        } catch (error) {
+            console.error('Error fetching data:', error);
         }
-        const data = await response.json();
-        setRepositories(data.projects); 
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
     };
     searchingRepositories();
-  }, []);
+  }, [id]);
 
-  useEffect ( ( ) =>  {
-    const searchingCompletedRepo= async () => {
-      try {
-        const response = await fetch('/projects/cardsProjectsCompletd.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log('completed:', data);
-        setCompletedRepositories(data.projects); 
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    searchingCompletedRepo();
-  }, []);
 
 
 
@@ -58,16 +50,41 @@ const Project = () => {
       currency: 'USD'
     }).format(amount);
   };
-
+ 
     return (
       <div className={`meowl_launchpad${isLigmode ? 'lightmode' : ''}`}>
         <div className='meowl_launchpad_container'>
           <div className='meowl_launchpad_header'>
             < HeaderProject />
           </div>
-         <ContentProject/>
+          {
+                project ? (
+                <ContentProject
+                    name={project.name}
+                    description={project.description}
+                    project_logo={project.project_logo}
+                    id={project.id}
+                    clock={project.clock}
+                    sub_title={project.sub_title}
+                    tagProject1={project.tagProject1}
+                    tagProject2={project.tagProject2}
+                    tagProject3={project.tagProject3}
+                />) : (
+                
+                
+                <p>Loading project details...</p>)
+                }
+        
          </div>
-         <NavegationProject />
+         {
+            project ? (
+        
+            <NavegationProject 
+            /> ) : (
+                <p> Loading project details...</p>
+            )
+
+         }
         < Banner />
         
       </div>

@@ -51,7 +51,7 @@ const router = createBrowserRouter ([
         element: <LaunchpadLanding />
       },
       {
-        path: "project",
+        path: "project/:id",
         element: <Project />
       },
       
