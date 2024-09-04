@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { LuAlertCircle } from "react-icons/lu";
 import { MdClose } from "react-icons/md"; // Adicionando um ícone de fechar
 import { FaTelegram } from "react-icons/fa";
@@ -10,15 +10,45 @@ import './contentproject.css';
 import testelogo from '../../../../img/1meowlLogo.svg';
 
 const ContentProject = ({ name, website, twitter, telegram, 
-     project_logo, description,
+     project_logo, description, launchDate,
      clock, sub_title, tagProject1, tagProject2, 
-     tagProject3}) => {
-const { isLigmode } = useContext(ThemeContext);
+     tagProject3,}) => {
+
+    const { isLigmode } = useContext(ThemeContext);
     const [isAlertVisible, setIsAlertVisible] = useState(true); // Estado para controlar a visibilidade do alerta
+    const [timeRemaining, setTimeRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     const handleAlertClose = () => {
         setIsAlertVisible(false);   
     };
+
+    // Função para calcular o tempo restante até a data de lançamento
+    const calculateTimeRemaining = () => {
+        const now = new Date();
+        const launch = new Date(launchDate); // Converter a data de lançamento para um objeto Date
+        const diff = launch - now; // Diferença em milissegundos
+
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            setTimeRemaining({ days, hours, minutes, seconds });
+        } else {
+            // Caso a data já tenha passado, zeramos o contador
+            setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        }
+    };
+
+    useEffect(() => {
+        if (clock) {
+            const timer = setInterval(calculateTimeRemaining, 1000); // Atualiza a cada segundo
+            return () => clearInterval(timer); // Limpa o intervalo quando o componente for desmontado
+        }
+        console.log('Clock value:', clock);
+
+    }, [clock, launchDate]);
 
     return (
         <div className={`meowl_contentProject ${isLigmode ? 'lightmode' : ''}`}>
@@ -34,17 +64,20 @@ const { isLigmode } = useContext(ThemeContext);
                     <div className='meowl_contentProject_maincontent'>
                         <div className='meowl_contentProject_firstcontent'>
                             <h1> {name} </h1>
-                            <div className='meowl_contentProject_clock_container'>
-                                <h2> Launching soon.. </h2>
-                                <div className='meowl_contentProject_clock_box'>
-                                    <div className='meowl_contentProject_clock_content'>
-                                        <p>2 days</p>
-                                        <p>2 hours</p>
-                                        <p>2 Minutes</p>
-                                        <p>2 Seconds</p>
-                                    </div>    
+                            {/* Exibe o contador apenas se 'clock' for true */}
+                            {clock === true && (
+                                <div className='meowl_contentProject_clock_container'>
+                                    <h2> Launching soon.. </h2>
+                                    <div className='meowl_contentProject_clock_box'>
+                                        <div className='meowl_contentProject_clock_content'>
+                                            <p>{timeRemaining.days} days</p>
+                                            <p>{timeRemaining.hours} hours</p>
+                                            <p>{timeRemaining.minutes} minutes</p>
+                                            <p>{timeRemaining.seconds} seconds</p>
+                                        </div>    
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                         <div className="text-box-container_cont">
                             <div className="text-box_cont box1">
@@ -59,6 +92,7 @@ const { isLigmode } = useContext(ThemeContext);
                             <div className='meowl_contentProject_paragraph'>
                                 <p> 
                                     {description}
+                                    
                                 </p>
                                 <div className='meowl_contentProject_media'>
                                     <a href={twitter} target="_blank" rel="noopener noreferrer"><FaSquareXTwitter /></a>

@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 const Project = () => {
   const { isLigmode } = useContext(ThemeContext);
   const [repositories , setRepositories] = useState([]);
-  const [completedRepositories, setCompletedRepositories] = useState([]);
+
   const { id } = useParams(); // Pega o ID da URL
   console.log('ID from URL:', id);
   const [project, setProject] = useState(null);
@@ -69,6 +69,7 @@ const Project = () => {
                     tagProject1={project.tagProject1}
                     tagProject2={project.tagProject2}
                     tagProject3={project.tagProject3}
+                    launchDate={project.launchDate}
                 />) : (
                 
                 
@@ -79,7 +80,30 @@ const Project = () => {
          {
             project ? (
         
-            <NavegationProject 
+            <NavegationProject
+              earlier_open_time={project.earlier_open_time}
+              earlier_Supply_offerd={project.earlier_Supply_offerd}
+              earlier_size={project.earlier_size} open_open_time={project.open_open_time}
+              open_Supply_offerd={project.open_Supply_offerd} open_size={project.open_size}
+              completed_descrption={project.completed_descrption}
+              Launchprice={project.Launchprice}
+              currenprice={project.currenprice}
+              ath={project.ath} number_realeses={project.number_realeses}
+              clif={project.clif} claim_interval={project.claim_interval}
+              tagProject3={project.tagProject3} 
+              buy_with={project.buy_with}
+              fundraise_goal={project.fundraise_goal}
+              token_price={project.token_price}
+              buil_on={project.buil_on}
+              ticker={project.ticker}
+              vesting={project.vesting}
+              tge_date={project.tge_date}
+              built_on2={project.built_on2}
+              smartcontractaddress={project.smartcontractaddress}
+              smartcontractabi={project.smartcontractabi}
+              stableAddress={project.stableAddress}
+              bannerproject={project.bannerproject}
+              tge_Availble={project.tge_Availble}
             /> ) : (
                 <p> Loading project details...</p>
             )

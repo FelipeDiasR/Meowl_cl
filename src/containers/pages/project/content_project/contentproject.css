@@ -49,7 +49,7 @@
 .meowl_contentProject_clock_content {
     display: flex;
     gap: 0.8rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
 }
 .meowl_contentProject_clock_content p {
@@ -153,7 +153,7 @@
     .meowl_contentProject_clock_content {
         display: flex;
         gap: 0.6rem;
-        font-size: 0.5rem;
+        font-size: 0.45rem;
         font-weight: bold;
     }
     .meowl_contentProject_clock_content p {
@@ -200,6 +200,19 @@
         margin-top: 1.4rem;
         margin-bottom: 1.4rem;
     }
+    .meowl_contentProject_clock_box {
+        margin-top: 0.5rem;
+        width: 270px;
+        height: 25px;
+        border-radius: 8px;
+        
+        }
+        .meowl_contentProject_clock_content {
+            display: flex;
+            gap: 0.6rem;
+            font-size: 0.65rem;
+            font-weight: bold;
+        }
 
 }
 
@@ -216,6 +229,20 @@
         margin-left: 4.8rem;
         
     }
+
+    .meowl_contentProject_clock_box {
+        margin-top: 0.5rem;
+        width: 270px;
+        height: 25px;
+        border-radius: 8px;
+        
+        }
+        .meowl_contentProject_clock_content {
+            display: flex;
+            gap: 0.6rem;
+            font-size: 0.65rem;
+            font-weight: bold;
+        }
 
 }
 

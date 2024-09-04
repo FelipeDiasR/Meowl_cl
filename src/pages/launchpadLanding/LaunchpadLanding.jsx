@@ -74,6 +74,7 @@ const LaunchpadLanding = () => {
                     tge_date={repo.tge_date}
                     active={repo.active}
                     id={repo.id}
+                    
                   />
                 ))          
               }

@@ -19,7 +19,10 @@
   }
   
   .meowl_navegation_paragraph p.actived {
-    border-bottom: 2px solid #070000;  /*Cor do texto sublinhado quando ativo */
+    border-bottom: 2px solid #ffffff;  /*Cor do texto sublinhado quando ativo */
+  }
+  .light-mode  .meowl_navegation_paragraph p.actived {
+    border-bottom: 2px solid #000000;  /*Cor do texto sublinhado quando ativo */
   }
 
 .meowl_navegation_paragraph {
