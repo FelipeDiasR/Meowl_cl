@@ -104,6 +104,7 @@ const Project = () => {
               stableAddress={project.stableAddress}
               bannerproject={project.bannerproject}
               tge_Availble={project.tge_Availble}
+              token_address={project.token_address}
             /> ) : (
                 <p> Loading project details...</p>
             )

@@ -1,4 +1,5 @@
 import { useState, useContext, React, useEffect} from 'react';
+import { FaCopy } from 'react-icons/fa';
 import { LuAlertCircle } from "react-icons/lu";
 import { IoMdInformationCircleOutline } from "react-icons/io"; // Adicionando um ícone de fechar
 import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
@@ -14,14 +15,14 @@ import abis from '../../../../abis/mainAbi';
 import {usdcAbi} from '../../../../abis/UsdcAbi';
 import './navegationproject.css';
 import { Loading, Approved, Denied } from '../../../../components';
-
+import {GeneralPopup} from '../../../../components/index'; 
 //  const fetchUserData
 
 const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
     earlier_size, open_open_time, open_Supply_offerd, open_size, completed_descrption,
     Launchprice, currenprice, ath, number_realeses, clif, claim_interval, vesting,
     smartcontractaddress, smartcontractabi, buy_with, tge_date, fundraise_goal, token_price,
-    buil_on, built_on2, stableAddress, bannerproject, tge_Availble}) => {
+    buil_on, built_on2, stableAddress, bannerproject, tge_Availble, token_address}) => {
     
     const { account, connectWallet } = useWallet();
     const [contract, setContract] = useState(null)
@@ -48,7 +49,11 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
         tgeClaimed: null,
       });
     const [isTgeActivated, setIsTgeActivated] = useState(false);
-
+    const [popup, setPopup] = useState({
+        visible: false,
+        message: '',
+        success: true
+      });
      // Função para abrir o popup com as informações corretas
     const handleOpenPopup = (title, content) => {
         setPopupInfo({ show: true, title, content });
@@ -374,6 +379,17 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
               fetchUserData(); // Atualize os dados do usuário após a conclusão da operação
             }
           };
+          const copyToClipboard = () => {
+            navigator.clipboard.writeText(token_address).then(() => {
+              setPopup({ visible: true, message: 'Address copied', success: true });
+            }).catch(err => {
+              console.error('Failed to copy: ', err);
+              setPopup({ visible: true, message: 'Failed to copy address', success: false });
+            });
+          };
+          const closePopup = () => {
+            setPopup({ visible: false, message: '', success: true });
+          };
         
 
 
@@ -583,6 +599,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
 
     return (
         <div className={`meowl_navegation ${isLigmode ? 'lightmode' : ''}` }>
+            {popup.visible && <GeneralPopup message={popup.message} success={popup.success} onClose={closePopup} />}
            <div className='meowl_navegation_container'>
             {loading && <Loading />} {/* Exibir o componente de loading */}
             {approved && <Approved />} {/* Exibir o componente Approved */}
@@ -753,6 +770,13 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                             <div className='meowl_navegation_funding_data2'>
                             <h3>Claimed (Number of claims+TGE)</h3>
                             <p>{userData.numberClaimed}</p>
+                            </div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+                            <div className='meowl_navegation_Third_card_division'></div>
+
+                            <div className='meowl_navegation_funding_data2'>
+                            <h3>Token address</h3>
+                            <p>{token_address} <FaCopy onClick={copyToClipboard} style={{ cursor: 'pointer' }} /></p>
                             </div>
                             <div className='meow__buy_title_buttons'>
                             <button 
