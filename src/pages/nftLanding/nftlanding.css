@@ -10,6 +10,11 @@
     margin-bottom: 3rem; /* Espaçamento entre o texto e os cards */
     margin-top: 5rem;
   }
+  .light-mode .meowl__nft_intro_text h1,
+  .light-mode .meow__beneffits_text {
+    color: black;
+
+  }
   
   .meowl__nft_intro_text h1 {
     color: #ffff;

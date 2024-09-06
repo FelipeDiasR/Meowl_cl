@@ -122,7 +122,7 @@
                 {contentList[activeIndex].content}
               </div>
               <div className='meowl_upcoming_content_button'>
-                <Link to={`/projects/${id}`}>
+                <Link to={`/project/${id}`}>
                   <button>See Details</button>
                 </Link>
               </div>

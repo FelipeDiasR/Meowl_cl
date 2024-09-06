@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { Reapercarrosel } from '../../../../img/index';
 import './nftselling.css';
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
+
+
 
 const NftSelling = () => {
   const currentContent = {
@@ -12,8 +15,10 @@ const NftSelling = () => {
     image: Reapercarrosel,
   };
 
+  const { isLigmode } = useContext(ThemeContext);
+
   return (
-    <div className="meow_nftselling" id="home">
+    <div className={`meow_nftselling ${isLigmode ? 'lightmode' : ''}`} id="home">
       <div className="meow_nftselling_container">
         <div className="meowl_nftselling_card">
           <div className="meowl_nftselling_card_container">

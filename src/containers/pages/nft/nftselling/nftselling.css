@@ -44,7 +44,10 @@
   margin-top: 4rem;
   line-height: 1.5;
 }
-
+.light-mode .meow_nftselling_content h1,
+.light-mode .meow_nftselling_content p {
+  color: black;
+}
 .meow_nftselling_buttons {
   margin-top: 2rem;
 }

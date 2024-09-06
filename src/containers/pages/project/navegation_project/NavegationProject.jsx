@@ -3,8 +3,6 @@ import { FaCopy } from 'react-icons/fa';
 import { LuAlertCircle } from "react-icons/lu";
 import { IoMdInformationCircleOutline } from "react-icons/io"; // Adicionando um ícone de fechar
 import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
-import testebanner from '../../../../img/testebanner.svg'
-import testebaseProject from '../../../../img/testebaseproject.svg'
 import {logoBlackProject, logoBlackProject2, logoWhiteProject, logoWhiteProject2 } from '../../../../img/index';
 import { InfoPopup } from '../../../../components';
 // Importar seu arquivo JSON com os dados
@@ -22,11 +20,16 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
     earlier_size, open_open_time, open_Supply_offerd, open_size, completed_descrption,
     Launchprice, currenprice, ath, number_realeses, clif, claim_interval, vesting,
     smartcontractaddress, smartcontractabi, buy_with, tge_date, fundraise_goal, token_price,
-    buil_on, built_on2, stableAddress, bannerproject, tge_Availble, token_address}) => {
+    buil_on, built_on2, stableAddress, bannerproject, tge_Availble, token_address,
+    claim_Avalible, open_buy, open_subscription, closed, rpc, explorerUrl,
+    chain_name, token_name, symbol, decimals, network, claim_section}) => {
     
     const { account, connectWallet } = useWallet();
     const [contract, setContract] = useState(null)
     const { isLigmode } = useContext(ThemeContext);
+    const [fetchCount, setFetchCount] = useState(0);
+    const [rightNetwork, setRightNetwork] = useState(null);
+    const [isCorrectNetwork, setIsCorrectNetwork] = useState(true);
     const [ abi, setABI] = useState(null);
     const [loading, setLoading] = useState(false);
     const [ approved, setApproved] = useState(false);
@@ -144,6 +147,104 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
               }
             }
           };
+          useEffect(() => {
+            const manageNetwork = async () => {
+              try {
+                if (network) {
+                  setRightNetwork(network);
+                  console.log("A rede correta do projeto é:", network);
+                }
+        
+                // Verifica se a carteira está conectada, open_buy é verdadeiro, e network está definido
+                if (account && open_buy && network) {
+                  // Verifica se o objeto Ethereum está disponível na janela
+                  if (typeof window.ethereum !== 'undefined') {
+                    const provider = new ethers.BrowserProvider(window.ethereum);
+                    const { chainId } = await provider.getNetwork();
+        
+                    console.log('Verificando redes:', 'chainId:', chainId, 'network:', parseInt(network, 16));
+        
+                    // Compara a rede do usuário com a rede correta do projeto
+                    if (Number(chainId) !== Number(parseInt(network, 16))) {
+                      setIsCorrectNetwork(false);
+                      console.log('Usuário não está na rede correta');
+                    } else {
+                      setIsCorrectNetwork(true);
+                      console.log('Usuário está na rede correta');
+                    }
+                  } else {
+                    console.error('Objeto Ethereum não encontrado, instale o Metamask.');
+                  }
+                } else {
+                  console.log('Conexão com carteira não está ativa ou open_buy é falso.');
+                }
+              } catch (error) {
+                console.error('Erro ao verificar ou definir a rede:', error);
+              }
+            };
+        
+            // Chama a função para gerenciar a rede
+            manageNetwork();
+        
+          }, [account, open_buy, network]);  // Certifique-se de que estas dependências estão configuradas corretamente
+        
+          // Adicione mais verificações para garantir que o estado inicial é correto e não é sobrescrito por engano.
+             
+         
+          const switchNetwork = async () => {
+            if (typeof window.ethereum !== 'undefined' && rightNetwork) {
+              try {
+                // Tentando mudar para a rede correta
+                await window.ethereum.request({
+                  method: 'wallet_switchEthereumChain',
+                  params: [{ chainId: rightNetwork }],
+                });
+                setIsCorrectNetwork(true);
+                console.log('Troca para a rede correta realizada com sucesso!');
+              } catch (switchError) {
+                // Se a rede não estiver disponível, tenta adicionar a rede
+                if (switchError.code === 4902) {
+                  try {
+                    await window.ethereum.request({
+                      method: 'wallet_addEthereumChain',
+                      params: [{
+                        chainId: rightNetwork,
+                        rpcUrls: [rpc],
+                        chainName: chain_name,
+                        nativeCurrency: {
+                          name: token_name,
+                          symbol: symbol,
+                          decimals: 18,
+                        },
+                        blockExplorerUrls: [explorerUrl],
+                      }],
+                    });
+                    setIsCorrectNetwork(true);
+                    
+                    console.log('Rede adicionada e trocada com sucesso!');
+                    fetchUserData();
+                    
+                  } catch (addError) {
+                    console.error('Erro ao adicionar a rede:', addError);
+                  }
+                } else {
+                  console.error('Erro ao trocar de rede:', switchError);
+                }
+              }
+            } else {
+              console.error('Ethereum não detectado ou rede correta não definida.');
+            }
+          };
+
+          useEffect(() => {
+            if (isCorrectNetwork && fetchCount < 10) {
+              // Chama fetchUserData e incrementa o contador se o limite ainda não foi atingido
+              fetchUserData();
+              setFetchCount(prevCount => prevCount + 1);
+            }
+          }, [isCorrectNetwork, fetchCount, fetchUserData]); 
+        
+          
           const handleAmountToBuyChange = (e) => {
             const inputAmount = e.target.value.trim();
         
@@ -341,7 +442,15 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
               fetchUserData(); // Atualize os dados do usuário após a conclusão da operação
             }
           };
-        
+
+          //-------------- claim tokens
+           //--------------
+            //--------------
+             //--------------
+              //--------------
+               //--------------
+                //--------------
+                
           const claimTokens = async () => {
             if (!isTgeActivated || !account) {
               console.error("TGE is not activated or account is not available.");
@@ -390,7 +499,12 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
           const closePopup = () => {
             setPopup({ visible: false, message: '', success: true });
           };
-        
+
+          useEffect(() => {
+            console.log("Account1:", account);
+            console.log("Is Correct Network teste:", isCorrectNetwork);
+        }, [account, isCorrectNetwork]);
+    
 
 
     const contentList = [
@@ -532,66 +646,78 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
         }
         ,
         {
-          section: "Buy / Claim",
-          content: (
-            <>
-              <div className='meowl_navegation_pools_container'>
-                            <div className='meowl_navegation_BuyMint'>
-                                <div className='meowl_navegation_earlier_content'>
-                                    <div className='meowl_buy_title1'>
-                                        <h2>Buy</h2>         
-                                    </div>
-                                    <p>To be able to buy it you must  have {buy_with} on base</p>
-                                    <div className='meowl_buy_title_input'>
-                                        <input className='meow_buy_input1' type='text' value={amountToBuy} onChange={handleAmountToBuyChange} placeholder={buy_with} />
-                                        <input className='meow_buy_input2' type='text' value={tokensReceived} onChange={handleTokensReceivedChange} placeholder={ticker}/>
-                                        <div className='meow__buy_title_buttons'>
-                                            <button className='desktop-only' onClick={buyTokens}> Buy </button>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='meowl_navegation_BuyMint'>
-                            <div className='meowl_navegation_token_info_title'>
-                                
-                                <div className='meowl_navegation_user_container'>
-                        
-                                    <div className='meowl_navegation_token_info_h2'>
-                                        <h2>User Info</h2>
-                                        
-                                    </div>            
-                                    <div className='meowl_navegation_token_info_data1'>
-                                        <h3>Total Purchased</h3>
-                                        <p>{userData.totalPurchased}</p>
-                                    </div>  
-                                    <div className='meowl_navegation_token_info_data2'>
-                                        <h3> Tge Amount </h3>
-                                        <p> {userData.tgeAmount}</p>
-                                    </div> 
- 
-                                    <div className='meowl_navegation_token_info_data3'>
-                                        <h3> Claim amount after TGE </h3>
-                                        <p> {userData.tokensPerClaim}</p>
-                                    </div>  
-                                    <div className='meowl_navegation_token_info_data3'>
-                                        <h3> Total number of claims </h3>
-                                        <p>{userData.totalNumberOfClaims}</p>
-                                    </div> 
-                                    <div className='meowl_navegation_token_info_data3'>
-                                        <h3> Claimed (Number of claims+TGE)  </h3>
-                                        <p> {userData.numberClaimed} </p>
-                                    </div> 
-                                
-                                </div>
-                                    
-                            </div>
-                            </div>  
-                           
+            section: "Buy / Claim",
+            content: open_buy ? (
+              <>
+                <div className='meowl_navegation_pools_container'>
+                  <div className='meowl_navegation_BuyMint'>
+                    <div className='meowl_navegation_earlier_content'>
+                      <div className='meowl_buy_title1'>
+                        <h2>Buy</h2>         
+                      </div>
+                      <p>To be able to buy it you must have {buy_with} on base</p>
+                      <div className='meowl_buy_title_input'>
+                        <input
+                          className='meow_buy_input1'
+                          type='text'
+                          value={amountToBuy}
+                          onChange={handleAmountToBuyChange}
+                          placeholder={buy_with}
+                        />
+                        <input
+                          className='meow_buy_input2'
+                          type='text'
+                          value={tokensReceived}
+                          onChange={handleTokensReceivedChange}
+                          placeholder={ticker}
+                        />
+                        <div className='meow__buy_title_buttons'>
+                          <button className='desktop-only' onClick={switchNetwork}>
+                            Buy
+                          </button>
+                        </div>
+                      </div>
                     </div>
-            </>
-          ),
-        },
+                  </div>
+          
+                  <div className='meowl_navegation_BuyMint'>
+                    <div className='meowl_navegation_token_info_title'>
+                      <div className='meowl_navegation_user_container'>
+                        <div className='meowl_navegation_token_info_h2'>
+                          <h2>User Info</h2>
+                        </div>            
+                        <div className='meowl_navegation_token_info_data1'>
+                          <h3>Total Purchased</h3>
+                          <p>{userData.totalPurchased}</p>
+                        </div>  
+                        <div className='meowl_navegation_token_info_data2'>
+                          <h3>Tge Amount</h3>
+                          <p>{userData.tgeAmount}</p>
+                        </div> 
+                        <div className='meowl_navegation_token_info_data3'>
+                          <h3>Claim amount after TGE</h3>
+                          <p>{userData.tokensPerClaim}</p>
+                        </div>  
+                        <div className='meowl_navegation_token_info_data3'>
+                          <h3>Total number of claims</h3>
+                          <p>{userData.totalNumberOfClaims}</p>
+                        </div> 
+                        <div className='meowl_navegation_token_info_data3'>
+                          <h3>Claimed (Number of claims + TGE)</h3>
+                          <p>{userData.numberClaimed}</p>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+              </>
+            ) : (
+                <div className='meowl_buy_claim_box'>
+                        <p>When the sale and claim are open, the section will be available here.</p>            
+                </div>
+            ),
+          }
+          
         
       ];
 
@@ -640,18 +766,51 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                             </p>
                             
                         </div>
+
+                        <div> 
+                        {!account ? (          
                         <div className='meowl_navegation_box'>
                             <div className='meowl_navegation_box_content'>
                                 <LuAlertCircle className='meowl_meowl_navegation_box_icon' />
-                                <p>Connect your wallet to view all the details about this project. 
-                                To participate, you must subscribe to the waitlist and stake Meowl Tokens at least 24 hours before the IDO.</p>
+                                
+                                <p>
+                                    Connect your wallet to view all the details about this project.
+                                    To participate, you must subscribe to the waitlist and stake Meowl Tokens at least 24 hours before the IDO.
+                                </p>
+                                
+                               
+                                <>
+                                  
+                                </>
+                                
                             </div>
                             
                         </div>
+                        ) : account && !isCorrectNetwork ? (
+                        <div>
+                            <div className='meowl_navegation_box'>
+                                <div className='meowl_navegation_box_content'>
+                                    <LuAlertCircle className='meowl_meowl_navegation_box_icon' />
+                                        <p>
+                                        change the chain by clicking on the button below to be able to see all the information about the project.
+                                        </p>
+                                      
+                                </div>
+                            
+                            </div>
+                            <button onClick={switchNetwork} className='switch-network-button'>
+                                        Switch Network
+                                        </button>       
+                        </div>
+                         ) : null}
+                        </div>
+                       
+                      
                         <div className='meowl_navegation_pools_container'>
                             {contentList[activeIndex].content}
                         </div>
                     </div>
+                    
                     <div className='meowl_navegation_contentSecond'>
                         <div className='meowl_navegation_card_container'>
                             <div className='meowl_navegation_card_title'>
@@ -704,7 +863,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                     </div>
                     
                 </div>
-                {isBuyClaimActive && (
+                {isBuyClaimActive && claim_section && (
                     <div className='meowl_navegation_contentThird_buy'>
                     <div className='meowl_navegation_Third_card'>
                         <div className='meowl_navegation_card_title'>

@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './nftlanding.css';
 import { NftOffers, HeaderNFT, Nftbenefits, NftSelling } from '../../containers';
+import { ThemeContext } from '../../components/themecontext/ThemeContext';
+
 
 
 const NftLanding = () => {
   const [NftArts, SetNft] = useState([]);
   const [moreNftsLoaded, setMoreNftsLoaded] = useState(false);
   const [showOpenSeaButton, setShowOpenSeaButton] = useState(false);
+  const { isLigmode } = useContext(ThemeContext);
 
   useEffect(() => {
     const SearchNFTS = async () => {
@@ -42,7 +45,7 @@ const NftLanding = () => {
   };
 
   return (
-    <div className='meow_nftLanding'>
+    <div className={`meow_nftLanding${isLigmode ? 'lightmode' : ''}`}>
       <HeaderNFT />
       <div className="meowl__nft_intro_text">
         <h1>Explore the collection</h1>

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './headernft.css';
 import { Link } from 'react-router-dom';
 import { Reapercarrosel, Shootercarrosel, MeowlKingCarrossel } from '../../../../img/index';
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
 
 const HeaderNFT = () => {
   const contentList = [
@@ -29,7 +30,7 @@ const HeaderNFT = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const { isLigmode } = useContext(ThemeContext);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % contentList.length);
@@ -45,7 +46,7 @@ const HeaderNFT = () => {
   const currentContent = contentList[currentIndex];
 
   return (
-    <div className="meow__headernft" id="home">
+    <div className={`meow__headernft ${isLigmode ? 'lightmode' : ''}`}  id="home">
       <div className="meow__headernft_container">
         <div className="meow__headernft_content">
           <h2>{currentContent.title}</h2>

@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './nftoffers.css'; // Arquivo CSS para estilização
 //import background from '../../../../img/assets/nfts/testeNft.svg';
 import logoWhithouLeters from '../../../../img/assets/logoWhithouLeters.svg';
 //import profileImage from '../../../../img/assets/nfts/profileImage.svg'; // Adicione o caminho correto da nova imagem de perfil
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
+
+
 
 const NftOffers = ({ name, weight, description, backgroubdImage }) => {
+
+  const { isLigmode } = useContext(ThemeContext);
+
   return (
-    <div className="meow__Nft_cards">
+    <div className={`meow__Nft_cards ${isLigmode ? 'lightmode' : ''}`}>
       <div className="meow__Nft_cards__container">
         <div className="meowl__nft_cards_textInside">
           <div className="profile-image-container">

@@ -41,6 +41,20 @@
     margin-top: 2rem;
 
 }
+.meowl_buy_claim_box {
+    width: 770px;
+    height: 210px;
+    background-color: #2f186e69;
+    border-radius: 8px;
+    margin-top: 2rem;
+
+}
+
+
+.meowl_buy_claim_box p {
+    margin-left: 7.5rem;
+    margin-top: 5.5rem;
+}
 
 .light-mode .meowl_navegation_box {
     background-color: #FFF1C3;
@@ -54,6 +68,7 @@
 .meowl_navegation_box_content {
     margin-top: 1.3rem;
     display: flex;
+    
 }
 
 .meowl_meowl_navegation_box_icon {  
@@ -66,6 +81,18 @@
 .meowl_navegation_box p {
     width: 650px;;
     margin-left: 1rem;
+}
+.switch-network-button{
+    font-family: var(--font-family);
+    width: 115px;
+    height: 31px;
+    background-color: #280377;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 2rem;
+   
+
 }
 
 .meowl_navegation_pools_container {
@@ -199,7 +226,8 @@
 .light-mode .meowl_navegation_earlier,
 .light-mode .meowl_navegation_price,
 .light-mode .meowl_navegation_token_info_container,
-.light-mode .meowl_navegation_BuyMint {
+.light-mode .meowl_navegation_BuyMint,
+.light-mode .meowl_buy_claim_box {
     background-color: #ffff;
 }
 
@@ -425,6 +453,15 @@
         width: 430px;;
         margin-left: 1rem;
     }
+    .meowl_buy_claim_box {
+        width: 520px;
+        height: 210px;
+    
+    }
+    .meowl_buy_claim_box p {
+        margin-left: 4rem;
+        margin-top: 5.5rem;
+    }
     .meowl_navegation_earlier {
         width: 245px;
         height: 260px;
@@ -498,6 +535,15 @@
         width: 95%;
         height: 110px;
     
+    }
+    .meowl_buy_claim_box {
+        width: 95%;
+        height: 210px;
+    
+    }
+    .meowl_buy_claim_box p {
+        margin-left: 4rem;
+        margin-top: 5.5rem;
     }
     .meowl_navegation_description {
         margin-top: 2rem;
@@ -593,6 +639,11 @@
         width: 95%;
         height: 145px;
     
+    }
+
+    .meowl_buy_claim_box p {
+        margin-left: 1rem;
+        margin-top: 5.5rem;
     }
     .meowl_navegation_description {
         margin-top: 2rem;

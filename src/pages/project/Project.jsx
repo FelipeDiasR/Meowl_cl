@@ -105,6 +105,18 @@ const Project = () => {
               bannerproject={project.bannerproject}
               tge_Availble={project.tge_Availble}
               token_address={project.token_address}
+              claim_Avalible={project.claim_Avalible}
+              open_buy={project.open_buy}
+              open_subscription={project.open_subscription}
+              closed={project.closed}
+              rpc={project.rpc}
+              explorerUrl={project.explorerUrl}
+              chain_name={project.chain_name}
+              token_name={project.token_name}
+              symbol={project.symbol}
+              decimals={project.decimals}
+              network={project.network}
+              claim_section={project.claim_section}
             /> ) : (
                 <p> Loading project details...</p>
             )

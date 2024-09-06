@@ -6,6 +6,11 @@
     width: 100%;
     background: black;
   }
+
+  .light-mode .meow__headernft {
+    background: #E7E4EF; /* Fundo claro para o modo claro */
+    color: #000; /* Texto preto para o modo claro */
+  }
   
   .meow__headernft_container {
     display: flex;
