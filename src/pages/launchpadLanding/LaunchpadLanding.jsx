@@ -80,7 +80,9 @@ const LaunchpadLanding = () => {
               }
             </div>
           ) : (
+            <div className='conditinal_paragrath'>
             <p> Soon we are going to have projects...</p>
+            </div>
           )
         }
       </div>
@@ -122,7 +124,11 @@ const LaunchpadLanding = () => {
               }
             </div>
           ) : (
-            <p> Soon we are going to have projects...</p>
+            <div className='conditinal_paragrath'>
+            <p> Soon we are going to have completed projects...</p>
+            </div>
+            
+            
           )
         }
       </div>

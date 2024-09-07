@@ -22,7 +22,7 @@ const router = createBrowserRouter ([
         element: <Home />
       },
       {
-        path: "launchpad",
+        path: "oldlaunchpad",
         element: <Lauchpad />
       },
       {
@@ -47,7 +47,7 @@ const router = createBrowserRouter ([
         element: <NftLanding />
       },
       {
-        path: "launchpads",
+        path: "launchpad",
         element: <LaunchpadLanding />
       },
       {

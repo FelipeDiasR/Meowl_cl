@@ -73,7 +73,7 @@ const Project = () => {
                 />) : (
                 
                 
-                <p>Loading project details...</p>)
+                null)
                 }
         
          </div>
@@ -118,7 +118,10 @@ const Project = () => {
               network={project.network}
               claim_section={project.claim_section}
             /> ) : (
-                <p> Loading project details...</p>
+            <div className='conditinal_paragrath'>
+            <p> Loading project details...</p>
+            </div>
+                
             )
 
          }

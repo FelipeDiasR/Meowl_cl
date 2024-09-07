@@ -26,11 +26,18 @@
   .meowl-completed_titles h1 {
     margin-bottom: 1rem;
   }
+  .conditinal_paragrath p{
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-size: 3rem;
+     font-weight: bold;
+  }
 
   @media screen and (max-width: 500px) {
     .meowl-completed_titles{
       margin-top: 2rem;
       margin-left: 2rem;
+      
     }
 
   }
