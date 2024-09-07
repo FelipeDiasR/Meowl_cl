@@ -21,6 +21,11 @@
     margin-bottom: 1rem;
 }
 
+.light-mode .meow__gaming_content h1,
+.light-mode .meow__gaming_content p {
+  color: black;
+}
+
 .meow__gaming_welcome{
     margin-top: 2rem;
     display: flex;

@@ -1,14 +1,16 @@
 // src/components/LoadingPopup.jsx
-import React from 'react';
+import React, {useContext} from 'react';
 import './gamming.css'; // Arquivo CSS para estilização
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
 
 
 
 
 function Gamming () {
+  const { isLigmode } = useContext(ThemeContext);
 
   return (
-    <div className="meow__gamming">
+    <div className={`meow__gamming ${isLigmode ? 'lightmode' : ''}`}>
         <div className="meow__gamming__container">
             <div className="meow__gaming_content">
                 <h1> Gaming platform</h1>

@@ -7,6 +7,11 @@
     font-family: var(--font-family);
     width: 100%;
     padding: 2rem 0;
+    background: #000000;
+  }
+
+  .light-mode .meow__partners{
+    background-color: #000000;
   }
   
   .meow__partners h2 {

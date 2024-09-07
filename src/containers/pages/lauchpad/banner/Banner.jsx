@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import ProjectLogo from '../../../../img/logotipo.svg';
 
 //css
 import './banner.css';
+import { ThemeContext } from '../../../../components/themecontext/ThemeContext';
 
 const Banner = () => {
+
+  const { isLigmode } = useContext(ThemeContext);
   return (
     
-    <div className='meow__banner section__padding'>
+    <div className={`meow__banner  ${isLigmode ? 'lightmode' : ''}`}>
       <div className='meow__banner_content'>
         <div className='meow__banner_text'>
           <h1>Are you a leading project, meme, or crypto initiative shaping the future?</h1>

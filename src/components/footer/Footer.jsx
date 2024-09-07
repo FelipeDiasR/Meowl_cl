@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './footer.css';
 
 import Logotipo from '../../img/logotipo.svg';
@@ -6,11 +6,13 @@ import Division from '../../img/division.svg';
 
 import { FaTwitter, FaTelegram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import { ThemeContext } from '../themecontext/ThemeContext';
 
 const Footer = () => {
+
+  const { isLigmode } = useContext(ThemeContext);
   return (
-    <div className='meow__footer section__padding'>
+    <div className={`meow__footer ${isLigmode ? 'lightmode' : ''}`}>
       <div className='meow__footer_links'>
         <div className='meow__footer-logo'>
           <img className="meow__footer_logo_img" src={Logotipo} alt="logo"/>

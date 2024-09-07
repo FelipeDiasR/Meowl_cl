@@ -12,6 +12,11 @@
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
 }
+
+.lightmode {
+  --gradient-text: -webkit-linear-gradient(right, #6E56CF 60%, #53025F 100%);
+ 
+}
 button:hover {
   transform: scale(0.95);
   transition: all 0.2s;

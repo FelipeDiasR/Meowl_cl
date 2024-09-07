@@ -8,8 +8,9 @@ import ReactGA from "react-ga4";
 //import do react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 //import { Footer } from './containers';
-import { Home, Lauchpad, Details, Game, WheelMainPage, WeelSelected } from './pages';
+import { Home, Lauchpad, Details, Game, WheelMainPage, WeelSelected, NftLanding, LaunchpadLanding, Project } from './pages';
 
+import { ThemeProvider } from './components/themecontext/ThemeContext.jsx';
 
 const router = createBrowserRouter ([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter ([
         element: <Home />
       },
       {
-        path: "launchpad",
+        path: "oldlaunchpad",
         element: <Lauchpad />
       },
       {
@@ -41,21 +42,33 @@ const router = createBrowserRouter ([
         element: <WeelSelected />
       },
       
+      {
+        path: "nft",
+        element: <NftLanding />
+      },
+      {
+        path: "launchpad",
+        element: <LaunchpadLanding />
+      },
+      {
+        path: "project/:id",
+        element: <Project />
+      },
+      
       
 
     ]
   },
 ]);
 ReactGA.initialize("G-PW6YY2V9BC");
+ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
-ReactGA.send({
-  hitType: "pageview",
-  page: window.location.pathname,
-});
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

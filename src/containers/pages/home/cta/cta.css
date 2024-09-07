@@ -10,6 +10,13 @@
     margin-top: 5rem;
 }
 
+.light-mode .meow_cta_container h1,
+.light-mode .meow_cta__input input::placeholder,
+.light-mode .meow_cta__input input,
+.light-mode .meow_cta__input{
+    color: rgb(0, 0, 0);
+  }
+
 .meow_cta_container {
     max-width: 800px;
     width: 100%;
@@ -53,6 +60,7 @@
 
 .meow_cta__input_email {
     width: 1.5rem;
+    height: 2rem;
     margin-right: 1rem; /* Espaço entre o input e o ícone */
 }
 
