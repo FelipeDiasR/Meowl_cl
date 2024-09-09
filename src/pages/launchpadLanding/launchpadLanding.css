@@ -3,6 +3,10 @@
     background: linear-gradient(90deg, rgba(113, 61, 255, 0.055) 0%, rgba(113, 61, 255, 0.171) 50%, rgba(113, 61, 255, 0.075) 100%);
     color: #ffff;
   }
+
+  .light-mode .meowl_launchpad {
+    background: #E7E4EF;
+  }
   
   .meowl_launchpad_upcoming_cards {
     display: flex;
@@ -31,6 +35,12 @@
     margin-top: 2rem;
     font-size: 3rem;
      font-weight: bold;
+  }
+
+  .light-mode .conditinal_paragrath,
+  .light-mode .meowl-completed_titles h1,
+  .light-mode .meowl-completed_titles p{
+    color: black;
   }
 
   @media screen and (max-width: 500px) {
