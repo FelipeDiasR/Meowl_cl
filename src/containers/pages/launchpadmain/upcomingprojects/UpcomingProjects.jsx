@@ -22,11 +22,11 @@ const UpcomingProjects = ({ name, card_background, website,
       content: (
         <>
           <h3> Token Price</h3>
-          <p> {token_price} </p>
+          <p> $ {token_price} </p>
           <h3> Round start on</h3>
           <p> {round_start_on}</p>
           <h3> Total Raise</h3>
-          <p> $ {total_raise}</p>
+          <p>  {total_raise}</p>
         </>
       ),
     },
