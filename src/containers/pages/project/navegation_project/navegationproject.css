@@ -324,7 +324,7 @@
 
 .meowl_navegation_Third_card {
     width: 763px;
-    height: 745Px;
+    height: 805Px;
     background-color: #2f186e69;
     border-radius: 8px;
     
@@ -534,7 +534,7 @@
 
     .meowl_navegation_Third_card {
         width: 520px;
-        height: 745Px;
+        height: 815Px;
         background-color: #2f186e69;
         border-radius: 8px;
         
@@ -633,7 +633,7 @@
 
     .meowl_navegation_Third_card {
         width: 95%;
-        height: 745Px;
+        height: 810Px;
         background-color: #2f186e69;
         border-radius: 8px;
         
@@ -744,7 +744,7 @@
 
     .meowl_navegation_Third_card {
         width: 95%;
-        height: 745Px;
+        height: 820Px;
         background-color: #2f186e69;
         border-radius: 8px;
         
@@ -822,6 +822,12 @@
     .meowl_navegation_price {
         width: 100px;
         height: 115px;
+        
+    }
+    .meowl_navegation_Third_card {
+        
+        height: 860Px;
+        
         
     }
    

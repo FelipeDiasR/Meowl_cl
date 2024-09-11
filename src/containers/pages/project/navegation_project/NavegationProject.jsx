@@ -1089,11 +1089,14 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
 
                             <div className='meowl_navegation_funding_data2'>
                             <h3>Token address</h3>
-                            <p>{token_address} <FaCopy onClick={copyToClipboard} style={{ cursor: 'pointer' }} /></p>
+                            <p>
+                              {`${token_address.slice(0, 4)}....${token_address.slice(-4)}`} {/* Abreviação do endereço */}
+                              <FaCopy onClick={copyToClipboard} style={{ cursor: 'pointer' }} />
+                            </p>
                             </div>
                             <div className='meow__claim_title_buttons'>
                             <button 
-                                className='desktop-only' 
+                               
                                 onClick={userData.tgeClaimed ? claimTokens : claimTge} // Condicional para função
                                 disabled={loading} // Desabilita o botão durante o carregamento
                                 >{userData.tgeClaimed ? "Claim Tokens" : "Claim TGE"} {/* Texto condicional */}
