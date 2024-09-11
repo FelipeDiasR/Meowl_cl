@@ -20,7 +20,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
     earlier_size, open_open_time, open_Supply_offerd, open_size, completed_descrption,
     Launchprice, currenprice, ath, number_realeses, clif, claim_interval, vesting,
     smartcontractaddress, smartcontractabi, buy_with, tge_date, fundraise_goal, token_price,
-    buil_on, built_on2, stableAddress, bannerproject, tge_Availble, token_address,
+    buil_on, built_on2, stableAddress, bannerproject, total_raise, tge_Availble, token_address,
     claim_Avalible, open_buy, open_subscription, closed, rpc, explorerUrl,
     chain_name, token_name, symbol, decimals, network, claim_section}) => {
     
@@ -61,6 +61,8 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
     const handleOpenPopup = (title, content) => {
         setPopupInfo({ show: true, title, content });
     };
+    
+    const [progressPercentage, setProgressPercentage] = useState(0);
 
     // Função para fechar o popup
     const handleClosePopup = () => {
@@ -68,8 +70,13 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
     };
     
     const [isBuyClaimActive, setIsBuyClaimActive] = useState(false);
-
-
+    const [fundraising, setFundraising] = useState({
+      totalToRaise: null,
+      alreadyCaptured: null
+    });
+    
+    const alreadyCaptured = parseFloat(fundraising.alreadyCaptured / (10 ** 6) || '0');
+    
     const handleSectionClick = (index) => {
         console.log(index);
         setActiveIndex(index);
@@ -86,7 +93,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
               if (smartcontractabi !== false) {
                 try {
                   const smartcontract = smartcontractaddress;
-                  console.log('Este é o smartcontract:', smartcontract);
+                 
                   setContract(smartcontract);
                 } catch (error) {
                   console.error('Error fetching data:', error);
@@ -102,7 +109,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
               if (smartcontractaddress) {
                 const abiItem = abis.find((item) => item.address === smartcontractaddress);
                 if (abiItem) {
-                  console.log("abi encontrada", abiItem)
+                  
                   setABI(abiItem.abi); // Supondo que cada item tenha um campo `abi`
                 } else {
                   console.error("ABI not found for the given address");
@@ -122,7 +129,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
           
                 // Chamar a função `users` do contrato, passando o endereço da conta como parâmetro
                 const userData = await contractInstance.users(account);
-                console.log("User data:", userData);
+                
           
                 // Função auxiliar para formatar valores grandes
                 const formatAndRound = (value) => Math.round(parseFloat(value.toString()) / (10 ** 18));
@@ -140,7 +147,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                   tgeClaimed: (userData[8] !== undefined ? Boolean(userData[8]) : false), // Tratamento booleano
                 };
           
-                console.log("Dados do usuário formatados:", formattedUserData);
+               
                 setUserData(formattedUserData);
               } catch (error) {
                 console.error('Error fetching user data1:', error);
@@ -152,7 +159,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
               try {
                 if (network) {
                   setRightNetwork(network);
-                  console.log("A rede correta do projeto é:", network);
+                  
                 }
         
                 // Verifica se a carteira está conectada, open_buy é verdadeiro, e network está definido
@@ -162,7 +169,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                     const provider = new ethers.BrowserProvider(window.ethereum);
                     const { chainId } = await provider.getNetwork();
         
-                    console.log('Verificando redes:', 'chainId:', chainId, 'network:', parseInt(network, 16));
+                    
         
                     // Compara a rede do usuário com a rede correta do projeto
                     if (Number(chainId) !== Number(parseInt(network, 16))) {
@@ -200,7 +207,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                   params: [{ chainId: rightNetwork }],
                 });
                 setIsCorrectNetwork(true);
-                console.log('Troca para a rede correta realizada com sucesso!');
+                
               } catch (switchError) {
                 // Se a rede não estiver disponível, tenta adicionar a rede
                 if (switchError.code === 4902) {
@@ -319,6 +326,79 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
             fetchUserData();
           }, [abi, contract, account, smartcontractaddress]);
 
+
+
+          const aprove = async () => {
+            let provider, signer, currentAccount;
+          
+            try {
+              if (!account) {
+                await connectWallet();
+                provider = new ethers.BrowserProvider(window.ethereum);
+                console.log('testando o provider', provider);
+                signer = await provider.getSigner();
+                currentAccount = await signer.getAddress();
+              } else {
+                provider = new ethers.BrowserProvider(window.ethereum);
+                signer = await provider.getSigner();
+                currentAccount = account;
+              }
+          
+              const spender = contract;
+              const amountToSpend = amountBlockchain; //amountToBuy amountBlock
+              const contractInstance = new ethers.Contract(stableAddress, usdcAbi, signer);// Utilize o signer aqui
+              const tx = await contractInstance.approve(spender, amountToSpend);
+              console.log('Transaction sent:', tx);
+          
+              setLoading(true);
+          
+              await tx.wait();
+          
+              console.log('Transaction confirmed:', tx);
+          
+              setLoading(false); // Ocultar o popup de carregamento
+          
+              setApproved(true);
+          
+                setTimeout(() => {
+                  setApproved(false);
+                }, 3000);
+                
+              const contractWithSigner = new ethers.Contract(contract, abi, signer);
+              const buyTx = await contractWithSigner.buyTokens(amountToSpend);
+              console.log('Buy tokens transaction sent:', buyTx);
+          
+              setLoading(true);
+          
+              await buyTx.wait();
+          
+              console.log('Buy tokens transaction confirmed:', buyTx);
+          
+              setApproved(true);
+          
+                setTimeout(() => {
+                  setApproved(false);
+                }, 3000);
+          
+              setLoading(false); // Ocultar o popup de carregamento
+          
+              // Atualizar os dados do usuário após a compra
+          
+              fetchUserData();
+              fetchFundraisingData();
+            
+          
+            } catch (error) {
+              console.error('Error approving or buying tokens:', error);
+              setLoading(false);
+                setDenied(true);
+          
+                setTimeout(() => {
+                  setDenied(false);
+                }, 3000);
+              }
+            };
+          
 
           const approveTokens = async () => {
             let provider, signer, currentAccount;
@@ -504,6 +584,66 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
             console.log("Account1:", account);
             console.log("Is Correct Network teste:", isCorrectNetwork);
         }, [account, isCorrectNetwork]);
+        
+        const fetchFundraisingData = async () => {
+          if (!smartcontractaddress || !abi || !account) {
+            console.error('Contract address, ABI, or account is missing');
+            return;
+          }
+        
+          try {
+            const provider = new ethers.BrowserProvider(window.ethereum);
+            const contractInstance = new ethers.Contract(smartcontractaddress, abi, provider);
+            
+            // Chamar a função `fundraising` do contrato
+            const [totalToRaise, alreadyCaptured] = await contractInstance.fundraising();
+        
+            // Atualizar o estado com os dados formatados
+            setFundraising({
+              totalToRaise: totalToRaise.toString(),
+              alreadyCaptured: alreadyCaptured.toString(),
+            });
+            
+            console.log('Fundraising data fetched:', { totalToRaise, alreadyCaptured });
+          } catch (error) {
+            console.error('Error fetching fundraising data:', error);
+            setFundraising({
+              totalToRaise: null,
+              alreadyCaptured: null,
+            });
+          }
+        };
+
+        useEffect(() => {
+          fetchFundraisingData();
+        }, [abi, smartcontractaddress, account]); // Dependências para reexecutar a função quando necessário
+
+
+     
+        const calculateProgressPercentage = () => {
+          // Converta alreadyCaptured para número
+          const captured = Number(alreadyCaptured);
+        
+          // Limpe e converta total_raise para número
+          const cleanedTotalRaise = total_raise.replace(/[$,]/g, ''); // Remove símbolos de dólar e vírgulas
+          const total = Number(cleanedTotalRaise);
+        
+          // Log para verificar os valores convertidos
+          console.log('Valores convertidos:', { captured, total });
+        
+          if (captured > 0 && total > 0) {
+            const percentage = (captured / total) * 100;
+            setProgressPercentage(percentage);
+            console.log('Porcentagem calculada:', percentage);
+          } else {
+            console.log('O valor é zero ou inválido');
+            setProgressPercentage(0);
+          }
+        };
+
+        useEffect(() => {
+          calculateProgressPercentage();
+        }, [alreadyCaptured, total_raise]); // Dependências para atualizar a porcentagem quando necessário
     
 
 
@@ -672,9 +812,16 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                           placeholder={ticker}
                         />
                         <div className='meow__buy_title_buttons'>
-                          <button className='desktop-only' onClick={switchNetwork}>
-                            Buy
-                          </button>
+                          <div className='meow__buy_desktop_buttons'>
+                            <button className='desktop-only' onClick={aprove}>
+                            aprove and Buy
+                            </button>
+                          </div>
+                          <div className='meow__buy_mobile_buttons'>
+                          <button className='mobile-only' disabled={!account || !amountBlockchain} onClick={approveTokens}> Approve </button>
+                          <button className='mobile-only2' disabled={!account || !amountBlockchain} onClick={buyTokens}> Buy Tokens </button>
+                          </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -814,10 +961,10 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                     <div className='meowl_navegation_contentSecond'>
                         <div className='meowl_navegation_card_container'>
                             <div className='meowl_navegation_card_title'>
-                                <h2> Raise Details</h2>
+                                <h2>Raise Details</h2>
                                 <div className='meowl_navegation_funding_container'>
                                     <div className='meowl_navegation_funding_content'>
-                                        <h3> Fundraise Goal </h3>
+                                        <h3>Fundraise Goal</h3>
                                         <p>{fundraise_goal}</p>
                                     </div>
                                     <div className='meowl_navegation_funding_logo'>
@@ -826,10 +973,17 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                                 </div>
                                 <div className='meowl_teste1'>
                                     <div className='meowl_navegation_funding_numbers'>
-                                        <p> $ 0 </p>
-                                        <p> $ 100</p>
+                                    <p>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(alreadyCaptured)}</p>
+                                        <p>{total_raise}</p>
                                     </div>
-                                    <div className='meowl_navegation_funding_loading'> </div>
+                                    
+                                      <div className='meowl_navegation_funding_loading'>
+                                      <div 
+                                        className='progress-bar'
+                                        style={{ width: `${progressPercentage}%` }} // Corrigido para usar crase e notação de interpolação correta
+                                      />
+                                      </div>
+                                    
                                     <div className='meowl_navegation_title_info'>
                                         <h2>Info</h2>
                                     </div>            
@@ -937,7 +1091,7 @@ const NavegationProject = ({ earlier_open_time, earlier_Supply_offerd, ticker,
                             <h3>Token address</h3>
                             <p>{token_address} <FaCopy onClick={copyToClipboard} style={{ cursor: 'pointer' }} /></p>
                             </div>
-                            <div className='meow__buy_title_buttons'>
+                            <div className='meow__claim_title_buttons'>
                             <button 
                                 className='desktop-only' 
                                 onClick={userData.tgeClaimed ? claimTokens : claimTge} // Condicional para função

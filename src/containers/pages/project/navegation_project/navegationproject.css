@@ -210,7 +210,11 @@
     color: #010000; /* Cor do texto digitado */
     margin-bottom: 1rem;
 }
-.meow__buy_title_buttons button {
+.meow__buy_title_buttons {
+    display: flex;
+}
+.meow__buy_desktop_buttons button,
+.meow__claim_title_buttons button {
     font-family: var(--font-family);
     width: 115px;
     height: 31px;
@@ -221,6 +225,22 @@
     margin-top: 1rem;
 }
 
+
+
+.meow__buy_mobile_buttons button {
+    font-family: var(--font-family);
+    width: 90px;
+    height: 31px;
+    background-color: #D862FF;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.mobile-only2{
+    margin-left: 1rem;
+}
 
 
 .light-mode .meowl_navegation_earlier,
@@ -386,8 +406,19 @@
     margin-bottom: 2rem;
     width: 95%;
     height: 14px;
-    background-color: #ffffffaf;
-    border-radius: 8px;   
+    background-color: #ffffffaf; /* Cor do fundo da barra de progresso */
+    border-radius: 8px; /* Canto arredondado */
+    position: relative; /* Necessário para posicionar a barra de progresso dentro */
+}
+
+.progress-bar {
+    margin-top: 1.3rem;
+    margin-bottom: 2rem;
+    width: 95%;
+    height: 14px;
+    background-color: #064c5caf; /* Cor do fundo da barra de progresso */
+    border-radius: 8px; /* Canto arredondado */
+    position: relative; /* Garante que a barra de progresso fique acima do fundo */
 }
 
 .meowl_navegation_title_info h2 {

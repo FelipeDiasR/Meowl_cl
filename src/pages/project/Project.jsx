@@ -117,6 +117,7 @@ const Project = () => {
               decimals={project.decimals}
               network={project.network}
               claim_section={project.claim_section}
+              total_raise={formatCurrency(project.total_raise)} 
             /> ) : (
             <div className='conditinal_paragrath'>
             <p> Loading project details...</p>
