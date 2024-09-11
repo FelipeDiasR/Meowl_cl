@@ -125,7 +125,7 @@
 @media screen and (max-width: 851px) {
   .meow__banner {
       width: 83%;
-      height: 490px;
+      height: 550px;
       background: linear-gradient(90deg, rgba(86, 78, 114, 0.404) 0%, rgba(24, 86, 110, 0.966) 50%, rgba(67, 40, 143, 0.562) 100%);
       padding: 20px;
       color: #ffff;
@@ -171,7 +171,7 @@
   .meow__banner__link {
       font-family: var(--font-family);
       display: inline-block;
-      width: 15%;
+      width: 25%;
       height: 35px;
       background-color: #d862ff75;
       color: rgba(254, 254, 255, 0.5);
