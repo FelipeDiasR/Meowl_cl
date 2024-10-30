@@ -8,10 +8,11 @@ import approved from '../../img/icons/approved.svg'
 function Approved () {
 
   return (
-    <div className="approved-popup">
-      <div className="approved-popup-content">
+    <div data-testid="approved" className="approved-popup">
+      <div  className="approved-popup-content">
         <img src={approved} alt='approved' />
         <p> The Transaction has been approved..</p>
+        
       </div>
     </div>
   );

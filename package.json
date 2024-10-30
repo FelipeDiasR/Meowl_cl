@@ -15,6 +15,7 @@
     "ethers": "^6.13.1",
     "firebase": "^10.12.2",
     "fortmatic": "^2.4.0",
+    "meowl_final": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-ga": "^3.3.1",
@@ -29,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -48,6 +49,14 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}"
+    ],
+    "coverageReporters": [
+      "lcov"
     ]
   }
 }
